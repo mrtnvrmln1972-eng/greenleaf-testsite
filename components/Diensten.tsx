@@ -1,31 +1,75 @@
 "use client";
 
+function IconPotlood() {
+  return (
+    <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+      <line x1="10" y1="38" x2="38" y2="10" stroke="#5b604b" strokeWidth="1.5" strokeLinecap="square" />
+      <polyline points="34,6 42,14 14,42 6,42 6,34" stroke="#5b604b" strokeWidth="1.5" strokeLinejoin="miter" fill="none" />
+      <line x1="6" y1="42" x2="14" y2="42" stroke="#5b604b" strokeWidth="1.5" strokeLinecap="square" />
+      <line x1="6" y1="34" x2="6" y2="42" stroke="#5b604b" strokeWidth="1.5" strokeLinecap="square" />
+      <line x1="30" y1="10" x2="38" y2="18" stroke="#5b604b" strokeWidth="1.5" />
+    </svg>
+  );
+}
+
+function IconSchop() {
+  return (
+    <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+      <path d="M24 8 L32 16 Q36 20 34 26 L26 34 L14 22 Q10 18 14 14 Z" stroke="#5b604b" strokeWidth="1.5" fill="none" strokeLinejoin="round" />
+      <line x1="26" y1="34" x2="18" y2="42" stroke="#5b604b" strokeWidth="1.5" strokeLinecap="square" />
+      <line x1="14" y1="22" x2="20" y2="28" stroke="#5b604b" strokeWidth="1" strokeLinecap="round" />
+    </svg>
+  );
+}
+
+function IconSchaar() {
+  return (
+    <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+      <circle cx="13" cy="35" r="6" stroke="#5b604b" strokeWidth="1.5" fill="none" />
+      <circle cx="13" cy="13" r="6" stroke="#5b604b" strokeWidth="1.5" fill="none" />
+      <line x1="18" y1="30" x2="42" y2="10" stroke="#5b604b" strokeWidth="1.5" strokeLinecap="square" />
+      <line x1="18" y1="18" x2="42" y2="38" stroke="#5b604b" strokeWidth="1.5" strokeLinecap="square" />
+      <line x1="27" y1="22" x2="29" y2="26" stroke="#5b604b" strokeWidth="1.5" strokeLinecap="round" />
+    </svg>
+  );
+}
+
+function IconWater() {
+  return (
+    <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+      <path d="M6 28 Q12 22 18 28 Q24 34 30 28 Q36 22 42 28" stroke="#5b604b" strokeWidth="1.5" strokeLinecap="round" fill="none" />
+      <path d="M6 36 Q12 30 18 36 Q24 42 30 36 Q36 30 42 36" stroke="#5b604b" strokeWidth="1.5" strokeLinecap="round" fill="none" />
+      <path d="M24 6 Q28 12 28 17 Q28 22 24 22 Q20 22 20 17 Q20 12 24 6 Z" stroke="#5b604b" strokeWidth="1.5" fill="none" strokeLinejoin="round" />
+    </svg>
+  );
+}
+
 const diensten = [
   {
+    Icon: IconPotlood,
     h3: "Tuinontwerp",
-    p1: "Een goed tuinontwerp is de basis voor een tuin die jarenlang voldoening geeft. Onze ontwerpers vertalen uw wensen naar een doordacht plan — van eerste schets tot compleet beplantingsplan.",
-    p2: "We houden rekening met de omgeving, het gebruik en uw budget. Zo ontstaat een ontwerp dat niet alleen mooi is, maar ook praktisch en haalbaar.",
+    p: "Een goed tuinontwerp is de basis voor een tuin die jarenlang voldoening geeft. Onze ontwerpers vertalen uw wensen naar een doordacht plan — van eerste schets tot compleet beplantingsplan.",
     cta: "→ Meer over tuinontwerp",
     href: "/tuinontwerp/",
   },
   {
+    Icon: IconSchop,
     h3: "Tuinaanleg",
-    p1: "Of het nu gaat om een compacte stadstuin of een uitgestrekt landschap: onze vakmensen leggen uw tuin aan met zorg en precisie. Wij werken met duurzame materialen en besteden extra aandacht aan een solide basis.",
-    p2: "Het resultaat? Een tuin die er direct prachtig uitziet én op de lange termijn mooi blijft.",
+    p: "Of het nu gaat om een compacte stadstuin of een uitgestrekt landschap: onze vakmensen leggen uw tuin aan met zorg en precisie. Wij werken met duurzame materialen en besteden extra aandacht aan een solide basis.",
     cta: "→ Meer over tuinaanleg",
     href: "/tuinaanleg/",
   },
   {
+    Icon: IconSchaar,
     h3: "Tuinonderhoud",
-    p1: "Een mooie tuin vraagt om regelmatige zorg. Kamsteeg Tuinen biedt zowel eenmalig als periodiek onderhoud. Van snoeien en onkruidbestrijding tot een compleet seizoensplan — wij houden uw tuin in topconditie.",
-    p2: "U geniet van het resultaat, wij nemen het werk uit handen.",
+    p: "Een mooie tuin vraagt om regelmatige zorg. Kamsteeg Tuinen biedt zowel eenmalig als periodiek onderhoud. Van snoeien en onkruidbestrijding tot een compleet seizoensplan — wij houden uw tuin in topconditie.",
     cta: "→ Meer over tuinonderhoud",
     href: "/tuinonderhoud/",
   },
   {
+    Icon: IconWater,
     h3: "(Zwem)vijvers & waterpartijen",
-    p1: "Water brengt rust en leven in uw tuin. Kamsteeg Tuinen is specialist in de aanleg van vijvers, zwemvijvers en waterpartijen. Wij adviseren u over de juiste opzet, afmetingen en techniek — zodat u jarenlang geniet van helder water in een natuurlijke omgeving.",
-    p2: "",
+    p: "Water brengt rust en leven in uw tuin. Kamsteeg Tuinen is specialist in de aanleg van vijvers, zwemvijvers en waterpartijen. Wij adviseren u over de juiste opzet, afmetingen en techniek — zodat u jarenlang geniet van helder water in een natuurlijke omgeving.",
     cta: "→ Meer over (zwem)vijvers en waterpartijen",
     href: "/tuinaanleg/zwemvijvers/",
   },
@@ -55,52 +99,48 @@ export default function Diensten() {
             color: "#3a3a2e",
             lineHeight: 1.7,
             textAlign: "center",
-            maxWidth: "680px",
+            maxWidth: "640px",
             margin: "0 auto 80px",
           }}
         >
           Van een compleet tuinontwerp tot periodiek onderhoud: Kamsteeg Tuinen is uw vaste partner
-          voor elke fase van uw tuin. Hieronder vindt u een overzicht van onze hoofddiensten.
+          voor elke fase van uw tuin.
         </p>
 
         <div
           style={{
             display: "grid",
-            gridTemplateColumns: "repeat(auto-fit, minmax(220px, 1fr))",
-            gap: "56px",
+            gridTemplateColumns: "repeat(4, 1fr)",
+            gap: "48px",
             marginBottom: "64px",
           }}
         >
-          {diensten.map((d) => (
-            <div key={d.h3}>
+          {diensten.map(({ Icon, h3, p, cta, href }) => (
+            <div key={h3} style={{ display: "flex", flexDirection: "column" }}>
+              <div style={{ marginBottom: "28px" }}>
+                <Icon />
+              </div>
               <h3
                 style={{
                   fontWeight: 400,
-                  fontSize: "24px",
+                  fontSize: "20px",
                   color: "#5b604b",
-                  marginBottom: "18px",
-                  paddingBottom: "16px",
+                  marginBottom: "16px",
                   lineHeight: 1.2,
-                  borderBottom: "1px solid #c8c4b4",
                 }}
               >
-                {d.h3}
+                {h3}
               </h3>
-              <p style={{ fontWeight: 400, fontSize: "17px", color: "#3a3a2e", lineHeight: 1.7, marginBottom: "14px" }}>
-                {d.p1}
+              <p style={{ fontWeight: 400, fontSize: "16px", color: "#3a3a2e", lineHeight: 1.7, marginBottom: "24px", flexGrow: 1 }}>
+                {p}
               </p>
-              {d.p2 && (
-                <p style={{ fontWeight: 400, fontSize: "17px", color: "#3a3a2e", lineHeight: 1.7, marginBottom: "20px" }}>
-                  {d.p2}
-                </p>
-              )}
               <a
-                href={d.href}
-                style={{ fontWeight: 400, fontSize: "14px", color: "#7a7b6b", textDecoration: "none" }}
+                href={href}
+                style={{ fontWeight: 400, fontSize: "14px", color: "#7a7b6b", textDecoration: "none", marginTop: "auto" }}
                 onMouseEnter={(e) => ((e.currentTarget as HTMLAnchorElement).style.textDecoration = "underline")}
                 onMouseLeave={(e) => ((e.currentTarget as HTMLAnchorElement).style.textDecoration = "none")}
               >
-                {d.cta}
+                {cta}
               </a>
             </div>
           ))}
