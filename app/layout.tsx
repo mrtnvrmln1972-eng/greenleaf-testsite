@@ -16,7 +16,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="nl" className="h-full">
-      <body className={`${inter.className} min-h-full flex flex-col`}>{children}</body>
+      <body className={`${inter.className} min-h-full flex flex-col`} suppressHydrationWarning>{children}</body>
     </html>
   );
 }
