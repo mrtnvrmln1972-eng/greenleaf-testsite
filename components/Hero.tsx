@@ -37,7 +37,7 @@ export default function Hero() {
       >
         <div
           style={{
-            backgroundColor: "rgba(0,0,0,0.45)",
+            backgroundColor: "rgba(91,96,75,0.65)",
             backdropFilter: "blur(4px)",
             WebkitBackdropFilter: "blur(4px)",
             padding: "48px",
