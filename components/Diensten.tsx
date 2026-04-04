@@ -75,9 +75,17 @@ const diensten = [
   },
 ];
 
+const shimmerDelays = ["0s", "0.6s", "1.2s", "1.8s"];
+
 export default function Diensten() {
   return (
     <section id="diensten" style={{ backgroundColor: "#f2eee2", padding: "120px 0" }}>
+      <style>{`
+        @keyframes shimmer {
+          0%   { background-position: -200% center; }
+          100% { background-position: 200% center; }
+        }
+      `}</style>
       <div style={{ maxWidth: "1200px", margin: "0 auto", padding: "0 40px" }}>
 
         <h2
@@ -116,7 +124,7 @@ export default function Diensten() {
             marginBottom: "64px",
           }}
         >
-          {diensten.map(({ Icon, h3, p, cta, href }) => (
+          {diensten.map(({ Icon, h3, p, cta, href }, idx) => (
             <div key={h3} style={{ display: "flex", flexDirection: "column" }}>
               <div style={{ marginBottom: "28px" }}>
                 <Icon />
@@ -137,9 +145,20 @@ export default function Diensten() {
               </p>
               <a
                 href={href}
-                style={{ fontWeight: 400, fontSize: "14px", color: "#7a7b6b", textDecoration: "none", marginTop: "auto" }}
-                onMouseEnter={(e) => ((e.currentTarget as HTMLAnchorElement).style.textDecoration = "underline")}
-                onMouseLeave={(e) => ((e.currentTarget as HTMLAnchorElement).style.textDecoration = "none")}
+                style={{
+                  fontWeight: 400,
+                  fontSize: "14px",
+                  textDecoration: "none",
+                  marginTop: "auto",
+                  display: "inline-block",
+                  background: "linear-gradient(90deg, #7a7b6b 35%, #b8b4a2 50%, #7a7b6b 65%)",
+                  backgroundSize: "200% auto",
+                  WebkitBackgroundClip: "text",
+                  backgroundClip: "text",
+                  WebkitTextFillColor: "transparent",
+                  animation: `shimmer 2.5s linear infinite`,
+                  animationDelay: shimmerDelays[idx],
+                }}
               >
                 {cta}
               </a>
