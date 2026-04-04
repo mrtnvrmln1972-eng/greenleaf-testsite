@@ -1,3 +1,5 @@
+"use client";
+
 const projecten = [
   {
     foto: "/images/vlug-12.jpg",
