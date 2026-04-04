@@ -1,9 +1,4 @@
 export default function Hero() {
-  const textStyle = {
-    WebkitTextStroke: "0.5px rgba(0,0,0,0.4)",
-    textShadow: "0 1px 6px rgba(0,0,0,0.5)",
-  };
-
   return (
     <section
       style={{
@@ -27,29 +22,34 @@ export default function Hero() {
           objectPosition: "center",
         }}
       />
+      <div
+        aria-hidden="true"
+        style={{
+          position: "absolute",
+          inset: 0,
+          background:
+            "linear-gradient(to top, rgba(0,0,0,0.60) 0%, rgba(0,0,0,0.30) 50%, transparent 80%)",
+        }}
+      />
 
-      {/* Tekstblok rechtsonder */}
       <div
         style={{
           position: "absolute",
           bottom: "60px",
+          left: "60px",
           right: "60px",
           zIndex: 10,
-          width: "50vw",
-          maxWidth: "50vw",
-          textAlign: "right",
         }}
       >
         <h1
           style={{
             fontFamily: "Roboto, system-ui, sans-serif",
             fontWeight: 400,
-            fontSize: "clamp(1.6rem, 4vw, 48px)",
+            fontSize: "clamp(2rem, 6vw, 72px)",
             color: "#ffffff",
             margin: "0 0 16px",
-            lineHeight: 1.15,
+            lineHeight: 1.1,
             letterSpacing: "0.01em",
-            ...textStyle,
           }}
         >
           Kamsteeg Tuinen – Tuinen met een goed gevoel in regio Breda
@@ -59,11 +59,11 @@ export default function Hero() {
           style={{
             fontFamily: "Roboto, system-ui, sans-serif",
             fontWeight: 300,
-            fontSize: "clamp(0.9rem, 1.6vw, 16px)",
+            fontSize: "clamp(0.95rem, 1.8vw, 18px)",
             color: "rgba(255,255,255,0.88)",
             margin: "0 0 8px",
+            maxWidth: "680px",
             lineHeight: 1.7,
-            ...textStyle,
           }}
         >
           Al meer dan 25 jaar creëert Kamsteeg Tuinen buitenruimtes waar u met plezier vertoeft.
@@ -74,16 +74,15 @@ export default function Hero() {
           style={{
             fontFamily: "Roboto, system-ui, sans-serif",
             fontWeight: 300,
-            fontSize: "clamp(0.85rem, 1.3vw, 15px)",
+            fontSize: "clamp(0.9rem, 1.5vw, 16px)",
             color: "rgba(255,255,255,0.75)",
             margin: "0 0 28px",
-            ...textStyle,
           }}
         >
           Ontdek wat wij voor uw tuin kunnen betekenen.
         </p>
 
-        <div style={{ display: "flex", flexWrap: "wrap", gap: "14px", justifyContent: "flex-end" }}>
+        <div style={{ display: "flex", flexWrap: "wrap", gap: "14px" }}>
           <a
             href="#contact"
             style={{
