@@ -58,11 +58,10 @@ export default function Hero() {
           style={{
             fontWeight: 400,
             fontSize: "17px",
-            color: "rgba(255,255,255,0.88)",
+            color: "#ffffff",
             margin: "0 0 10px",
             maxWidth: "680px",
             lineHeight: 1.7,
-            color: "#ffffff",
           }}
         >
           Al meer dan 25 jaar creëert Kamsteeg Tuinen buitenruimtes waar u met plezier vertoeft.
