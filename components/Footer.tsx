@@ -1,13 +1,9 @@
 const navigatie = [
-  "Home",
-  "Tuinontwerp",
-  "Tuinaanleg",
-  "Tuinonderhoud",
+  "Diensten",
+  "Hovenier",
+  "Blog",
   "Over ons",
   "Contact",
-  "Facebook",
-  "LinkedIn",
-  "Instagram",
 ];
 
 const awards = [
@@ -88,10 +84,22 @@ export default function Footer() {
             color: "#5b604b",
             letterSpacing: "0.18em",
             textTransform: "uppercase",
-            marginBottom: "48px",
+            marginBottom: "8px",
           }}
         >
           Kamsteeg Tuinen
+        </p>
+        <p
+          style={{
+            fontFamily: "Roboto, system-ui, sans-serif",
+            fontWeight: 300,
+            fontSize: "14px",
+            color: "#7a7b6b",
+            fontStyle: "italic",
+            marginBottom: "48px",
+          }}
+        >
+          Tuinen met een goed gevoel
         </p>
 
         {/* 3 kolommen */}

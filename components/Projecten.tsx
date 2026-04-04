@@ -17,6 +17,13 @@ const projecten = [
   },
 ];
 
+const inspiratieBullets = [
+  "Kleine tuinen slim inrichten",
+  "Onderhoudsarme tuinen",
+  "Voortuinideeën die opvallen",
+  "Tuinstijlen: modern, landelijk, ecologisch en meer",
+];
+
 export default function Projecten() {
   return (
     <section
@@ -44,10 +51,35 @@ export default function Projecten() {
             textAlign: "center",
             marginBottom: "60px",
             lineHeight: 1.7,
+            maxWidth: "680px",
+            margin: "0 auto 60px",
           }}
         >
-          Benieuwd hoe een tuin van Kamsteeg eruitziet in de praktijk?<br />
-          Bekijk onze gerealiseerde projecten.
+          Benieuwd hoe een tuin van Kamsteeg eruitziet in de praktijk? Bekijk onze gerealiseerde projecten en laat u inspireren voor uw eigen buitenruimte.
+        </p>
+
+        <h3
+          style={{
+            fontFamily: "Roboto, system-ui, sans-serif",
+            fontWeight: 400,
+            fontSize: "22px",
+            color: "#ffffff",
+            marginBottom: "20px",
+          }}
+        >
+          Gerealiseerde tuinen in en rond Breda
+        </h3>
+        <p
+          style={{
+            fontWeight: 300,
+            fontSize: "15px",
+            color: "rgba(255,255,255,0.75)",
+            lineHeight: 1.75,
+            marginBottom: "40px",
+            maxWidth: "720px",
+          }}
+        >
+          Van een moderne stadstuin in het centrum van Breda tot een landelijke tuin in de Baronie: elk project is uniek. In ons portfolio ziet u wat er mogelijk is — en hoe wij de wensen van onze klanten vertalen naar een prachtig eindresultaat.
         </p>
 
         <div
@@ -55,7 +87,7 @@ export default function Projecten() {
             display: "grid",
             gridTemplateColumns: "repeat(3, 1fr)",
             gap: "20px",
-            marginBottom: "52px",
+            marginBottom: "60px",
           }}
         >
           {projecten.map((p) => (
@@ -76,26 +108,53 @@ export default function Projecten() {
                   onMouseLeave={(e) => { (e.currentTarget as HTMLImageElement).style.transform = "scale(1)"; }}
                 />
               </div>
-              <h3
-                style={{
-                  fontFamily: "Roboto, system-ui, sans-serif",
-                  fontWeight: 400,
-                  fontSize: "17px",
-                  color: "#ffffff",
-                  marginTop: "16px",
-                  marginBottom: "8px",
-                }}
-              >
-                {p.titel}
-              </h3>
-              <p style={{ fontWeight: 300, fontSize: "14px", color: "rgba(255,255,255,0.72)", lineHeight: 1.65 }}>
-                {p.tekst}
-              </p>
             </div>
           ))}
         </div>
 
-        <div style={{ textAlign: "center" }}>
+        <h3
+          style={{
+            fontFamily: "Roboto, system-ui, sans-serif",
+            fontWeight: 400,
+            fontSize: "22px",
+            color: "#ffffff",
+            marginBottom: "16px",
+          }}
+        >
+          Laat u inspireren
+        </h3>
+        <p
+          style={{
+            fontWeight: 300,
+            fontSize: "15px",
+            color: "rgba(255,255,255,0.75)",
+            lineHeight: 1.75,
+            marginBottom: "16px",
+          }}
+        >
+          Op zoek naar ideeën voor uw tuin? In onze inspiratiegidsen vindt u tips en voorbeelden voor onder meer:
+        </p>
+        <ul style={{ listStyle: "none", padding: 0, margin: "0 0 52px" }}>
+          {inspiratieBullets.map((b) => (
+            <li
+              key={b}
+              style={{
+                fontWeight: 300,
+                fontSize: "15px",
+                color: "rgba(255,255,255,0.75)",
+                lineHeight: 1.8,
+                paddingLeft: "16px",
+                position: "relative",
+                marginBottom: "6px",
+              }}
+            >
+              <span style={{ position: "absolute", left: 0, color: "rgba(255,255,255,0.5)" }}>–</span>
+              {b}
+            </li>
+          ))}
+        </ul>
+
+        <div style={{ display: "flex", gap: "14px", flexWrap: "wrap" }}>
           <a
             href="#"
             style={{
@@ -113,7 +172,26 @@ export default function Projecten() {
             onMouseEnter={(e) => { (e.currentTarget as HTMLAnchorElement).style.background = "rgba(255,255,255,0.12)"; }}
             onMouseLeave={(e) => { (e.currentTarget as HTMLAnchorElement).style.background = "transparent"; }}
           >
-            Bekijk meer projecten →
+            Bekijk meer projecten
+          </a>
+          <a
+            href="#"
+            style={{
+              display: "inline-block",
+              fontFamily: "Roboto, system-ui, sans-serif",
+              fontWeight: 300,
+              fontSize: "14px",
+              color: "rgba(255,255,255,0.80)",
+              border: "1px solid rgba(255,255,255,0.35)",
+              padding: "12px 36px",
+              textDecoration: "none",
+              letterSpacing: "0.06em",
+              transition: "background 0.2s",
+            }}
+            onMouseEnter={(e) => { (e.currentTarget as HTMLAnchorElement).style.background = "rgba(255,255,255,0.08)"; }}
+            onMouseLeave={(e) => { (e.currentTarget as HTMLAnchorElement).style.background = "transparent"; }}
+          >
+            Meer tuin-inspiratie
           </a>
         </div>
       </div>

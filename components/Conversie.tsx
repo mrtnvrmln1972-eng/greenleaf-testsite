@@ -1,14 +1,14 @@
 "use client";
 const stappen = [
-  "Contact opnemen",
-  "Kennismakingsgesprek",
-  "Voorstel op maat",
+  "U neemt contact op via het formulier, telefoon of e-mail.",
+  "Wij plannen een vrijblijvend kennismakingsgesprek bij u thuis.",
+  "U ontvangt een helder voorstel, afgestemd op uw wensen en budget.",
 ];
 
 const knoppen = [
   { label: "Vraag offerte aan", href: "#" },
-  { label: "Bel: 076 5421230", href: "tel:0765421230" },
-  { label: "Mail: info@kamsteegtuinen.nl", href: "mailto:info@kamsteegtuinen.nl" },
+  { label: "Bel direct: 076 5421230", href: "tel:0765421230" },
+  { label: "Mail ons: info@kamsteegtuinen.nl", href: "mailto:info@kamsteegtuinen.nl" },
 ];
 
 export default function Conversie() {
@@ -26,6 +26,19 @@ export default function Conversie() {
         >
           Klaar voor een tuin met een goed gevoel?
         </h2>
+
+        <h3
+          style={{
+            fontFamily: "Roboto, system-ui, sans-serif",
+            fontWeight: 400,
+            fontSize: "22px",
+            color: "rgba(255,255,255,0.90)",
+            marginBottom: "20px",
+          }}
+        >
+          Vraag een vrijblijvende offerte aan
+        </h3>
+
         <p
           style={{
             fontWeight: 300,
@@ -35,23 +48,36 @@ export default function Conversie() {
             lineHeight: 1.7,
           }}
         >
-          Neem vrijblijvend contact met ons op.
+          Benieuwd wat Kamsteeg Tuinen voor u kan betekenen? Neem vrijblijvend contact met ons op. Wij luisteren graag naar uw wensen en maken een voorstel op maat.
         </p>
 
-        {/* Stappen */}
+        {/* Zo werkt het */}
+        <p
+          style={{
+            fontWeight: 400,
+            fontSize: "14px",
+            color: "rgba(255,255,255,0.70)",
+            letterSpacing: "0.08em",
+            textTransform: "uppercase",
+            marginBottom: "32px",
+          }}
+        >
+          Zo werkt het:
+        </p>
+
         <div
           style={{
             display: "flex",
             justifyContent: "center",
-            alignItems: "center",
+            alignItems: "flex-start",
             gap: "0",
             marginBottom: "56px",
             flexWrap: "wrap",
           }}
         >
           {stappen.map((s, i) => (
-            <div key={s} style={{ display: "flex", alignItems: "center" }}>
-              <div style={{ textAlign: "center", padding: "0 24px" }}>
+            <div key={s} style={{ display: "flex", alignItems: "flex-start" }}>
+              <div style={{ textAlign: "center", padding: "0 24px", maxWidth: "200px" }}>
                 <div
                   style={{
                     width: "40px",
@@ -69,7 +95,7 @@ export default function Conversie() {
                 >
                   {i + 1}
                 </div>
-                <span style={{ fontWeight: 300, fontSize: "14px", color: "rgba(255,255,255,0.85)", letterSpacing: "0.02em" }}>
+                <span style={{ fontWeight: 300, fontSize: "14px", color: "rgba(255,255,255,0.85)", letterSpacing: "0.02em", lineHeight: 1.6, display: "block" }}>
                   {s}
                 </span>
               </div>
@@ -80,6 +106,7 @@ export default function Conversie() {
                     height: "1px",
                     backgroundColor: "rgba(255,255,255,0.3)",
                     flexShrink: 0,
+                    marginTop: "20px",
                   }}
                 />
               )}

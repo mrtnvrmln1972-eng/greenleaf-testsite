@@ -1,9 +1,9 @@
 "use client";
 const punten = [
-  "Één aanspreekpunt voor ontwerp, aanleg én onderhoud",
-  "Ruim 25 jaar ervaring als hovenier in regio Breda",
-  "Specialist in (zwem)vijvers en waterpartijen",
-  "Voor particulieren, bedrijven en overheden",
+  "Eén aanspreekpunt voor tuinontwerp, tuinaanleg én tuinonderhoud.",
+  "Ruim 25 jaar ervaring als hovenier in regio Breda en omstreken.",
+  "Specialist in (zwem)vijvers en complete buitenruimtes.",
+  "Voor particulieren, bedrijven en overheden — elk project krijgt dezelfde toewijding.",
 ];
 
 export default function Waarom() {
@@ -16,11 +16,22 @@ export default function Waarom() {
             fontWeight: 400,
             fontSize: "clamp(2rem, 5vw, 60px)",
             color: "#7a7b6b",
-            marginBottom: "48px",
+            marginBottom: "24px",
           }}
         >
           Waarom Kamsteeg Tuinen?
         </h2>
+        <p
+          style={{
+            fontWeight: 300,
+            fontSize: "16px",
+            color: "#555",
+            lineHeight: 1.8,
+            marginBottom: "40px",
+          }}
+        >
+          Er zijn veel hoveniers. Maar er is een reden waarom klanten in Breda en omgeving al ruim 25 jaar voor Kamsteeg kiezen:
+        </p>
 
         <ul style={{ listStyle: "none", padding: 0, margin: 0, marginBottom: "48px" }}>
           {punten.map((p, i) => (
