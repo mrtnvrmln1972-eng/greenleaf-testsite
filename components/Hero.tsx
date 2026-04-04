@@ -12,7 +12,6 @@ export default function Hero() {
       <img
         src="/images/kamsteeg/hero/Toptuinen-Luxe-villatuin-in-Bilthoven-08.jpg"
         alt="Luxe villatuin gerealiseerd door Kamsteeg Tuinen"
-        aria-hidden="true"
         style={{
           position: "absolute",
           inset: 0,
@@ -22,96 +21,100 @@ export default function Hero() {
           objectPosition: "center",
         }}
       />
-      <div
-        aria-hidden="true"
-        style={{
-          position: "absolute",
-          inset: 0,
-          background:
-            "linear-gradient(to top, rgba(0,0,0,0.65) 0%, rgba(0,0,0,0.25) 50%, transparent 80%)",
-        }}
-      />
 
+      {/* Overlay blok rechts, verticaal gecentreerd */}
       <div
         style={{
           position: "absolute",
-          bottom: "80px",
-          left: "60px",
-          right: "60px",
+          top: 0,
+          right: 0,
+          bottom: 0,
+          width: "40%",
+          display: "flex",
+          alignItems: "center",
           zIndex: 10,
         }}
       >
-        <h1
+        <div
           style={{
-            fontWeight: 400,
-            fontSize: "90px",
-            color: "#ffffff",
-            margin: "0 0 24px",
-            lineHeight: 1.2,
-            letterSpacing: "-0.01em",
+            backgroundColor: "rgba(0,0,0,0.45)",
+            backdropFilter: "blur(4px)",
+            WebkitBackdropFilter: "blur(4px)",
+            padding: "48px",
+            width: "100%",
           }}
         >
-          Kamsteeg Tuinen – Tuinen met een goed gevoel in regio Breda
-        </h1>
-
-        <p
-          style={{
-            fontWeight: 400,
-            fontSize: "17px",
-            color: "#ffffff",
-            margin: "0 0 10px",
-            maxWidth: "680px",
-            lineHeight: 1.7,
-          }}
-        >
-          Al meer dan 25 jaar creëert Kamsteeg Tuinen buitenruimtes waar u met plezier vertoeft.
-          Van tuinontwerp en tuinaanleg tot volledig tuinonderhoud — voor particulieren, bedrijven
-          en overheden in Breda en omgeving.
-        </p>
-        <p
-          style={{
-            fontWeight: 400,
-            fontSize: "17px",
-            color: "rgba(255,255,255,0.80)",
-            margin: "0 0 40px",
-            lineHeight: 1.7,
-          }}
-        >
-          Ontdek wat wij voor uw tuin kunnen betekenen.
-        </p>
-
-        <div style={{ display: "flex", flexWrap: "wrap", gap: "14px" }}>
-          <a
-            href="#contact"
+          <h1
             style={{
-              display: "inline-block",
               fontWeight: 400,
-              fontSize: "14px",
+              fontSize: "clamp(2rem, 3.5vw, 54px)",
               color: "#ffffff",
-              backgroundColor: "transparent",
-              border: "1px solid #ffffff",
-              padding: "12px 28px",
-              textDecoration: "none",
-              letterSpacing: "0.04em",
+              margin: "0 0 24px",
+              lineHeight: 1.2,
+              letterSpacing: "-0.01em",
             }}
           >
-            Vraag vrijblijvend advies aan
-          </a>
-          <a
-            href="#projecten"
+            Kamsteeg Tuinen – Tuinen met een goed gevoel
+          </h1>
+
+          <p
             style={{
-              display: "inline-block",
               fontWeight: 400,
-              fontSize: "14px",
+              fontSize: "17px",
               color: "#ffffff",
-              border: "1px solid rgba(255,255,255,0.5)",
-              padding: "12px 28px",
-              textDecoration: "none",
-              letterSpacing: "0.04em",
+              margin: "0 0 10px",
+              lineHeight: 1.7,
             }}
           >
-            Bekijk gerealiseerde tuinen
-          </a>
+            Al meer dan 25 jaar creëert Kamsteeg Tuinen buitenruimtes waar u met plezier vertoeft.
+            Van tuinontwerp en tuinaanleg tot volledig tuinonderhoud — voor particulieren, bedrijven
+            en overheden in Breda en omgeving.
+          </p>
+          <p
+            style={{
+              fontWeight: 400,
+              fontSize: "17px",
+              color: "rgba(255,255,255,0.80)",
+              margin: "0 0 40px",
+              lineHeight: 1.7,
+            }}
+          >
+            Ontdek wat wij voor uw tuin kunnen betekenen.
+          </p>
+
+          <div style={{ display: "flex", flexWrap: "wrap", gap: "14px" }}>
+            <a
+              href="#contact"
+              style={{
+                display: "inline-block",
+                fontWeight: 400,
+                fontSize: "14px",
+                color: "#ffffff",
+                backgroundColor: "transparent",
+                border: "1px solid #ffffff",
+                padding: "12px 28px",
+                textDecoration: "none",
+                letterSpacing: "0.04em",
+              }}
+            >
+              Vraag vrijblijvend advies aan
+            </a>
+            <a
+              href="#projecten"
+              style={{
+                display: "inline-block",
+                fontWeight: 400,
+                fontSize: "14px",
+                color: "#ffffff",
+                border: "1px solid rgba(255,255,255,0.5)",
+                padding: "12px 28px",
+                textDecoration: "none",
+                letterSpacing: "0.04em",
+              }}
+            >
+              Bekijk gerealiseerde tuinen
+            </a>
+          </div>
         </div>
       </div>
     </section>
