@@ -1,86 +1,44 @@
 "use client";
 
-import { useEffect, useRef, useState } from "react";
-
-const GAP = 16;
-const VISIBLE = 3;
+import { useState } from "react";
 
 const fotos = [
-  { src: "/images/DSC_4243-768x476.jpg",                                            alt: "Tuin aangelegd door Kamsteeg Tuinen" },
-  { src: "/images/IMG_9526-scaled.jpg",                                             alt: "Tuinproject Kamsteeg Tuinen" },
-  { src: "/images/IMG_010904-024-1024x768.webp",                                    alt: "Tuinaanleg Kamsteeg Tuinen" },
-  { src: "/images/tussenetalage.jpg",                                                alt: "Tuinontwerp Kamsteeg Tuinen" },
-  { src: "/images/Overflowing-flower-beds-lining-winding-brick-paths-0.jpeg.webp",  alt: "Borders en paden Kamsteeg Tuinen" },
+  { src: "/images/DSC_4243-768x476.jpg",                                           alt: "Tuin aangelegd door Kamsteeg Tuinen" },
+  { src: "/images/IMG_9526-scaled.jpg",                                            alt: "Tuinproject Kamsteeg Tuinen" },
+  { src: "/images/IMG_010904-024-1024x768.webp",                                   alt: "Tuinaanleg Kamsteeg Tuinen" },
+  { src: "/images/tussenetalage.jpg",                                               alt: "Tuinontwerp Kamsteeg Tuinen" },
+  { src: "/images/Overflowing-flower-beds-lining-winding-brick-paths-0.jpeg.webp", alt: "Borders en paden Kamsteeg Tuinen" },
 ];
 
 const N = fotos.length;
-const slides = [...fotos, ...fotos, ...fotos]; // 15 slides voor oneindige loop
-const START = N; // begin in de middelste kopie (index 5)
 
 export default function Galerij() {
-  const [index, setIndex] = useState(START);
-  const [animating, setAnimating] = useState(true);
-  const [photoWidth, setPhotoWidth] = useState(0);
-  const containerRef = useRef<HTMLDivElement>(null);
-
-  useEffect(() => {
-    function measure() {
-      if (containerRef.current) {
-        const w = containerRef.current.offsetWidth;
-        setPhotoWidth((w - (VISIBLE - 1) * GAP) / VISIBLE);
-      }
-    }
-    measure();
-    window.addEventListener("resize", measure);
-    return () => window.removeEventListener("resize", measure);
-  }, []);
+  const [index, setIndex] = useState(0);
 
   function prev() {
-    setAnimating(true);
-    setIndex((i) => i - 1);
+    setIndex((i) => (i - 1 + N) % N);
   }
 
   function next() {
-    setAnimating(true);
-    setIndex((i) => i + 1);
+    setIndex((i) => (i + 1) % N);
   }
 
-  function handleTransitionEnd() {
-    if (index < N) {
-      setAnimating(false);
-      setIndex(index + N);
-    } else if (index >= 2 * N) {
-      setAnimating(false);
-      setIndex(index - N);
-    }
-  }
-
-  useEffect(() => {
-    if (!animating) {
-      // Zet transition na 1 frame terug aan
-      const id = requestAnimationFrame(() =>
-        requestAnimationFrame(() => setAnimating(true))
-      );
-      return () => cancelAnimationFrame(id);
-    }
-  }, [animating]);
-
-  const translateX = photoWidth > 0 ? -(index * (photoWidth + GAP)) : 0;
+  const zichtbaar = [
+    fotos[index % N],
+    fotos[(index + 1) % N],
+    fotos[(index + 2) % N],
+  ];
 
   return (
     <section style={{ backgroundColor: "#5b604b", padding: "80px 0" }}>
       <div
         style={{
-          maxWidth: "1200px",
+          maxWidth: "1300px",
           margin: "0 auto",
           padding: "0 40px",
-        }}
-      >
-      <div
-        style={{
-          position: "relative",
           display: "flex",
           alignItems: "center",
+          gap: "20px",
         }}
       >
         {/* Pijl links */}
@@ -92,10 +50,9 @@ export default function Galerij() {
             background: "none",
             border: "none",
             cursor: "pointer",
-            padding: "0 16px",
+            padding: "0",
             color: "#ffffff",
             lineHeight: 0,
-            zIndex: 2,
           }}
           onMouseEnter={(e) => { (e.currentTarget as HTMLButtonElement).style.color = "rgba(255,255,255,0.6)"; }}
           onMouseLeave={(e) => { (e.currentTarget as HTMLButtonElement).style.color = "#ffffff"; }}
@@ -105,46 +62,29 @@ export default function Galerij() {
           </svg>
         </button>
 
-        {/* Slider viewport */}
+        {/* Foto's grid */}
         <div
-          ref={containerRef}
-          style={{ flex: 1, overflow: "hidden" }}
+          style={{
+            flex: 1,
+            display: "grid",
+            gridTemplateColumns: "1fr 1fr 1fr",
+            gap: "16px",
+          }}
         >
-          <div
-            style={{
-              display: "flex",
-              gap: `${GAP}px`,
-              transform: `translateX(${translateX}px)`,
-              transition: animating ? "transform 0.4s ease" : "none",
-            }}
-            onTransitionEnd={handleTransitionEnd}
-          >
-            {slides.map((foto, i) => (
-              <div
-                key={i}
+          {zichtbaar.map((foto, i) => (
+            <div key={i} style={{ overflow: "hidden", lineHeight: 0 }}>
+              <img
+                src={foto.src}
+                alt={foto.alt}
                 style={{
-                  flexShrink: 0,
-                  width: photoWidth > 0 ? `${photoWidth}px` : "calc(33.333% - 8px)",
-                  height: "320px",
-                  overflow: "hidden",
-                  lineHeight: 0,
-                  fontSize: 0,
+                  width: "100%",
+                  height: "300px",
+                  objectFit: "cover",
+                  display: "block",
                 }}
-              >
-                <img
-                  src={foto.src}
-                  alt={foto.alt}
-                  style={{
-                    width: "100%",
-                    height: "100%",
-                    objectFit: "cover",
-                    display: "block",
-                    verticalAlign: "bottom",
-                  }}
-                />
-              </div>
-            ))}
-          </div>
+              />
+            </div>
+          ))}
         </div>
 
         {/* Pijl rechts */}
@@ -156,10 +96,9 @@ export default function Galerij() {
             background: "none",
             border: "none",
             cursor: "pointer",
-            padding: "0 16px",
+            padding: "0",
             color: "#ffffff",
             lineHeight: 0,
-            zIndex: 2,
           }}
           onMouseEnter={(e) => { (e.currentTarget as HTMLButtonElement).style.color = "rgba(255,255,255,0.6)"; }}
           onMouseLeave={(e) => { (e.currentTarget as HTMLButtonElement).style.color = "#ffffff"; }}
@@ -168,7 +107,6 @@ export default function Galerij() {
             <polyline points="12,6 22,16 12,26" stroke="currentColor" strokeWidth="1.5" strokeLinecap="square" strokeLinejoin="miter" fill="none" />
           </svg>
         </button>
-      </div>
       </div>
     </section>
   );
