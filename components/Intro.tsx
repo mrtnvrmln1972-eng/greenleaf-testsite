@@ -61,7 +61,7 @@ export default function Intro() {
               Of u nu wilt genieten van een zonnige zithoek, een groene oase of een robuuste
               buitenruimte voor uw bedrijf — wij zorgen dat het klopt. Tot in detail.
             </p>
-            <div style={{ marginTop: "auto", textAlign: "right" }}>
+            <div style={{ marginTop: "auto" }}>
               <a href="/diensten/particulieren" style={btnStyle}>
                 Bekijk onze diensten voor particulieren
               </a>
@@ -100,7 +100,7 @@ export default function Intro() {
                 </li>
               ))}
             </ul>
-            <div style={{ marginTop: "auto", textAlign: "right" }}>
+            <div style={{ marginTop: "auto" }}>
               <a href="/diensten/bedrijven" style={btnStyle}>
                 Bekijk onze diensten voor bedrijven
               </a>
