@@ -83,7 +83,7 @@ export default function Projecten() {
                 <p style={{
                   fontFamily: '"Roboto", system-ui, sans-serif',
                   fontWeight: 500,
-                  fontSize: "16px",
+                  fontSize: "22px",
                   color: "#ffffff",
                   lineHeight: 1.3,
                   marginBottom: "10px",
