@@ -30,10 +30,10 @@ export default function Galerij() {
   ];
 
   return (
-    <section style={{ backgroundColor: "#5b604b", padding: "80px 0" }}>
+    <section style={{ backgroundColor: "#5b604b", padding: "100px 0" }}>
       <div
         style={{
-          maxWidth: "1300px",
+          maxWidth: "1400px",
           margin: "0 auto",
           padding: "0 40px",
           display: "flex",
@@ -78,7 +78,7 @@ export default function Galerij() {
                 alt={foto.alt}
                 style={{
                   width: "100%",
-                  height: "300px",
+                  height: "420px",
                   objectFit: "cover",
                   display: "block",
                 }}
