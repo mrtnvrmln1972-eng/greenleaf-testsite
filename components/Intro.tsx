@@ -1,7 +1,7 @@
 export default function Intro() {
   return (
     <section style={{ backgroundColor: "#f2eee2", padding: "120px 0" }}>
-      <div style={{ maxWidth: "960px", margin: "0 auto", padding: "0 40px" }}>
+      <div style={{ maxWidth: "900px", margin: "0 auto", padding: "0 40px" }}>
 
         <h2
           style={{
@@ -97,12 +97,42 @@ export default function Intro() {
                 </li>
               ))}
             </ul>
-            <p style={{ fontWeight: 400, fontSize: "14px", color: "#7a7b6b" }}>
-              <a href="#" style={{ color: "#7a7b6b" }}>→ Bekijk onze diensten voor particulieren</a>
-              {"  |  "}
-              <a href="#" style={{ color: "#7a7b6b" }}>→ Bekijk onze diensten voor bedrijven</a>
-            </p>
           </div>
+        </div>
+
+        <div style={{ display: "flex", flexWrap: "wrap", gap: "16px", marginTop: "48px" }}>
+          <a
+            href="/diensten/particulieren"
+            style={{
+              display: "inline-block",
+              fontFamily: '"Roboto", system-ui, sans-serif',
+              fontWeight: 400,
+              fontSize: "16px",
+              color: "#5b604b",
+              border: "1px solid #5b604b",
+              padding: "12px 32px",
+              textDecoration: "none",
+              background: "transparent",
+            }}
+          >
+            Bekijk onze diensten voor particulieren
+          </a>
+          <a
+            href="/diensten/bedrijven"
+            style={{
+              display: "inline-block",
+              fontFamily: '"Roboto", system-ui, sans-serif',
+              fontWeight: 400,
+              fontSize: "16px",
+              color: "#5b604b",
+              border: "1px solid #5b604b",
+              padding: "12px 32px",
+              textDecoration: "none",
+              background: "transparent",
+            }}
+          >
+            Bekijk onze diensten voor bedrijven
+          </a>
         </div>
 
       </div>
