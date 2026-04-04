@@ -10,10 +10,9 @@ import Services from "@/components/Services";
 import ContactCTA from "@/components/ContactCTA";
 import Footer from "@/components/Footer";
 
-export const revalidate = 60; // ISR: herlaad content elke 60 seconden
+export const revalidate = 60;
 
 export default async function Home() {
-  // Fetch alle pagina's parallel
   const [homePage, servicesPage, contactPage] = await Promise.all([
     fetchPage("home"),
     fetchPage("services"),
@@ -21,8 +20,18 @@ export default async function Home() {
   ]);
 
   const heroData = homePage ? parseHeroData(homePage.content) : undefined;
-  const diensten = servicesPage ? parseServicesData(servicesPage.content) : undefined;
-  const contactData = contactPage ? parseContactData(contactPage.content) : undefined;
+
+  // Services page is leeg — val terug op homepage content voor diensten
+  const servicesContent = servicesPage?.content?.trim()
+    ? servicesPage.content
+    : homePage?.content ?? "";
+  const diensten = parseServicesData(servicesContent);
+
+  // Contact page is leeg — val terug op homepage content of defaults
+  const contactContent = contactPage?.content?.trim()
+    ? contactPage.content
+    : homePage?.content ?? "";
+  const contactData = parseContactData(contactContent);
 
   return (
     <main className="flex flex-col min-h-screen">
