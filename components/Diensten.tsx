@@ -68,7 +68,7 @@ const diensten = [
   },
   {
     Icon: IconWater,
-    h3: "(Zwem)vijvers & waterpartijen",
+    h3: "Vijvers & zwemvijvers",
     p: "Water brengt rust en leven in uw tuin. Kamsteeg Tuinen is specialist in de aanleg van vijvers en zwemvijvers, afgestemd op de juiste opzet, afmetingen en techniek.",
     cta: "→ Meer over (zwem)vijvers",
     href: "/tuinaanleg/zwemvijvers/",
