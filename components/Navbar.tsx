@@ -29,7 +29,7 @@ export default function Navbar() {
         left: 0,
         right: 0,
         zIndex: 100,
-        backgroundColor: "rgba(0,0,0,0.5)",
+        backgroundColor: "rgba(91,96,75,0.65)",
         backdropFilter: "blur(8px)",
         WebkitBackdropFilter: "blur(8px)",
         transition: "background-color 0.3s",
