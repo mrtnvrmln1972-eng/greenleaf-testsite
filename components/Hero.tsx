@@ -1,7 +1,18 @@
-export default function Hero() {
+import type { HeroData } from "@/lib/wordpress";
+
+interface HeroProps {
+  data?: HeroData;
+}
+
+export default function Hero({ data }: HeroProps) {
+  const heading = data?.heading ?? "Uw tuin, onze passie";
+  const subheading =
+    data?.subheading ?? "Van ontwerp tot onderhoud – GreenLeaf transformeert uw buitenruimte in een groene oase.";
+  const ctaText = data?.ctaText ?? "Gratis offerte aanvragen";
+
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
-      {/* Background gradient (simulates a lush garden photo) */}
+      {/* Background */}
       <div
         className="absolute inset-0 bg-gradient-to-br from-green-900 via-green-700 to-emerald-500"
         style={{
@@ -10,7 +21,6 @@ export default function Hero() {
           backgroundPosition: "center",
         }}
       />
-      {/* Dark overlay */}
       <div className="absolute inset-0 bg-black/45" />
 
       {/* Decorative blobs */}
@@ -19,19 +29,24 @@ export default function Hero() {
 
       {/* Content */}
       <div className="relative z-10 max-w-4xl mx-auto px-6 text-center">
-        {/* Badge */}
         <div className="inline-flex items-center gap-2 bg-white/15 backdrop-blur-sm text-white text-sm font-medium px-4 py-1.5 rounded-full mb-6 border border-white/20">
           <span className="w-2 h-2 bg-green-400 rounded-full animate-pulse" />
           Meer dan 15 jaar ervaring
         </div>
 
         <h1 className="text-5xl md:text-7xl font-extrabold text-white leading-tight mb-6 tracking-tight">
-          Uw tuin,{" "}
-          <span className="text-green-400">onze passie</span>
+          {heading.includes("onze passie") ? (
+            <>
+              Uw tuin,{" "}
+              <span className="text-green-400">onze passie</span>
+            </>
+          ) : (
+            <span>{heading}</span>
+          )}
         </h1>
 
         <p className="text-lg md:text-xl text-gray-200 max-w-2xl mx-auto mb-10 leading-relaxed">
-          Van ontwerp tot onderhoud – GreenLeaf transformeert uw buitenruimte in een groene oase. Professioneel, betrouwbaar en duurzaam.
+          {subheading}
         </p>
 
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -39,7 +54,7 @@ export default function Hero() {
             href="#contact"
             className="bg-green-500 hover:bg-green-400 text-white font-bold px-8 py-4 rounded-full text-lg transition-all shadow-lg hover:shadow-green-500/40 hover:-translate-y-0.5"
           >
-            Gratis offerte aanvragen
+            {ctaText}
           </a>
           <a
             href="#diensten"
