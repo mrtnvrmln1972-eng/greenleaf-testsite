@@ -5,11 +5,18 @@ const WP_API = "https://pingwin-development.nl/wp-json/wp/v2";
 // h2's that are page-structure headings, not service names
 const SKIP_HEADINGS = ["About Us", "Get Growing", "Happy clients", "Our Spot", "Contact"];
 
+export interface AcfHeroFields {
+  hero_titel?: string;
+  hero_subtitel?: string;
+  hero_knoptekst?: string;
+}
+
 export interface WpPage {
   id: number;
   slug: string;
   title: string;
   content: string;
+  acf: AcfHeroFields;
 }
 
 export interface HeroData {
@@ -34,9 +41,10 @@ export interface ContactData {
 
 export async function fetchPage(slug: string): Promise<WpPage | null> {
   try {
-    const res = await fetch(`${WP_API}/pages?slug=${slug}&_fields=id,slug,title,content`, {
-      next: { revalidate: 60 },
-    });
+    const res = await fetch(
+      `${WP_API}/pages?slug=${slug}&acf_format=standard&_fields=id,slug,title,content,acf`,
+      { next: { revalidate: 60 } }
+    );
     if (!res.ok) return null;
     const pages = await res.json();
     if (!pages.length) return null;
@@ -46,6 +54,7 @@ export async function fetchPage(slug: string): Promise<WpPage | null> {
       slug: page.slug,
       title: page.title.rendered,
       content: page.content.rendered,
+      acf: page.acf ?? {},
     };
   } catch {
     return null;
@@ -60,22 +69,28 @@ function cleanText(raw: string): string {
 
 // ─── Parsers ─────────────────────────────────────────────────────────────────
 
-export function parseHeroData(html: string): HeroData {
+export function parseHeroData(html: string, acf: AcfHeroFields = {}): HeroData {
+  // ACF fields krijgen prioriteit; val terug op HTML-parser als leeg
+  if (acf.hero_titel || acf.hero_subtitel || acf.hero_knoptekst) {
+    return {
+      heading: acf.hero_titel?.trim() || "Uw tuin, onze passie",
+      subheading: acf.hero_subtitel?.trim() || "Professionele tuinspecialisten voor ontwerp, onderhoud en bestrating.",
+      ctaText: acf.hero_knoptekst?.trim() || "Gratis offerte aanvragen",
+    };
+  }
+
+  // Fallback: parse uit blokeditor HTML
   const root = parse(html);
 
-  // heading: first <h1>
   const heading = cleanText(root.querySelector("h1")?.innerText ?? "");
 
-  // subheading: text in first <p>, stripping any nested <a> and <img> text
   const firstP = root.querySelector("p");
   let subheading = "";
   if (firstP) {
-    // Remove link and image nodes to get only the surrounding text
     firstP.querySelectorAll("a, img").forEach((n) => n.remove());
     subheading = cleanText(firstP.innerText);
   }
 
-  // CTA: first <a> text anywhere on the page (re-parse since we mutated above)
   const rootFresh = parse(html);
   const ctaText = cleanText(rootFresh.querySelector("a")?.innerText ?? "");
 
