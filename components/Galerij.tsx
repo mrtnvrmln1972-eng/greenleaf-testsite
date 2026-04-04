@@ -68,13 +68,19 @@ export default function Galerij() {
   const translateX = photoWidth > 0 ? -(index * (photoWidth + GAP)) : 0;
 
   return (
-    <section style={{ backgroundColor: "#ffffff", padding: "0", overflow: "hidden" }}>
+    <section style={{ backgroundColor: "transparent", padding: "40px 0" }}>
+      <div
+        style={{
+          maxWidth: "900px",
+          margin: "0 auto",
+          padding: "0 40px",
+        }}
+      >
       <div
         style={{
           position: "relative",
           display: "flex",
           alignItems: "center",
-          gap: "0",
         }}
       >
         {/* Pijl links */}
@@ -162,6 +168,7 @@ export default function Galerij() {
             <polyline points="12,6 22,16 12,26" stroke="currentColor" strokeWidth="1.5" strokeLinecap="square" strokeLinejoin="miter" fill="none" />
           </svg>
         </button>
+      </div>
       </div>
     </section>
   );
