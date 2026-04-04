@@ -41,7 +41,7 @@ export default function Hero() {
           style={{
             position: "absolute",
             inset: "-28px -32px",
-            background: "rgba(0,0,0,0.55)",
+            background: "rgba(0,0,0,0.20)",
             backdropFilter: "blur(6px)",
             WebkitBackdropFilter: "blur(6px)",
           }}
