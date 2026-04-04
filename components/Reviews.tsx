@@ -148,7 +148,7 @@ export default function Reviews() {
           }}>
             Wij zijn erkend dealer voor
           </p>
-          <div style={{ display: "flex", justifyContent: "center", alignItems: "center", gap: "0" }}>
+          <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", gap: "0" }}>
             {[
               {
                 label: "KOKOSYSTEMS",
