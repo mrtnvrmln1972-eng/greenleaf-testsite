@@ -1,39 +1,21 @@
 "use client";
+
 const fotos = [
-  {
-    src: "https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=600&q=85",
-    alt: "Buitenzithoek met loungebank – tuinaanleg Breda",
-  },
-  {
-    src: "https://images.unsplash.com/photo-1416879595882-3373a0480b5b?w=600&q=85",
-    alt: "Solitaire boom formele tuin – tuinontwerp",
-  },
-  {
-    src: "https://images.unsplash.com/photo-1558618047-3c8c76ca7d72?w=600&q=85",
-    alt: "Landgoed met bestrating – hovenier Breda",
-  },
-  {
-    src: "https://images.unsplash.com/photo-1544551763-46a013bb70d5?w=600&q=85",
-    alt: "Zwemvijver met terras – zwemvijver specialist",
-  },
-  {
-    src: "https://images.unsplash.com/photo-1585320806297-9af5b2e2c98d?w=600&q=85",
-    alt: "Moderne tuin – tuinonderhoud Breda",
-  },
+  { src: "/images/DSC_4243-768x476.jpg",                                              alt: "Tuin aangelegd door Kamsteeg Tuinen" },
+  { src: "/images/IMG_9526-scaled.jpg",                                               alt: "Tuinproject Kamsteeg Tuinen" },
+  { src: "/images/IMG_010904-024-1024x768.webp",                                      alt: "Tuinaanleg Kamsteeg Tuinen" },
+  { src: "/images/tussenetalage.jpg",                                                  alt: "Tuinontwerp Kamsteeg Tuinen" },
+  { src: "/images/Overflowing-flower-beds-lining-winding-brick-paths-0.jpeg.webp",    alt: "Borders en paden Kamsteeg Tuinen" },
 ];
 
 export default function Galerij() {
   return (
-    <section style={{ backgroundColor: "#ffffff", padding: "80px 0" }}>
-      {/* 5 gelijke kolommen, kleine gap, geen border-radius — exact als referentie */}
+    <section style={{ backgroundColor: "#ffffff", padding: 0 }}>
       <div
         style={{
           display: "grid",
           gridTemplateColumns: "repeat(5, 1fr)",
-          gap: "6px",
-          maxWidth: "1400px",
-          margin: "0 auto",
-          padding: "0 40px",
+          gap: "4px",
         }}
       >
         {fotos.map((foto) => (
@@ -41,7 +23,9 @@ export default function Galerij() {
             key={foto.src}
             style={{
               overflow: "hidden",
-              aspectRatio: "3 / 4",
+              height: "250px",
+              lineHeight: 0,
+              fontSize: 0,
             }}
           >
             <img
@@ -52,15 +36,11 @@ export default function Galerij() {
                 height: "100%",
                 objectFit: "cover",
                 display: "block",
-                borderRadius: 0,
+                verticalAlign: "bottom",
                 transition: "transform 0.6s ease",
               }}
-              onMouseEnter={(e) => {
-                (e.currentTarget as HTMLImageElement).style.transform = "scale(1.04)";
-              }}
-              onMouseLeave={(e) => {
-                (e.currentTarget as HTMLImageElement).style.transform = "scale(1)";
-              }}
+              onMouseEnter={(e) => { (e.currentTarget as HTMLImageElement).style.transform = "scale(1.04)"; }}
+              onMouseLeave={(e) => { (e.currentTarget as HTMLImageElement).style.transform = "scale(1)"; }}
             />
           </div>
         ))}
