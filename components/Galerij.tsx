@@ -68,10 +68,10 @@ export default function Galerij() {
   const translateX = photoWidth > 0 ? -(index * (photoWidth + GAP)) : 0;
 
   return (
-    <section style={{ backgroundColor: "transparent", padding: "40px 0" }}>
+    <section style={{ backgroundColor: "#5b604b", padding: "60px 0" }}>
       <div
         style={{
-          maxWidth: "900px",
+          maxWidth: "1100px",
           margin: "0 auto",
           padding: "0 40px",
         }}
@@ -93,12 +93,12 @@ export default function Galerij() {
             border: "none",
             cursor: "pointer",
             padding: "0 16px",
-            color: "#5b604b",
+            color: "#ffffff",
             lineHeight: 0,
             zIndex: 2,
           }}
-          onMouseEnter={(e) => { (e.currentTarget as HTMLButtonElement).style.color = "#3d4232"; }}
-          onMouseLeave={(e) => { (e.currentTarget as HTMLButtonElement).style.color = "#5b604b"; }}
+          onMouseEnter={(e) => { (e.currentTarget as HTMLButtonElement).style.color = "rgba(255,255,255,0.6)"; }}
+          onMouseLeave={(e) => { (e.currentTarget as HTMLButtonElement).style.color = "#ffffff"; }}
         >
           <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
             <polyline points="20,6 10,16 20,26" stroke="currentColor" strokeWidth="1.5" strokeLinecap="square" strokeLinejoin="miter" fill="none" />
@@ -157,12 +157,12 @@ export default function Galerij() {
             border: "none",
             cursor: "pointer",
             padding: "0 16px",
-            color: "#5b604b",
+            color: "#ffffff",
             lineHeight: 0,
             zIndex: 2,
           }}
-          onMouseEnter={(e) => { (e.currentTarget as HTMLButtonElement).style.color = "#3d4232"; }}
-          onMouseLeave={(e) => { (e.currentTarget as HTMLButtonElement).style.color = "#5b604b"; }}
+          onMouseEnter={(e) => { (e.currentTarget as HTMLButtonElement).style.color = "rgba(255,255,255,0.6)"; }}
+          onMouseLeave={(e) => { (e.currentTarget as HTMLButtonElement).style.color = "#ffffff"; }}
         >
           <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
             <polyline points="12,6 22,16 12,26" stroke="currentColor" strokeWidth="1.5" strokeLinecap="square" strokeLinejoin="miter" fill="none" />
