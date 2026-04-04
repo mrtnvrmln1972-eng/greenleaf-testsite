@@ -24,7 +24,7 @@ const projecten = [
 export default function Projecten() {
   return (
     <section id="projecten" style={{ backgroundColor: "#5b604b", padding: "120px 0" }}>
-      <div style={{ maxWidth: "1200px", margin: "0 auto", padding: "0 40px" }}>
+      <div style={{ maxWidth: "1300px", margin: "0 auto", padding: "0 40px" }}>
 
         <h2
           style={{
@@ -56,7 +56,7 @@ export default function Projecten() {
           style={{
             display: "grid",
             gridTemplateColumns: "repeat(3, 1fr)",
-            gap: "32px",
+            gap: "40px",
             marginBottom: "56px",
           }}
         >
@@ -93,7 +93,7 @@ export default function Projecten() {
                 <p style={{
                   fontFamily: '"Roboto", system-ui, sans-serif',
                   fontWeight: 400,
-                  fontSize: "14px",
+                  fontSize: "17px",
                   color: "rgba(255,255,255,0.85)",
                   lineHeight: 1.7,
                 }}>
