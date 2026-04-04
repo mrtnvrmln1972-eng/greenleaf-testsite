@@ -16,7 +16,7 @@ export default function Navbar() {
   const [scrolled, setScrolled] = useState(false);
 
   useEffect(() => {
-    const onScroll = () => setScrolled(window.scrollY > 80);
+    const onScroll = () => setScrolled(window.scrollY > window.innerHeight);
     window.addEventListener("scroll", onScroll, { passive: true });
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
@@ -29,7 +29,7 @@ export default function Navbar() {
         left: 0,
         right: 0,
         zIndex: 100,
-        backgroundColor: "rgba(91,96,75,0.65)",
+        backgroundColor: scrolled ? "#5b604b" : "rgba(91,96,75,0.65)",
         backdropFilter: "blur(8px)",
         WebkitBackdropFilter: "blur(8px)",
         transition: "background-color 0.3s",
