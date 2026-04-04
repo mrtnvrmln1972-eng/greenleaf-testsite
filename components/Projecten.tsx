@@ -7,19 +7,22 @@ const projecten = [
     foto: "/images/vlug-12.jpg",
     alt: "Zwemvijver met rieten dak – Breda",
     h3: "Gerealiseerde tuinen in en rond Breda",
-    tekst: "Een zwemvijver met rieten dak in een weelderige groene tuin — vakmanschap van Kamsteeg Tuinen in Breda.",
+    dynamischeTekst: "Een zwemvijver met rieten dak in een weelderige groene tuin — vakmanschap van Kamsteeg Tuinen in Breda.",
+    vasteTekst: "Zwemvijver met rieten dak – Breda. Een natuurlijke zwemvijver naadloos geïntegreerd in een weelderige landschappelijke tuin.",
   },
   {
     foto: "/images/landelijke-tuin-hendriks-hoveniers-16-16469123278l64z_750x473.jpg",
     alt: "Landschappelijke tuin – Etten-Leur",
     h3: "Landschappelijke tuin in de Baronie",
-    tekst: "Een rustige, open landschappelijke tuin met siergrassen en vijver — aangelegd door Kamsteeg Tuinen in Etten-Leur.",
+    dynamischeTekst: "Een rustige, open landschappelijke tuin met siergrassen en vijver — aangelegd door Kamsteeg Tuinen in Etten-Leur.",
+    vasteTekst: "Landschappelijke tuin – Etten-Leur. Een open, rustige tuin met siergrassen, bochtige borders en een vijver — een oase van rust in het buitengebied.",
   },
   {
     foto: "/images/Luxe-wellness-binnentuin-bij-hotel-Van-der-Valk-Dutch-Quality-Gardens-11.jpg",
     alt: "Bedrijfstuin kantoorpand – Tilburg",
     h3: "Bedrijfstuin Van der Valk – Tilburg",
-    tekst: "Een moderne binnentuin voor hotel Van der Valk, aangelegd en onderhouden door Kamsteeg Tuinen.",
+    dynamischeTekst: "Een moderne binnentuin voor hotel Van der Valk, aangelegd en onderhouden door Kamsteeg Tuinen.",
+    vasteTekst: "Bedrijfstuin Van der Valk – Tilburg. Een moderne binnentuin met sculpturale buxusvormen en grindvlakken, aangelegd voor hotel Van der Valk.",
   },
 ];
 
@@ -60,13 +63,46 @@ export default function Projecten() {
             textAlign: "center",
             lineHeight: 1.7,
             maxWidth: "640px",
-            margin: "0 auto 72px",
+            margin: "0 auto 56px",
           }}
         >
           Benieuwd hoe een tuin van Kamsteeg eruitziet in de praktijk? Bekijk onze gerealiseerde projecten.
         </p>
 
-        {/* Foto's + tekst per kolom */}
+        {/* Dynamische tekst — wisselt bij klik */}
+        <div
+          style={{
+            marginBottom: "40px",
+            minHeight: "80px",
+            opacity: zichtbaar ? 1 : 0,
+            transition: "opacity 0.3s ease",
+          }}
+        >
+          <h3
+            style={{
+              fontWeight: 400,
+              fontSize: "24px",
+              color: "#ffffff",
+              marginBottom: "10px",
+              lineHeight: 1.2,
+            }}
+          >
+            {projecten[actief].h3}
+          </h3>
+          <p
+            style={{
+              fontWeight: 400,
+              fontSize: "17px",
+              color: "rgba(255,255,255,0.80)",
+              lineHeight: 1.7,
+              maxWidth: "640px",
+            }}
+          >
+            {projecten[actief].dynamischeTekst}
+          </p>
+        </div>
+
+        {/* Foto's */}
         <div
           style={{
             display: "grid",
@@ -77,19 +113,28 @@ export default function Projecten() {
         >
           {projecten.map((p, i) => (
             <div key={p.foto}>
-              {/* Klikbare foto */}
               <button
                 onClick={() => handleKlik(i)}
                 style={{
                   display: "block",
                   width: "100%",
                   padding: 0,
+                  margin: 0,
                   border: "none",
+                  outline: "none",
                   background: "transparent",
                   cursor: "pointer",
+                  lineHeight: 0,
                 }}
               >
-                <div style={{ overflow: "hidden", aspectRatio: "3/2" }}>
+                <div
+                  style={{
+                    overflow: "hidden",
+                    height: "320px",
+                    lineHeight: 0,
+                    fontSize: 0,
+                  }}
+                >
                   <img
                     src={p.foto}
                     alt={p.alt}
@@ -98,6 +143,9 @@ export default function Projecten() {
                       height: "100%",
                       objectFit: "cover",
                       display: "block",
+                      verticalAlign: "bottom",
+                      margin: 0,
+                      padding: 0,
                       opacity: i === actief ? 1 : 0.55,
                       transition: "opacity 0.3s ease, transform 0.6s ease",
                     }}
@@ -105,7 +153,7 @@ export default function Projecten() {
                     onMouseLeave={(e) => { (e.currentTarget as HTMLImageElement).style.transform = "scale(1)"; }}
                   />
                 </div>
-                {/* Actieve indicator lijn */}
+                {/* Actieve indicator */}
                 <div
                   style={{
                     height: "3px",
@@ -115,37 +163,19 @@ export default function Projecten() {
                 />
               </button>
 
-              {/* Tekst direct onder de foto — zichtbaar alleen bij actieve foto */}
-              <div
+              {/* Vaste tekst onder de foto — altijd zichtbaar */}
+              <p
                 style={{
-                  paddingTop: "20px",
-                  minHeight: "100px",
-                  opacity: i === actief ? (zichtbaar ? 1 : 0) : 0,
-                  transition: "opacity 0.3s ease",
+                  fontFamily: '"Roboto", system-ui, sans-serif',
+                  fontWeight: 400,
+                  fontSize: "15px",
+                  color: "rgba(255,255,255,0.85)",
+                  lineHeight: 1.7,
+                  marginTop: "16px",
                 }}
               >
-                <h3
-                  style={{
-                    fontWeight: 400,
-                    fontSize: "20px",
-                    color: "#ffffff",
-                    marginBottom: "10px",
-                    lineHeight: 1.2,
-                  }}
-                >
-                  {p.h3}
-                </h3>
-                <p
-                  style={{
-                    fontWeight: 400,
-                    fontSize: "16px",
-                    color: "rgba(255,255,255,0.78)",
-                    lineHeight: 1.7,
-                  }}
-                >
-                  {p.tekst}
-                </p>
-              </div>
+                {p.vasteTekst}
+              </p>
             </div>
           ))}
         </div>
