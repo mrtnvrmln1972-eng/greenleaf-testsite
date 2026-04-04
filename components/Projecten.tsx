@@ -56,7 +56,7 @@ export default function Projecten() {
           style={{
             display: "grid",
             gridTemplateColumns: "repeat(3, 1fr)",
-            gap: "16px",
+            gap: "32px",
             marginBottom: "56px",
           }}
         >
