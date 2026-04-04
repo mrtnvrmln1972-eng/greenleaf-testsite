@@ -2,7 +2,7 @@
 
 import { useEffect, useRef, useState } from "react";
 
-const GAP = 12;
+const GAP = 16;
 const VISIBLE = 3;
 
 const fotos = [
@@ -68,10 +68,10 @@ export default function Galerij() {
   const translateX = photoWidth > 0 ? -(index * (photoWidth + GAP)) : 0;
 
   return (
-    <section style={{ backgroundColor: "#5b604b", padding: "60px 0" }}>
+    <section style={{ backgroundColor: "#5b604b", padding: "80px 0" }}>
       <div
         style={{
-          maxWidth: "1100px",
+          maxWidth: "1200px",
           margin: "0 auto",
           padding: "0 40px",
         }}
@@ -125,7 +125,7 @@ export default function Galerij() {
                 style={{
                   flexShrink: 0,
                   width: photoWidth > 0 ? `${photoWidth}px` : "calc(33.333% - 8px)",
-                  height: "280px",
+                  height: "320px",
                   overflow: "hidden",
                   lineHeight: 0,
                   fontSize: 0,
