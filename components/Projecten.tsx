@@ -38,7 +38,7 @@ export default function Projecten() {
 
   return (
     <section id="projecten" style={{ backgroundColor: "#5b604b", padding: "120px 0" }}>
-      <div style={{ maxWidth: "1100px", margin: "0 auto", padding: "0 40px" }}>
+      <div style={{ maxWidth: "1200px", margin: "0 auto", padding: "0 40px" }}>
 
         <h2
           style={{
@@ -66,79 +66,87 @@ export default function Projecten() {
           Benieuwd hoe een tuin van Kamsteeg eruitziet in de praktijk? Bekijk onze gerealiseerde projecten.
         </p>
 
-        {/* Dynamische tekst boven de foto's */}
-        <div
-          style={{
-            marginBottom: "32px",
-            opacity: zichtbaar ? 1 : 0,
-            transition: "opacity 0.3s ease",
-          }}
-        >
-          <h3
-            style={{
-              fontWeight: 400,
-              fontSize: "24px",
-              color: "#ffffff",
-              marginBottom: "12px",
-              lineHeight: 1.2,
-            }}
-          >
-            {projecten[actief].h3}
-          </h3>
-          <p
-            style={{
-              fontWeight: 400,
-              fontSize: "17px",
-              color: "rgba(255,255,255,0.80)",
-              lineHeight: 1.7,
-              maxWidth: "640px",
-            }}
-          >
-            {projecten[actief].tekst}
-          </p>
-        </div>
-
-        {/* Foto's */}
+        {/* Foto's + tekst per kolom */}
         <div
           style={{
             display: "grid",
             gridTemplateColumns: "repeat(3, 1fr)",
-            gap: "4px",
+            gap: "16px",
             marginBottom: "56px",
           }}
         >
           {projecten.map((p, i) => (
-            <button
-              key={p.foto}
-              onClick={() => handleKlik(i)}
-              style={{
-                display: "block",
-                padding: 0,
-                border: "none",
-                background: "none",
-                cursor: "pointer",
-                borderBottom: i === actief ? "3px solid #ffffff" : "3px solid transparent",
-                transition: "border-color 0.3s ease",
-              }}
-            >
-              <div style={{ overflow: "hidden", aspectRatio: "4/3" }}>
-                <img
-                  src={p.foto}
-                  alt={p.alt}
+            <div key={p.foto}>
+              {/* Klikbare foto */}
+              <button
+                onClick={() => handleKlik(i)}
+                style={{
+                  display: "block",
+                  width: "100%",
+                  padding: 0,
+                  border: "none",
+                  background: "transparent",
+                  cursor: "pointer",
+                }}
+              >
+                <div style={{ overflow: "hidden", aspectRatio: "3/2" }}>
+                  <img
+                    src={p.foto}
+                    alt={p.alt}
+                    style={{
+                      width: "100%",
+                      height: "100%",
+                      objectFit: "cover",
+                      display: "block",
+                      opacity: i === actief ? 1 : 0.55,
+                      transition: "opacity 0.3s ease, transform 0.6s ease",
+                    }}
+                    onMouseEnter={(e) => { (e.currentTarget as HTMLImageElement).style.transform = "scale(1.03)"; }}
+                    onMouseLeave={(e) => { (e.currentTarget as HTMLImageElement).style.transform = "scale(1)"; }}
+                  />
+                </div>
+                {/* Actieve indicator lijn */}
+                <div
                   style={{
-                    width: "100%",
-                    height: "100%",
-                    objectFit: "cover",
-                    display: "block",
-                    opacity: i === actief ? 1 : 0.65,
-                    transition: "opacity 0.3s ease, transform 0.6s ease",
-                    transform: "scale(1)",
+                    height: "3px",
+                    backgroundColor: i === actief ? "#ffffff" : "transparent",
+                    transition: "background-color 0.3s ease",
                   }}
-                  onMouseEnter={(e) => { (e.currentTarget as HTMLImageElement).style.transform = "scale(1.03)"; }}
-                  onMouseLeave={(e) => { (e.currentTarget as HTMLImageElement).style.transform = "scale(1)"; }}
                 />
+              </button>
+
+              {/* Tekst direct onder de foto — zichtbaar alleen bij actieve foto */}
+              <div
+                style={{
+                  paddingTop: "20px",
+                  minHeight: "100px",
+                  opacity: i === actief ? (zichtbaar ? 1 : 0) : 0,
+                  transition: "opacity 0.3s ease",
+                }}
+              >
+                <h3
+                  style={{
+                    fontWeight: 400,
+                    fontSize: "20px",
+                    color: "#ffffff",
+                    marginBottom: "10px",
+                    lineHeight: 1.2,
+                  }}
+                >
+                  {p.h3}
+                </h3>
+                <p
+                  style={{
+                    fontWeight: 400,
+                    fontSize: "16px",
+                    color: "rgba(255,255,255,0.78)",
+                    lineHeight: 1.7,
+                  }}
+                >
+                  {p.tekst}
+                </p>
               </div>
-            </button>
+            </div>
           ))}
         </div>
 
