@@ -23,25 +23,26 @@ export default function Hero() {
         }}
       />
 
-      {/* Gradient alleen over rechteronderhoek — foto blijft elders volledig helder */}
+      {/* Gradient alleen over rechterhelft — linkerkant foto volledig helder */}
       <div
         aria-hidden="true"
         style={{
           position: "absolute",
           inset: 0,
           background:
-            "linear-gradient(to bottom left, transparent 30%, rgba(0,0,0,0.65) 100%)",
+            "linear-gradient(to right, transparent 0%, rgba(0,0,0,0.6) 40%, rgba(0,0,0,0.75) 100%)",
         }}
       />
 
-      {/* Tekst rechtsonder, max 480px breed, rechts uitgelijnd */}
+      {/* Tekst rechtsonder, 50vw breed, rechts uitgelijnd */}
       <div
         style={{
           position: "absolute",
           bottom: "60px",
           right: "60px",
           zIndex: 10,
-          maxWidth: "480px",
+          width: "50vw",
+          maxWidth: "50vw",
           textAlign: "right",
         }}
       >
