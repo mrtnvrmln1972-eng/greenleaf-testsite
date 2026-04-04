@@ -76,10 +76,11 @@ const diensten = [
 ];
 
 const shimmerDelays = ["0s", "0.6s", "1.2s", "1.8s"];
+const staggerDelays = ["0s", "0.1s", "0.2s", "0.3s"];
 
 export default function Diensten() {
   return (
-    <section id="diensten" style={{ backgroundColor: "#f2eee2", padding: "120px 0" }}>
+    <section id="diensten" style={{ backgroundColor: "#f4f0e8", padding: "120px 0" }}>
       <style>{`
         @keyframes shimmer {
           0%   { background-position: -200% center; }
@@ -89,26 +90,30 @@ export default function Diensten() {
       <div style={{ maxWidth: "1200px", margin: "0 auto", padding: "0 40px" }}>
 
         <h2
+          data-fade=""
           style={{
-            fontWeight: 400,
-            fontSize: "60px",
-            color: "#7a7b6b",
+            fontWeight: 300,
+            fontSize: "48px",
+            color: "#6b6b5a",
             marginBottom: "24px",
-            lineHeight: 1.2,
+            lineHeight: 1.1,
+            letterSpacing: "-0.01em",
             textAlign: "center",
           }}
         >
           Onze diensten
         </h2>
         <p
+          data-fade=""
           style={{
-            fontWeight: 400,
-            fontSize: "17px",
-            color: "#3a3a2e",
-            lineHeight: 1.7,
+            fontWeight: 300,
+            fontSize: "18px",
+            color: "#1a1a18",
+            lineHeight: 1.75,
             textAlign: "center",
             maxWidth: "640px",
-            margin: "0 auto 80px",
+            margin: "0 auto 88px",
+            transitionDelay: "0.1s",
           }}
         >
           Van een compleet tuinontwerp tot periodiek onderhoud: Kamsteeg Tuinen is uw vaste partner
@@ -121,26 +126,34 @@ export default function Diensten() {
             gridTemplateColumns: "repeat(4, 1fr)",
             gap: "48px",
             alignItems: "stretch",
-            marginBottom: "64px",
+            marginBottom: "72px",
           }}
         >
           {diensten.map(({ Icon, h3, p, cta, href }, idx) => (
-            <div key={h3} style={{ display: "flex", flexDirection: "column" }}>
-              <div style={{ marginBottom: "28px" }}>
+            <div
+              key={h3}
+              data-fade=""
+              style={{
+                display: "flex",
+                flexDirection: "column",
+                transitionDelay: staggerDelays[idx],
+              }}
+            >
+              <div style={{ marginBottom: "32px" }}>
                 <Icon />
               </div>
               <h3
                 style={{
-                  fontWeight: 400,
-                  fontSize: "20px",
+                  fontWeight: 300,
+                  fontSize: "24px",
                   color: "#5b604b",
                   marginBottom: "16px",
-                  lineHeight: 1.2,
+                  lineHeight: 1.3,
                 }}
               >
                 {h3}
               </h3>
-              <p style={{ fontWeight: 400, fontSize: "16px", color: "#3a3a2e", lineHeight: 1.7, marginBottom: "24px", flexGrow: 1 }}>
+              <p style={{ fontWeight: 300, fontSize: "17px", color: "#1a1a18", lineHeight: 1.75, marginBottom: "28px", flexGrow: 1 }}>
                 {p}
               </p>
               <a
@@ -166,27 +179,29 @@ export default function Diensten() {
           ))}
         </div>
 
-        <div style={{ textAlign: "center" }}>
+        <div data-fade="" style={{ textAlign: "center", transitionDelay: "0.4s" }}>
           <a
             href="#"
             style={{
               display: "inline-block",
               fontWeight: 400,
-              fontSize: "14px",
+              fontSize: "13px",
               color: "#5b604b",
               border: "1px solid #5b604b",
-              padding: "12px 28px",
+              padding: "16px 40px",
               textDecoration: "none",
-              letterSpacing: "0.05em",
+              letterSpacing: "0.1em",
+              textTransform: "uppercase",
+              transition: "background-color 0.3s ease, color 0.3s ease",
             }}
             onMouseEnter={(e) => {
               const el = e.currentTarget as HTMLAnchorElement;
-              el.style.background = "#5b604b";
+              el.style.backgroundColor = "#5b604b";
               el.style.color = "#fff";
             }}
             onMouseLeave={(e) => {
               const el = e.currentTarget as HTMLAnchorElement;
-              el.style.background = "transparent";
+              el.style.backgroundColor = "transparent";
               el.style.color = "#5b604b";
             }}
           >

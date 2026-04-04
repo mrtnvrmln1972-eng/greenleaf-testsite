@@ -16,9 +16,8 @@ const awards = [
 export default function Footer() {
   return (
     <footer style={{ backgroundColor: "#cecdb9" }}>
-      <div style={{ maxWidth: "1100px", margin: "0 auto", padding: "48px 40px" }}>
+      <div style={{ maxWidth: "1200px", margin: "0 auto", padding: "48px 40px" }}>
 
-        {/* 4 kolommen */}
         <div
           style={{
             display: "grid",
@@ -28,15 +27,14 @@ export default function Footer() {
             marginBottom: "40px",
           }}
         >
-
           {/* Kolom 1: Logo + slogan */}
           <div>
             <img
               src="/logo-kamsteeg.png"
               alt="Kamsteeg Tuinen"
-              style={{ height: "60px", width: "auto", display: "block", marginBottom: "12px" }}
+              style={{ height: "60px", width: "auto", display: "block", marginBottom: "14px" }}
             />
-            <p style={{ fontWeight: 400, fontSize: "13px", color: "#3a3a2e", margin: 0, fontStyle: "italic" }}>
+            <p style={{ fontWeight: 300, fontSize: "13px", color: "#1a1a18", margin: 0, fontStyle: "italic" }}>
               Tuinen met een goed gevoel
             </p>
           </div>
@@ -46,10 +44,10 @@ export default function Footer() {
             <h4
               style={{
                 fontWeight: 400,
-                fontSize: "13px",
-                color: "#3a3a2e",
-                marginBottom: "14px",
-                letterSpacing: "0.06em",
+                fontSize: "11px",
+                color: "#1a1a18",
+                marginBottom: "16px",
+                letterSpacing: "0.08em",
                 textTransform: "uppercase",
               }}
             >
@@ -58,16 +56,16 @@ export default function Footer() {
             <address
               style={{
                 fontStyle: "normal",
-                fontWeight: 400,
+                fontWeight: 300,
                 fontSize: "14px",
-                color: "#3a3a2e",
+                color: "#1a1a18",
                 lineHeight: 1.9,
               }}
             >
               Rithsestraat 152<br />
               4838 GD Breda<br />
-              <a href="tel:0765421230" style={{ color: "#3a3a2e", textDecoration: "none" }}>076 5421230</a><br />
-              <a href="mailto:info@kamsteegtuinen.nl" style={{ color: "#3a3a2e", textDecoration: "none" }}>info@kamsteegtuinen.nl</a>
+              <a href="tel:0765421230" style={{ color: "#1a1a18", textDecoration: "none", transition: "color 0.3s ease" }}>076 5421230</a><br />
+              <a href="mailto:info@kamsteegtuinen.nl" style={{ color: "#1a1a18", textDecoration: "none", transition: "color 0.3s ease" }}>info@kamsteegtuinen.nl</a>
             </address>
           </div>
 
@@ -76,10 +74,10 @@ export default function Footer() {
             <h4
               style={{
                 fontWeight: 400,
-                fontSize: "13px",
-                color: "#3a3a2e",
-                marginBottom: "14px",
-                letterSpacing: "0.06em",
+                fontSize: "11px",
+                color: "#1a1a18",
+                marginBottom: "16px",
+                letterSpacing: "0.08em",
                 textTransform: "uppercase",
               }}
             >
@@ -89,7 +87,7 @@ export default function Footer() {
               {awards.map((a) => (
                 <li
                   key={a}
-                  style={{ fontWeight: 400, fontSize: "14px", color: "#3a3a2e", lineHeight: 1.9 }}
+                  style={{ fontWeight: 300, fontSize: "14px", color: "#1a1a18", lineHeight: 1.9 }}
                 >
                   {a}
                 </li>
@@ -102,10 +100,10 @@ export default function Footer() {
             <h4
               style={{
                 fontWeight: 400,
-                fontSize: "13px",
-                color: "#3a3a2e",
-                marginBottom: "14px",
-                letterSpacing: "0.06em",
+                fontSize: "11px",
+                color: "#1a1a18",
+                marginBottom: "16px",
+                letterSpacing: "0.08em",
                 textTransform: "uppercase",
               }}
             >
@@ -116,7 +114,7 @@ export default function Footer() {
                 <li key={n.label} style={{ lineHeight: 1.9 }}>
                   <a
                     href={n.href}
-                    style={{ fontWeight: 400, fontSize: "14px", color: "#3a3a2e", textDecoration: "none" }}
+                    style={{ fontWeight: 300, fontSize: "14px", color: "#1a1a18", textDecoration: "none", transition: "color 0.3s ease", letterSpacing: "0.02em" }}
                   >
                     {n.label}
                   </a>
@@ -124,12 +122,10 @@ export default function Footer() {
               ))}
             </ul>
           </div>
-
         </div>
 
-        {/* Copyright */}
         <div style={{ borderTop: "1px solid #b8b7a5", paddingTop: "20px" }}>
-          <p style={{ fontWeight: 400, fontSize: "13px", color: "#3a3a2e", margin: 0 }}>
+          <p style={{ fontWeight: 300, fontSize: "13px", color: "#1a1a18", margin: 0 }}>
             © Kamsteeg Tuinen 2025
           </p>
         </div>

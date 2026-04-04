@@ -32,7 +32,7 @@ export default function Navbar() {
         backgroundColor: scrolled ? "#5b604b" : "rgba(91,96,75,0.65)",
         backdropFilter: "blur(8px)",
         WebkitBackdropFilter: "blur(8px)",
-        transition: "background-color 0.3s",
+        transition: "background-color 0.3s ease",
       }}
     >
       <div
@@ -56,14 +56,15 @@ export default function Navbar() {
               href={l.href}
               style={{
                 fontFamily: '"Roboto", system-ui, sans-serif',
-                fontSize: "16px",
-                fontWeight: 500,
+                fontSize: "15px",
+                fontWeight: 400,
                 color: "#ffffff",
                 textDecoration: "none",
+                letterSpacing: "0.03em",
                 opacity: 1,
-                transition: "opacity 0.2s",
+                transition: "opacity 0.3s ease",
               }}
-              onMouseEnter={(e) => { (e.currentTarget as HTMLAnchorElement).style.opacity = "0.6"; }}
+              onMouseEnter={(e) => { (e.currentTarget as HTMLAnchorElement).style.opacity = "0.65"; }}
               onMouseLeave={(e) => { (e.currentTarget as HTMLAnchorElement).style.opacity = "1"; }}
             >
               {l.label}
@@ -94,7 +95,7 @@ export default function Navbar() {
             <a
               key={l.label}
               href={l.href}
-              style={{ fontSize: "14px", fontWeight: 400, color: "#3a3a2e", textDecoration: "none" }}
+              style={{ fontSize: "14px", fontWeight: 400, color: "#1a1a18", textDecoration: "none", letterSpacing: "0.03em" }}
               onClick={() => setMenuOpen(false)}
             >
               {l.label}

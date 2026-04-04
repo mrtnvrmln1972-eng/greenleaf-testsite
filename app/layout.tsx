@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import "./globals.css";
+import AnimateOnScroll from "@/components/AnimateOnScroll";
 
 export const metadata: Metadata = {
   title: "Kamsteeg Tuinen | Hovenier in Breda | Tuinontwerp, aanleg & onderhoud",
@@ -26,6 +27,7 @@ export default function RootLayout({
         style={{ fontFamily: '"Roboto", system-ui, sans-serif' }}
         suppressHydrationWarning
       >
+        <AnimateOnScroll />
         {children}
       </body>
     </html>

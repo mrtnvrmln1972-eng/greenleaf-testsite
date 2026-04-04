@@ -1,4 +1,5 @@
 "use client";
+
 const stappen = [
   "U neemt contact op via het formulier, telefoon of e-mail.",
   "Wij plannen een vrijblijvend kennismakingsgesprek bij u thuis.",
@@ -8,7 +9,7 @@ const stappen = [
 const knoppen = [
   { label: "Vraag offerte aan", href: "#" },
   { label: "Bel direct: 076 5421230", href: "tel:0765421230" },
-  { label: "Mail ons: info@kamsteegtuinen.nl", href: "mailto:info@kamsteegtuinen.nl" },
+  { label: "Mail ons", href: "mailto:info@kamsteegtuinen.nl" },
 ];
 
 export default function Conversie() {
@@ -16,62 +17,72 @@ export default function Conversie() {
     <section id="contact" style={{ backgroundColor: "#5b604b", padding: "120px 0" }}>
       <div style={{ maxWidth: "860px", margin: "0 auto", padding: "0 40px", textAlign: "center" }}>
         <h2
+          data-fade=""
           style={{
-            fontWeight: 400,
-            fontSize: "60px",
+            fontWeight: 300,
+            fontSize: "48px",
             color: "#ffffff",
             marginBottom: "24px",
-            lineHeight: 1.2,
+            lineHeight: 1.1,
+            letterSpacing: "-0.01em",
           }}
         >
           Klaar voor een tuin met een goed gevoel?
         </h2>
 
         <h3
+          data-fade=""
           style={{
-            fontWeight: 400,
+            fontWeight: 300,
             fontSize: "24px",
             color: "rgba(255,255,255,0.90)",
             marginBottom: "24px",
-            lineHeight: 1.2,
+            lineHeight: 1.3,
+            transitionDelay: "0.1s",
           }}
         >
           Vraag een vrijblijvende offerte aan
         </h3>
 
         <p
+          data-fade=""
           style={{
-            fontWeight: 400,
-            fontSize: "17px",
-            color: "rgba(255,255,255,0.82)",
-            marginBottom: "72px",
-            lineHeight: 1.7,
+            fontWeight: 300,
+            fontSize: "18px",
+            color: "rgba(255,255,255,0.80)",
+            marginBottom: "80px",
+            lineHeight: 1.75,
+            transitionDelay: "0.2s",
           }}
         >
           Benieuwd wat Kamsteeg Tuinen voor u kan betekenen? Neem vrijblijvend contact met ons op. Wij luisteren graag naar uw wensen en maken een voorstel op maat.
         </p>
 
         <p
+          data-fade=""
           style={{
             fontWeight: 400,
-            fontSize: "14px",
-            color: "rgba(255,255,255,0.70)",
-            letterSpacing: "0.08em",
+            fontSize: "11px",
+            color: "rgba(255,255,255,0.60)",
+            letterSpacing: "0.1em",
             textTransform: "uppercase",
-            marginBottom: "40px",
+            marginBottom: "48px",
+            transitionDelay: "0.3s",
           }}
         >
           Zo werkt het:
         </p>
 
         <div
+          data-fade=""
           style={{
             display: "flex",
             justifyContent: "center",
             alignItems: "flex-start",
             gap: "0",
-            marginBottom: "72px",
+            marginBottom: "80px",
             flexWrap: "wrap",
+            transitionDelay: "0.4s",
           }}
         >
           {stappen.map((s, i) => (
@@ -87,14 +98,14 @@ export default function Conversie() {
                     alignItems: "center",
                     justifyContent: "center",
                     color: "#fff",
-                    fontWeight: 400,
+                    fontWeight: 300,
                     fontSize: "14px",
-                    margin: "0 auto 14px",
+                    margin: "0 auto 16px",
                   }}
                 >
                   {i + 1}
                 </div>
-                <span style={{ fontWeight: 400, fontSize: "17px", color: "rgba(255,255,255,0.85)", lineHeight: 1.7, display: "block" }}>
+                <span style={{ fontWeight: 300, fontSize: "17px", color: "rgba(255,255,255,0.85)", lineHeight: 1.75, display: "block" }}>
                   {s}
                 </span>
               </div>
@@ -113,7 +124,7 @@ export default function Conversie() {
           ))}
         </div>
 
-        <div style={{ display: "flex", gap: "14px", justifyContent: "center", flexWrap: "wrap" }}>
+        <div data-fade="" style={{ display: "flex", gap: "14px", justifyContent: "center", flexWrap: "wrap", transitionDelay: "0.5s" }}>
           {knoppen.map((k) => (
             <a
               key={k.label}
@@ -121,17 +132,18 @@ export default function Conversie() {
               style={{
                 display: "inline-block",
                 fontWeight: 400,
-                fontSize: "14px",
+                fontSize: "13px",
                 color: "#ffffff",
                 backgroundColor: "transparent",
-                border: "1px solid #ffffff",
-                padding: "12px 28px",
+                border: "1px solid rgba(255,255,255,0.6)",
+                padding: "16px 40px",
                 textDecoration: "none",
-                letterSpacing: "0.04em",
-                transition: "opacity 0.2s",
+                letterSpacing: "0.1em",
+                textTransform: "uppercase",
+                transition: "background-color 0.3s ease, border-color 0.3s ease",
               }}
-              onMouseEnter={(e) => { (e.currentTarget as HTMLAnchorElement).style.opacity = "0.75"; }}
-              onMouseLeave={(e) => { (e.currentTarget as HTMLAnchorElement).style.opacity = "1"; }}
+              onMouseEnter={(e) => { (e.currentTarget as HTMLAnchorElement).style.backgroundColor = "rgba(255,255,255,0.12)"; }}
+              onMouseLeave={(e) => { (e.currentTarget as HTMLAnchorElement).style.backgroundColor = "transparent"; }}
             >
               {k.label}
             </a>

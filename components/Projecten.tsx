@@ -24,29 +24,33 @@ const projecten = [
 export default function Projecten() {
   return (
     <section id="projecten" style={{ backgroundColor: "#5b604b", padding: "120px 0" }}>
-      <div style={{ maxWidth: "1300px", margin: "0 auto", padding: "0 40px" }}>
+      <div style={{ maxWidth: "1200px", margin: "0 auto", padding: "0 40px" }}>
 
         <h2
+          data-fade=""
           style={{
-            fontWeight: 400,
-            fontSize: "60px",
+            fontWeight: 300,
+            fontSize: "48px",
             color: "#ffffff",
             marginBottom: "24px",
-            lineHeight: 1.2,
+            lineHeight: 1.1,
+            letterSpacing: "-0.01em",
             textAlign: "center",
           }}
         >
           Projecten &amp; inspiratie
         </h2>
         <p
+          data-fade=""
           style={{
-            fontWeight: 400,
-            fontSize: "17px",
+            fontWeight: 300,
+            fontSize: "18px",
             color: "rgba(255,255,255,0.80)",
             textAlign: "center",
-            lineHeight: 1.7,
+            lineHeight: 1.75,
             maxWidth: "640px",
-            margin: "0 auto 64px",
+            margin: "0 auto 72px",
+            transitionDelay: "0.1s",
           }}
         >
           Benieuwd hoe een tuin van Kamsteeg eruitziet in de praktijk? Bekijk onze gerealiseerde projecten.
@@ -57,11 +61,15 @@ export default function Projecten() {
             display: "grid",
             gridTemplateColumns: "repeat(3, 1fr)",
             gap: "40px",
-            marginBottom: "56px",
+            marginBottom: "64px",
           }}
         >
-          {projecten.map((p) => (
-            <div key={p.foto}>
+          {projecten.map((p, idx) => (
+            <div
+              key={p.foto}
+              data-fade=""
+              style={{ transitionDelay: `${idx * 0.1}s` }}
+            >
               <div style={{ overflow: "hidden", height: "340px", lineHeight: 0, fontSize: 0 }}>
                 <img
                   src={p.foto}
@@ -79,23 +87,23 @@ export default function Projecten() {
                 />
               </div>
 
-              <div style={{ paddingTop: "20px" }}>
+              <div style={{ paddingTop: "24px" }}>
                 <p style={{
                   fontFamily: '"Roboto", system-ui, sans-serif',
-                  fontWeight: 500,
+                  fontWeight: 300,
                   fontSize: "22px",
                   color: "#ffffff",
                   lineHeight: 1.3,
-                  marginBottom: "10px",
+                  marginBottom: "12px",
                 }}>
                   {p.titel}
                 </p>
                 <p style={{
                   fontFamily: '"Roboto", system-ui, sans-serif',
-                  fontWeight: 400,
+                  fontWeight: 300,
                   fontSize: "17px",
-                  color: "rgba(255,255,255,0.85)",
-                  lineHeight: 1.7,
+                  color: "rgba(255,255,255,0.80)",
+                  lineHeight: 1.75,
                 }}>
                   {p.tekst}
                 </p>
@@ -104,23 +112,25 @@ export default function Projecten() {
           ))}
         </div>
 
-        <div style={{ textAlign: "center" }}>
+        <div data-fade="" style={{ textAlign: "center", transitionDelay: "0.3s" }}>
           <a
             href="#"
             style={{
               display: "inline-block",
               fontWeight: 400,
-              fontSize: "14px",
+              fontSize: "13px",
               color: "#ffffff",
-              border: "1px solid #ffffff",
-              padding: "12px 28px",
+              border: "1px solid rgba(255,255,255,0.6)",
+              padding: "16px 40px",
               textDecoration: "none",
-              letterSpacing: "0.04em",
+              letterSpacing: "0.1em",
+              textTransform: "uppercase",
+              transition: "background-color 0.3s ease",
             }}
-            onMouseEnter={(e) => { (e.currentTarget as HTMLAnchorElement).style.background = "rgba(255,255,255,0.12)"; }}
-            onMouseLeave={(e) => { (e.currentTarget as HTMLAnchorElement).style.background = "transparent"; }}
+            onMouseEnter={(e) => { (e.currentTarget as HTMLAnchorElement).style.backgroundColor = "rgba(255,255,255,0.12)"; }}
+            onMouseLeave={(e) => { (e.currentTarget as HTMLAnchorElement).style.backgroundColor = "transparent"; }}
           >
-            Bekijk meer projecten →
+            Bekijk meer projecten
           </a>
         </div>
 

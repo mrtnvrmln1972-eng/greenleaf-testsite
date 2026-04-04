@@ -40,18 +40,18 @@ export default function Hero() {
             backgroundColor: "rgba(91,96,75,0.65)",
             backdropFilter: "blur(4px)",
             WebkitBackdropFilter: "blur(4px)",
-            padding: "48px",
+            padding: "56px 48px",
             width: "100%",
           }}
         >
           <h1
             style={{
-              fontWeight: 400,
-              fontSize: "clamp(2rem, 3.5vw, 54px)",
+              fontWeight: 300,
+              fontSize: "clamp(2rem, 3.5vw, 72px)",
               color: "#ffffff",
-              margin: "0 0 24px",
-              lineHeight: 1.2,
-              letterSpacing: "-0.01em",
+              margin: "0 0 28px",
+              lineHeight: 1.05,
+              letterSpacing: "-0.02em",
             }}
           >
             Kamsteeg Tuinen – Tuinen met een goed gevoel
@@ -59,11 +59,11 @@ export default function Hero() {
 
           <p
             style={{
-              fontWeight: 400,
-              fontSize: "17px",
-              color: "#ffffff",
-              margin: "0 0 10px",
-              lineHeight: 1.7,
+              fontWeight: 300,
+              fontSize: "18px",
+              color: "rgba(255,255,255,0.90)",
+              margin: "0 0 12px",
+              lineHeight: 1.75,
             }}
           >
             Al meer dan 25 jaar creëert Kamsteeg Tuinen buitenruimtes waar u met plezier vertoeft.
@@ -72,11 +72,11 @@ export default function Hero() {
           </p>
           <p
             style={{
-              fontWeight: 400,
-              fontSize: "17px",
-              color: "rgba(255,255,255,0.80)",
-              margin: "0 0 40px",
-              lineHeight: 1.7,
+              fontWeight: 300,
+              fontSize: "18px",
+              color: "rgba(255,255,255,0.75)",
+              margin: "0 0 44px",
+              lineHeight: 1.75,
             }}
           >
             Ontdek wat wij voor uw tuin kunnen betekenen.
@@ -88,31 +88,35 @@ export default function Hero() {
               style={{
                 display: "inline-block",
                 fontWeight: 400,
-                fontSize: "14px",
+                fontSize: "13px",
                 color: "#ffffff",
                 backgroundColor: "transparent",
                 border: "1px solid #ffffff",
-                padding: "12px 28px",
+                padding: "16px 40px",
                 textDecoration: "none",
-                letterSpacing: "0.04em",
+                letterSpacing: "0.1em",
+                textTransform: "uppercase",
+                transition: "background-color 0.3s ease, opacity 0.3s ease",
               }}
             >
-              Vraag vrijblijvend advies aan
+              Vrijblijvend advies
             </a>
             <a
               href="#projecten"
               style={{
                 display: "inline-block",
                 fontWeight: 400,
-                fontSize: "14px",
+                fontSize: "13px",
                 color: "#ffffff",
                 border: "1px solid rgba(255,255,255,0.5)",
-                padding: "12px 28px",
+                padding: "16px 40px",
                 textDecoration: "none",
-                letterSpacing: "0.04em",
+                letterSpacing: "0.1em",
+                textTransform: "uppercase",
+                transition: "border-color 0.3s ease, opacity 0.3s ease",
               }}
             >
-              Bekijk gerealiseerde tuinen
+              Bekijk projecten
             </a>
           </div>
         </div>

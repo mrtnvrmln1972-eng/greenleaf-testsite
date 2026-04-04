@@ -8,34 +8,35 @@ const plaatsen = [
 
 export default function Werkgebied() {
   return (
-    <section id="werkgebied" style={{ backgroundColor: "#f2eee2", padding: "120px 0" }}>
-      <div style={{ maxWidth: "1100px", margin: "0 auto", padding: "0 40px" }}>
+    <section id="werkgebied" style={{ backgroundColor: "#f4f0e8", padding: "120px 0" }}>
+      <div style={{ maxWidth: "1200px", margin: "0 auto", padding: "0 40px" }}>
 
-        {/* H2 over volledige breedte */}
         <h2
+          data-fade=""
           style={{
-            fontWeight: 400,
-            fontSize: "60px",
-            color: "#7a7b6b",
-            marginBottom: "56px",
-            lineHeight: 1.2,
+            fontWeight: 300,
+            fontSize: "48px",
+            color: "#6b6b5a",
+            marginBottom: "64px",
+            lineHeight: 1.1,
+            letterSpacing: "-0.01em",
+            textAlign: "center",
           }}
         >
           Werkgebied Breda en omgeving
         </h2>
 
-        {/* Foto + tekst twee kolommen */}
         <div
           style={{
             display: "grid",
             gridTemplateColumns: "1fr 1fr",
             gap: "80px",
             alignItems: "start",
-            marginBottom: "48px",
+            marginBottom: "56px",
           }}
         >
           {/* Links: foto */}
-          <div>
+          <div data-fade="">
             <img
               src="/images/Kamperland-sander_2_med-scaled.jpg"
               alt="Sander Kamsteeg, hovenier Breda"
@@ -50,14 +51,14 @@ export default function Werkgebied() {
           </div>
 
           {/* Rechts: tekst */}
-          <div style={{ display: "flex", flexDirection: "column" }}>
+          <div data-fade="" style={{ display: "flex", flexDirection: "column", transitionDelay: "0.15s" }}>
             <h3
               style={{
-                fontWeight: 400,
+                fontWeight: 300,
                 fontSize: "24px",
                 color: "#5b604b",
                 marginBottom: "24px",
-                lineHeight: 1.2,
+                lineHeight: 1.3,
               }}
             >
               Hovenier in Breda en omliggende plaatsen
@@ -65,10 +66,10 @@ export default function Werkgebied() {
 
             <p
               style={{
-                fontWeight: 400,
-                fontSize: "17px",
-                color: "#3a3a2e",
-                lineHeight: 1.7,
+                fontWeight: 300,
+                fontSize: "18px",
+                color: "#1a1a18",
+                lineHeight: 1.75,
                 marginBottom: "32px",
               }}
             >
@@ -77,10 +78,10 @@ export default function Werkgebied() {
 
             <p
               style={{
-                fontWeight: 400,
-                fontSize: "17px",
-                color: "#3a3a2e",
-                lineHeight: 1.7,
+                fontWeight: 300,
+                fontSize: "18px",
+                color: "#1a1a18",
+                lineHeight: 1.75,
                 marginBottom: "16px",
               }}
             >
@@ -92,16 +93,16 @@ export default function Werkgebied() {
                 <li
                   key={p}
                   style={{
-                    fontWeight: 400,
-                    fontSize: "17px",
-                    color: "#3a3a2e",
-                    lineHeight: 1.7,
+                    fontWeight: 300,
+                    fontSize: "18px",
+                    color: "#1a1a18",
+                    lineHeight: 1.75,
                     paddingLeft: "20px",
                     position: "relative",
                     marginBottom: "6px",
                   }}
                 >
-                  <span style={{ position: "absolute", left: 0, color: "#7a7b6b" }}>–</span>
+                  <span style={{ position: "absolute", left: 0, color: "#6b6b5a" }}>–</span>
                   {p}
                 </li>
               ))}
@@ -109,17 +110,16 @@ export default function Werkgebied() {
 
             <p
               style={{
-                fontWeight: 400,
-                fontSize: "17px",
-                color: "#3a3a2e",
-                lineHeight: 1.7,
+                fontWeight: 300,
+                fontSize: "18px",
+                color: "#1a1a18",
+                lineHeight: 1.75,
                 marginBottom: "40px",
               }}
             >
               Woont u buiten dit gebied? Neem gerust contact op — in overleg is veel mogelijk.
             </p>
 
-            {/* CTA knop */}
             <div>
               <a
                 href="/contact"
@@ -127,12 +127,14 @@ export default function Werkgebied() {
                   display: "inline-block",
                   fontFamily: '"Roboto", system-ui, sans-serif',
                   fontWeight: 400,
-                  fontSize: "16px",
+                  fontSize: "13px",
                   color: "#5b604b",
                   border: "1px solid #5b604b",
-                  padding: "14px 32px",
+                  padding: "16px 40px",
                   textDecoration: "none",
-                  letterSpacing: "0.02em",
+                  letterSpacing: "0.1em",
+                  textTransform: "uppercase",
+                  transition: "background-color 0.3s ease, color 0.3s ease",
                 }}
               >
                 Neem contact op met Sander Kamsteeg
@@ -141,13 +143,13 @@ export default function Werkgebied() {
           </div>
         </div>
 
-        {/* Links onderaan over volledige breedte */}
-        <p style={{ fontWeight: 400, fontSize: "14px", color: "#7a7b6b" }}>
-          <a href="#" style={{ color: "#7a7b6b", textDecoration: "none" }}>→ Hovenier in Breda</a>
+        {/* Links onderaan */}
+        <p data-fade="" style={{ fontWeight: 300, fontSize: "14px", color: "#6b6b5a", transitionDelay: "0.2s" }}>
+          <a href="#" style={{ color: "#6b6b5a", textDecoration: "none", transition: "color 0.3s ease" }}>→ Hovenier in Breda</a>
           {"  |  "}
-          <a href="#" style={{ color: "#7a7b6b", textDecoration: "none" }}>→ Hovenier in Etten-Leur</a>
+          <a href="#" style={{ color: "#6b6b5a", textDecoration: "none", transition: "color 0.3s ease" }}>→ Hovenier in Etten-Leur</a>
           {"  |  "}
-          <a href="#" style={{ color: "#7a7b6b", textDecoration: "none" }}>→ Hovenier in Tilburg</a>
+          <a href="#" style={{ color: "#6b6b5a", textDecoration: "none", transition: "color 0.3s ease" }}>→ Hovenier in Tilburg</a>
         </p>
 
       </div>
