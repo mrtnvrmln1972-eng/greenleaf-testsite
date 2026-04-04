@@ -23,24 +23,28 @@ export default function Navbar() {
 
   return (
     <header
-      className="fixed top-0 left-0 right-0 z-50 transition-all duration-300"
       style={{
-        backgroundColor: scrolled ? "rgba(255,255,255,0.96)" : "rgba(0,0,0,0.45)",
-        backdropFilter: "blur(6px)",
-        WebkitBackdropFilter: "blur(6px)",
-        borderBottom: scrolled ? "1px solid #e5e5e5" : "none",
+        position: "fixed",
+        top: 0,
+        left: 0,
+        right: 0,
+        zIndex: 100,
+        backgroundColor: "rgba(0,0,0,0.5)",
+        backdropFilter: "blur(8px)",
+        WebkitBackdropFilter: "blur(8px)",
+        transition: "background-color 0.3s",
       }}
     >
       <div
         className="flex items-center justify-between px-8 md:px-14"
-        style={{ height: "70px" }}
+        style={{ height: "90px" }}
       >
         {/* Logo */}
         <a href="#" style={{ display: "inline-block", lineHeight: 0 }}>
           <img
             src="/logo-kamsteeg.png"
             alt="Kamsteeg Tuinen"
-            style={{ height: "60px", width: "auto", display: "block" }}
+            style={{ height: "70px", width: "auto", display: "block" }}
           />
         </a>
 
@@ -54,7 +58,7 @@ export default function Navbar() {
                 fontFamily: '"Roboto", system-ui, sans-serif',
                 fontSize: "16px",
                 fontWeight: 500,
-                color: scrolled ? "#5b604b" : "#ffffff",
+                color: "#ffffff",
                 textDecoration: "none",
                 opacity: 1,
                 transition: "opacity 0.2s",
@@ -71,7 +75,7 @@ export default function Navbar() {
         <button
           onClick={() => setMenuOpen(!menuOpen)}
           aria-label="Menu"
-          style={{ color: scrolled ? "#3a3a2e" : "#ffffff", background: "none", border: "none", cursor: "pointer" }}
+          style={{ color: "#ffffff", background: "none", border: "none", cursor: "pointer" }}
         >
           <svg width="22" height="22" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             {menuOpen
