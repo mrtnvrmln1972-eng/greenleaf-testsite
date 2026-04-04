@@ -1,7 +1,19 @@
 export default function Intro() {
+  const btnStyle: React.CSSProperties = {
+    display: "inline-block",
+    fontFamily: '"Roboto", system-ui, sans-serif',
+    fontWeight: 400,
+    fontSize: "16px",
+    color: "#5b604b",
+    border: "1px solid #5b604b",
+    padding: "12px 32px",
+    textDecoration: "none",
+    background: "transparent",
+  };
+
   return (
-    <section style={{ backgroundColor: "#f2eee2", padding: "120px 0" }}>
-      <div style={{ maxWidth: "900px", margin: "0 auto", padding: "0 40px" }}>
+    <section style={{ backgroundColor: "#f2eee2", padding: "60px 0" }}>
+      <div style={{ maxWidth: "1100px", margin: "0 auto", padding: "0 40px" }}>
 
         <h2
           style={{
@@ -20,7 +32,7 @@ export default function Intro() {
           combineert ruim 25 jaar ervaring met persoonlijke aandacht. Ons team denkt met u mee —
           van het eerste idee tot het eindresultaat.
         </p>
-        <p style={{ fontWeight: 400, fontSize: "17px", color: "#3a3a2e", lineHeight: 1.7, marginBottom: "72px" }}>
+        <p style={{ fontWeight: 400, fontSize: "17px", color: "#3a3a2e", lineHeight: 1.7, marginBottom: "56px" }}>
           Wij werken voor particulieren, bedrijven en overheden in Breda en de wijde omgeving.
           Geen project is te groot of te klein. Wat ons drijft? De overtuiging dat een goed
           aangelegde tuin uw dagelijks leven verrijkt.
@@ -29,22 +41,15 @@ export default function Intro() {
         <div
           style={{
             display: "grid",
-            gridTemplateColumns: "repeat(auto-fit, minmax(300px, 1fr))",
+            gridTemplateColumns: "1fr 1fr",
             gap: "64px",
             borderTop: "1px solid #c8c4b4",
-            paddingTop: "64px",
+            paddingTop: "48px",
           }}
         >
-          <div>
-            <h3
-              style={{
-                fontWeight: 400,
-                fontSize: "24px",
-                color: "#5b604b",
-                marginBottom: "20px",
-                lineHeight: 1.2,
-              }}
-            >
+          {/* Linkerkolom */}
+          <div style={{ display: "flex", flexDirection: "column" }}>
+            <h3 style={{ fontWeight: 400, fontSize: "24px", color: "#5b604b", marginBottom: "20px", lineHeight: 1.2 }}>
               Tuinen met een goed gevoel
             </h3>
             <p style={{ fontWeight: 400, fontSize: "17px", color: "#3a3a2e", lineHeight: 1.7, marginBottom: "18px" }}>
@@ -52,22 +57,20 @@ export default function Intro() {
               aanpak: wij ontwerpen, leggen aan en onderhouden tuinen waarin u zich het hele jaar
               door prettig voelt. Met oog voor sfeer, functionaliteit en de natuur om u heen.
             </p>
-            <p style={{ fontWeight: 400, fontSize: "17px", color: "#3a3a2e", lineHeight: 1.7 }}>
+            <p style={{ fontWeight: 400, fontSize: "17px", color: "#3a3a2e", lineHeight: 1.7, marginBottom: "32px" }}>
               Of u nu wilt genieten van een zonnige zithoek, een groene oase of een robuuste
               buitenruimte voor uw bedrijf — wij zorgen dat het klopt. Tot in detail.
             </p>
+            <div style={{ marginTop: "auto", textAlign: "right" }}>
+              <a href="/diensten/particulieren" style={btnStyle}>
+                Bekijk onze diensten voor particulieren
+              </a>
+            </div>
           </div>
 
-          <div>
-            <h3
-              style={{
-                fontWeight: 400,
-                fontSize: "24px",
-                color: "#5b604b",
-                marginBottom: "20px",
-                lineHeight: 1.2,
-              }}
-            >
+          {/* Rechterkolom */}
+          <div style={{ display: "flex", flexDirection: "column" }}>
+            <h3 style={{ fontWeight: 400, fontSize: "24px", color: "#5b604b", marginBottom: "20px", lineHeight: 1.2 }}>
               Voor particulieren én bedrijven
             </h3>
             <p style={{ fontWeight: 400, fontSize: "17px", color: "#3a3a2e", lineHeight: 1.7, marginBottom: "20px" }}>
@@ -97,42 +100,12 @@ export default function Intro() {
                 </li>
               ))}
             </ul>
+            <div style={{ marginTop: "auto", textAlign: "right" }}>
+              <a href="/diensten/bedrijven" style={btnStyle}>
+                Bekijk onze diensten voor bedrijven
+              </a>
+            </div>
           </div>
-        </div>
-
-        <div style={{ display: "flex", flexWrap: "wrap", gap: "16px", marginTop: "48px" }}>
-          <a
-            href="/diensten/particulieren"
-            style={{
-              display: "inline-block",
-              fontFamily: '"Roboto", system-ui, sans-serif',
-              fontWeight: 400,
-              fontSize: "16px",
-              color: "#5b604b",
-              border: "1px solid #5b604b",
-              padding: "12px 32px",
-              textDecoration: "none",
-              background: "transparent",
-            }}
-          >
-            Bekijk onze diensten voor particulieren
-          </a>
-          <a
-            href="/diensten/bedrijven"
-            style={{
-              display: "inline-block",
-              fontFamily: '"Roboto", system-ui, sans-serif',
-              fontWeight: 400,
-              fontSize: "16px",
-              color: "#5b604b",
-              border: "1px solid #5b604b",
-              padding: "12px 32px",
-              textDecoration: "none",
-              background: "transparent",
-            }}
-          >
-            Bekijk onze diensten voor bedrijven
-          </a>
         </div>
 
       </div>
