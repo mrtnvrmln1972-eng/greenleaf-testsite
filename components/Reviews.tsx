@@ -125,6 +125,36 @@ export default function Reviews() {
           >
             Kamsteeg Tuinen staat bekend om kwaliteit en betrouwbaarheid. Dat bevestigen niet alleen onze klanten, maar ook de branche:
           </p>
+          {/* Erkende dealer logo-balk */}
+          <div style={{ borderTop: "1px solid #c8c4b4", paddingTop: "40px", marginBottom: "40px" }}>
+            <p style={{ fontWeight: 400, fontSize: "13px", color: "#7a7b6b", letterSpacing: "0.08em", textTransform: "uppercase", marginBottom: "28px" }}>
+              Wij zijn erkend dealer voor
+            </p>
+            <div style={{ display: "flex", justifyContent: "space-around", alignItems: "center", flexWrap: "wrap", gap: "24px" }}>
+
+              {/* KOKOSYSTEMS */}
+              <svg width="160" height="32" viewBox="0 0 160 32" fill="none" xmlns="http://www.w3.org/2000/svg" aria-label="Kokosystems">
+                <text x="0" y="22" fontFamily='"Roboto", system-ui, sans-serif' fontSize="14" fontWeight="500" fill="#7a7b6b" letterSpacing="3">KOKOSYSTEMS</text>
+              </svg>
+
+              {/* PLATOFLEX */}
+              <svg width="130" height="32" viewBox="0 0 130 32" fill="none" xmlns="http://www.w3.org/2000/svg" aria-label="Platoflex">
+                <text x="0" y="22" fontFamily='"Roboto", system-ui, sans-serif' fontSize="14" fontWeight="500" fill="#7a7b6b" letterSpacing="2">PLATOFLEX</text>
+              </svg>
+
+              {/* Avyna */}
+              <svg width="90" height="36" viewBox="0 0 90 36" fill="none" xmlns="http://www.w3.org/2000/svg" aria-label="Avyna">
+                <text x="0" y="26" fontFamily="Georgia, serif" fontSize="22" fontWeight="400" fontStyle="italic" fill="#7a7b6b">Avyna</text>
+              </svg>
+
+              {/* tablazz */}
+              <svg width="90" height="32" viewBox="0 0 90 32" fill="none" xmlns="http://www.w3.org/2000/svg" aria-label="Tablazz">
+                <text x="0" y="22" fontFamily='"Roboto", system-ui, sans-serif' fontSize="16" fontWeight="300" fill="#7a7b6b" letterSpacing="1">tablazz</text>
+              </svg>
+
+            </div>
+          </div>
+
           <a
             href="#"
             style={{ fontWeight: 400, fontSize: "14px", color: "#7a7b6b", textDecoration: "none" }}
