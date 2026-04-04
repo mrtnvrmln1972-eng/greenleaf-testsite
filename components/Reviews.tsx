@@ -1,3 +1,5 @@
+"use client";
+
 const reviews = [
   {
     naam: "Familie De Vries",
@@ -126,31 +128,86 @@ export default function Reviews() {
             Kamsteeg Tuinen staat bekend om kwaliteit en betrouwbaarheid. Dat bevestigen niet alleen onze klanten, maar ook de branche:
           </p>
           {/* Erkende dealer logo-balk */}
-          <div style={{ borderTop: "1px solid #c8c4b4", paddingTop: "40px", marginBottom: "40px" }}>
-            <p style={{ fontWeight: 400, fontSize: "13px", color: "#7a7b6b", letterSpacing: "0.08em", textTransform: "uppercase", marginBottom: "28px" }}>
+          <div style={{ borderTop: "1px solid #c8c4b4", padding: "40px 0", marginBottom: "40px" }}>
+            <p style={{
+              fontWeight: 400,
+              fontSize: "11px",
+              color: "#7a7b6b",
+              letterSpacing: "3px",
+              textTransform: "uppercase",
+              textAlign: "center",
+              marginBottom: "36px",
+            }}>
               Wij zijn erkend dealer voor
             </p>
-            <div style={{ display: "flex", justifyContent: "space-around", alignItems: "center", flexWrap: "wrap", gap: "24px" }}>
+            <div style={{ display: "flex", justifyContent: "center", alignItems: "center", gap: "0" }}>
 
-              {/* KOKOSYSTEMS */}
-              <svg width="160" height="32" viewBox="0 0 160 32" fill="none" xmlns="http://www.w3.org/2000/svg" aria-label="Kokosystems">
-                <text x="0" y="22" fontFamily='"Roboto", system-ui, sans-serif' fontSize="14" fontWeight="500" fill="#7a7b6b" letterSpacing="3">KOKOSYSTEMS</text>
-              </svg>
-
-              {/* PLATOFLEX */}
-              <svg width="130" height="32" viewBox="0 0 130 32" fill="none" xmlns="http://www.w3.org/2000/svg" aria-label="Platoflex">
-                <text x="0" y="22" fontFamily='"Roboto", system-ui, sans-serif' fontSize="14" fontWeight="500" fill="#7a7b6b" letterSpacing="2">PLATOFLEX</text>
-              </svg>
-
-              {/* Avyna */}
-              <svg width="90" height="36" viewBox="0 0 90 36" fill="none" xmlns="http://www.w3.org/2000/svg" aria-label="Avyna">
-                <text x="0" y="26" fontFamily="Georgia, serif" fontSize="22" fontWeight="400" fontStyle="italic" fill="#7a7b6b">Avyna</text>
-              </svg>
-
-              {/* tablazz */}
-              <svg width="90" height="32" viewBox="0 0 90 32" fill="none" xmlns="http://www.w3.org/2000/svg" aria-label="Tablazz">
-                <text x="0" y="22" fontFamily='"Roboto", system-ui, sans-serif' fontSize="16" fontWeight="300" fill="#7a7b6b" letterSpacing="1">tablazz</text>
-              </svg>
+              {[
+                {
+                  label: "KOKOSYSTEMS",
+                  style: {
+                    fontFamily: '"Roboto", system-ui, sans-serif',
+                    fontSize: "18px",
+                    fontWeight: 600,
+                    letterSpacing: "4px",
+                    color: "#3a3a2e",
+                    transition: "color 0.2s",
+                    cursor: "default",
+                    padding: "0 36px",
+                  },
+                },
+                {
+                  label: "PLATOFLEX",
+                  style: {
+                    fontFamily: '"Roboto", system-ui, sans-serif',
+                    fontSize: "18px",
+                    fontWeight: 600,
+                    letterSpacing: "3px",
+                    color: "#3a3a2e",
+                    transition: "color 0.2s",
+                    cursor: "default",
+                    padding: "0 36px",
+                    borderLeft: "1px solid #c8c4b4",
+                  },
+                },
+                {
+                  label: "Avyna",
+                  style: {
+                    fontFamily: "Georgia, serif",
+                    fontSize: "22px",
+                    fontWeight: 400,
+                    fontStyle: "italic",
+                    color: "#3a3a2e",
+                    transition: "color 0.2s",
+                    cursor: "default",
+                    padding: "0 36px",
+                    borderLeft: "1px solid #c8c4b4",
+                  },
+                },
+                {
+                  label: "tablazz",
+                  style: {
+                    fontFamily: '"Roboto", system-ui, sans-serif',
+                    fontSize: "20px",
+                    fontWeight: 300,
+                    letterSpacing: "2px",
+                    color: "#3a3a2e",
+                    transition: "color 0.2s",
+                    cursor: "default",
+                    padding: "0 36px",
+                    borderLeft: "1px solid #c8c4b4",
+                  },
+                },
+              ].map(({ label, style }) => (
+                <span
+                  key={label}
+                  style={style as React.CSSProperties}
+                  onMouseEnter={(e) => { (e.currentTarget as HTMLSpanElement).style.color = "#5b604b"; }}
+                  onMouseLeave={(e) => { (e.currentTarget as HTMLSpanElement).style.color = "#3a3a2e"; }}
+                >
+                  {label}
+                </span>
+              ))}
 
             </div>
           </div>
