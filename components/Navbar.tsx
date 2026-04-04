@@ -36,31 +36,12 @@ export default function Navbar() {
         style={{ height: "70px" }}
       >
         {/* Logo */}
-        <a href="#" className="flex items-center gap-3 no-underline">
-          <svg
-            width="36"
-            height="36"
-            viewBox="0 0 36 36"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-            style={{ color: scrolled ? "#5b604b" : "#fff" }}
-          >
-            <rect x="1" y="1" width="34" height="34" rx="0" stroke="currentColor" strokeWidth="1.2" />
-            <path d="M6 28 Q18 8 30 28" stroke="currentColor" strokeWidth="1.2" fill="none" />
-            <circle cx="18" cy="14" r="3" stroke="currentColor" strokeWidth="1.2" />
-          </svg>
-          <span
-            style={{
-              fontFamily: '"Roboto", system-ui, sans-serif',
-              fontSize: "14px",
-              fontWeight: 500,
-              letterSpacing: "0.18em",
-              textTransform: "uppercase" as const,
-              color: scrolled ? "#5b604b" : "#ffffff",
-            }}
-          >
-            Kamsteeg Tuinen
-          </span>
+        <a href="#" style={{ display: "inline-block", lineHeight: 0 }}>
+          <img
+            src="/logo-kamsteeg.png"
+            alt="Kamsteeg Tuinen"
+            style={{ height: "60px", width: "auto", display: "block" }}
+          />
         </a>
 
         {/* Desktop nav */}
