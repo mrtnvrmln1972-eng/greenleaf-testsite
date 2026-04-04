@@ -21,16 +21,16 @@ const reviews = [
 
 export default function Reviews() {
   return (
-    <section style={{ backgroundColor: "#f2eee2", padding: "100px 0" }}>
+    <section style={{ backgroundColor: "#f2eee2", padding: "120px 0" }}>
       <div style={{ maxWidth: "1100px", margin: "0 auto", padding: "0 40px" }}>
 
         <h2
           style={{
-            fontFamily: "Roboto, system-ui, sans-serif",
             fontWeight: 400,
-            fontSize: "clamp(2rem, 5vw, 60px)",
+            fontSize: "60px",
             color: "#7a7b6b",
-            marginBottom: "20px",
+            marginBottom: "24px",
+            lineHeight: 1.2,
           }}
         >
           Klantreviews &amp; keurmerken
@@ -38,22 +38,22 @@ export default function Reviews() {
 
         <h3
           style={{
-            fontFamily: "Roboto, system-ui, sans-serif",
             fontWeight: 400,
-            fontSize: "22px",
-            color: "#7a7b6b",
-            marginBottom: "16px",
+            fontSize: "24px",
+            color: "#5b604b",
+            marginBottom: "20px",
+            lineHeight: 1.2,
           }}
         >
           Dit zeggen onze klanten
         </h3>
         <p
           style={{
-            fontWeight: 300,
-            fontSize: "16px",
-            color: "#555",
-            lineHeight: 1.8,
-            marginBottom: "52px",
+            fontWeight: 400,
+            fontSize: "17px",
+            color: "#3a3a2e",
+            lineHeight: 1.7,
+            marginBottom: "64px",
           }}
         >
           Wij laten ons werk graag voor zich spreken. Maar het mooiste compliment komt van onze klanten zelf:
@@ -64,7 +64,7 @@ export default function Reviews() {
             display: "grid",
             gridTemplateColumns: "repeat(3, 1fr)",
             gap: "40px",
-            marginBottom: "60px",
+            marginBottom: "80px",
           }}
         >
           {reviews.map((r) => (
@@ -72,29 +72,29 @@ export default function Reviews() {
               key={r.naam}
               style={{
                 backgroundColor: "#ffffff",
-                padding: "36px",
+                padding: "40px",
               }}
             >
-              <div style={{ marginBottom: "18px", color: "#7a7b6b", fontSize: "16px", letterSpacing: "2px" }}>
+              <div style={{ marginBottom: "20px", color: "#7a7b6b", fontSize: "16px", letterSpacing: "2px" }}>
                 {"★".repeat(r.sterren)}
               </div>
               <p
                 style={{
-                  fontWeight: 300,
-                  fontSize: "15px",
-                  color: "#444",
-                  lineHeight: 1.78,
+                  fontWeight: 400,
+                  fontSize: "17px",
+                  color: "#3a3a2e",
+                  lineHeight: 1.7,
                   fontStyle: "italic",
-                  marginBottom: "24px",
+                  marginBottom: "28px",
                 }}
               >
                 &ldquo;{r.tekst}&rdquo;
               </p>
-              <div style={{ borderTop: "1px solid #e8e4d8", paddingTop: "18px" }}>
-                <p style={{ fontWeight: 500, fontSize: "14px", color: "#5b604b", margin: 0 }}>
+              <div style={{ borderTop: "1px solid #e8e4d8", paddingTop: "20px" }}>
+                <p style={{ fontWeight: 400, fontSize: "14px", color: "#5b604b", margin: 0 }}>
                   {r.naam}
                 </p>
-                <p style={{ fontWeight: 300, fontSize: "13px", color: "#888", marginTop: "3px" }}>
+                <p style={{ fontWeight: 400, fontSize: "13px", color: "#888", marginTop: "4px" }}>
                   {r.plaats}
                 </p>
               </div>
@@ -102,25 +102,25 @@ export default function Reviews() {
           ))}
         </div>
 
-        <div style={{ borderTop: "1px solid #c8c4b4", paddingTop: "52px" }}>
+        <div style={{ borderTop: "1px solid #c8c4b4", paddingTop: "64px" }}>
           <h3
             style={{
-              fontFamily: "Roboto, system-ui, sans-serif",
               fontWeight: 400,
-              fontSize: "22px",
-              color: "#7a7b6b",
-              marginBottom: "16px",
+              fontSize: "24px",
+              color: "#5b604b",
+              marginBottom: "20px",
+              lineHeight: 1.2,
             }}
           >
             Erkende en bekroonde tuinspecialist
           </h3>
           <p
             style={{
-              fontWeight: 300,
-              fontSize: "15px",
-              color: "#555",
-              lineHeight: 1.8,
-              marginBottom: "28px",
+              fontWeight: 400,
+              fontSize: "17px",
+              color: "#3a3a2e",
+              lineHeight: 1.7,
+              marginBottom: "32px",
             }}
           >
             Kamsteeg Tuinen staat bekend om kwaliteit en betrouwbaarheid. Dat bevestigen niet alleen onze klanten, maar ook de branche:

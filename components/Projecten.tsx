@@ -28,16 +28,16 @@ export default function Projecten() {
   return (
     <section
       id="projecten"
-      style={{ backgroundColor: "#5b604b", padding: "100px 0" }}
+      style={{ backgroundColor: "#5b604b", padding: "120px 0" }}
     >
       <div style={{ maxWidth: "1100px", margin: "0 auto", padding: "0 40px" }}>
         <h2
           style={{
-            fontFamily: "Roboto, system-ui, sans-serif",
             fontWeight: 400,
-            fontSize: "clamp(2rem, 5vw, 60px)",
+            fontSize: "60px",
             color: "#ffffff",
-            marginBottom: "20px",
+            marginBottom: "24px",
+            lineHeight: 1.2,
             textAlign: "center",
           }}
         >
@@ -45,14 +45,13 @@ export default function Projecten() {
         </h2>
         <p
           style={{
-            fontWeight: 300,
-            fontSize: "16px",
-            color: "rgba(255,255,255,0.80)",
+            fontWeight: 400,
+            fontSize: "17px",
+            color: "rgba(255,255,255,0.82)",
             textAlign: "center",
-            marginBottom: "60px",
             lineHeight: 1.7,
             maxWidth: "680px",
-            margin: "0 auto 60px",
+            margin: "0 auto 80px",
           }}
         >
           Benieuwd hoe een tuin van Kamsteeg eruitziet in de praktijk? Bekijk onze gerealiseerde projecten en laat u inspireren voor uw eigen buitenruimte.
@@ -60,22 +59,22 @@ export default function Projecten() {
 
         <h3
           style={{
-            fontFamily: "Roboto, system-ui, sans-serif",
             fontWeight: 400,
-            fontSize: "22px",
-            color: "#ffffff",
-            marginBottom: "20px",
+            fontSize: "24px",
+            color: "rgba(255,255,255,0.90)",
+            marginBottom: "24px",
+            lineHeight: 1.2,
           }}
         >
           Gerealiseerde tuinen in en rond Breda
         </h3>
         <p
           style={{
-            fontWeight: 300,
-            fontSize: "15px",
+            fontWeight: 400,
+            fontSize: "17px",
             color: "rgba(255,255,255,0.75)",
-            lineHeight: 1.75,
-            marginBottom: "40px",
+            lineHeight: 1.7,
+            marginBottom: "48px",
             maxWidth: "720px",
           }}
         >
@@ -87,7 +86,7 @@ export default function Projecten() {
             display: "grid",
             gridTemplateColumns: "repeat(3, 1fr)",
             gap: "20px",
-            marginBottom: "60px",
+            marginBottom: "80px",
           }}
         >
           {projecten.map((p) => (
@@ -101,7 +100,6 @@ export default function Projecten() {
                     height: "100%",
                     objectFit: "cover",
                     display: "block",
-                    borderRadius: 0,
                     transition: "transform 0.6s ease",
                   }}
                   onMouseEnter={(e) => { (e.currentTarget as HTMLImageElement).style.transform = "scale(1.04)"; }}
@@ -114,38 +112,38 @@ export default function Projecten() {
 
         <h3
           style={{
-            fontFamily: "Roboto, system-ui, sans-serif",
             fontWeight: 400,
-            fontSize: "22px",
-            color: "#ffffff",
-            marginBottom: "16px",
+            fontSize: "24px",
+            color: "rgba(255,255,255,0.90)",
+            marginBottom: "20px",
+            lineHeight: 1.2,
           }}
         >
           Laat u inspireren
         </h3>
         <p
           style={{
-            fontWeight: 300,
-            fontSize: "15px",
+            fontWeight: 400,
+            fontSize: "17px",
             color: "rgba(255,255,255,0.75)",
-            lineHeight: 1.75,
-            marginBottom: "16px",
+            lineHeight: 1.7,
+            marginBottom: "20px",
           }}
         >
           Op zoek naar ideeën voor uw tuin? In onze inspiratiegidsen vindt u tips en voorbeelden voor onder meer:
         </p>
-        <ul style={{ listStyle: "none", padding: 0, margin: "0 0 52px" }}>
+        <ul style={{ listStyle: "none", padding: 0, margin: "0 0 64px" }}>
           {inspiratieBullets.map((b) => (
             <li
               key={b}
               style={{
-                fontWeight: 300,
-                fontSize: "15px",
+                fontWeight: 400,
+                fontSize: "17px",
                 color: "rgba(255,255,255,0.75)",
-                lineHeight: 1.8,
-                paddingLeft: "16px",
+                lineHeight: 1.7,
+                paddingLeft: "20px",
                 position: "relative",
-                marginBottom: "6px",
+                marginBottom: "8px",
               }}
             >
               <span style={{ position: "absolute", left: 0, color: "rgba(255,255,255,0.5)" }}>–</span>
@@ -159,15 +157,13 @@ export default function Projecten() {
             href="#"
             style={{
               display: "inline-block",
-              fontFamily: "Roboto, system-ui, sans-serif",
               fontWeight: 400,
               fontSize: "14px",
               color: "#ffffff",
-              border: "1px solid rgba(255,255,255,0.6)",
-              padding: "12px 36px",
+              border: "1px solid #ffffff",
+              padding: "12px 28px",
               textDecoration: "none",
-              letterSpacing: "0.06em",
-              transition: "background 0.2s",
+              letterSpacing: "0.04em",
             }}
             onMouseEnter={(e) => { (e.currentTarget as HTMLAnchorElement).style.background = "rgba(255,255,255,0.12)"; }}
             onMouseLeave={(e) => { (e.currentTarget as HTMLAnchorElement).style.background = "transparent"; }}
@@ -178,15 +174,13 @@ export default function Projecten() {
             href="#"
             style={{
               display: "inline-block",
-              fontFamily: "Roboto, system-ui, sans-serif",
-              fontWeight: 300,
+              fontWeight: 400,
               fontSize: "14px",
               color: "rgba(255,255,255,0.80)",
-              border: "1px solid rgba(255,255,255,0.35)",
-              padding: "12px 36px",
+              border: "1px solid rgba(255,255,255,0.4)",
+              padding: "12px 28px",
               textDecoration: "none",
-              letterSpacing: "0.06em",
-              transition: "background 0.2s",
+              letterSpacing: "0.04em",
             }}
             onMouseEnter={(e) => { (e.currentTarget as HTMLAnchorElement).style.background = "rgba(255,255,255,0.08)"; }}
             onMouseLeave={(e) => { (e.currentTarget as HTMLAnchorElement).style.background = "transparent"; }}

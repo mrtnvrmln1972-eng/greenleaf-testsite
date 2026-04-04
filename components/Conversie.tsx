@@ -13,15 +13,15 @@ const knoppen = [
 
 export default function Conversie() {
   return (
-    <section id="contact" style={{ backgroundColor: "#5b604b", padding: "100px 0" }}>
+    <section id="contact" style={{ backgroundColor: "#5b604b", padding: "120px 0" }}>
       <div style={{ maxWidth: "860px", margin: "0 auto", padding: "0 40px", textAlign: "center" }}>
         <h2
           style={{
-            fontFamily: "Roboto, system-ui, sans-serif",
             fontWeight: 400,
-            fontSize: "clamp(2rem, 5vw, 60px)",
+            fontSize: "60px",
             color: "#ffffff",
-            marginBottom: "18px",
+            marginBottom: "24px",
+            lineHeight: 1.2,
           }}
         >
           Klaar voor een tuin met een goed gevoel?
@@ -29,11 +29,11 @@ export default function Conversie() {
 
         <h3
           style={{
-            fontFamily: "Roboto, system-ui, sans-serif",
             fontWeight: 400,
-            fontSize: "22px",
+            fontSize: "24px",
             color: "rgba(255,255,255,0.90)",
-            marginBottom: "20px",
+            marginBottom: "24px",
+            lineHeight: 1.2,
           }}
         >
           Vraag een vrijblijvende offerte aan
@@ -41,17 +41,16 @@ export default function Conversie() {
 
         <p
           style={{
-            fontWeight: 300,
+            fontWeight: 400,
             fontSize: "17px",
-            color: "rgba(255,255,255,0.80)",
-            marginBottom: "56px",
+            color: "rgba(255,255,255,0.82)",
+            marginBottom: "72px",
             lineHeight: 1.7,
           }}
         >
           Benieuwd wat Kamsteeg Tuinen voor u kan betekenen? Neem vrijblijvend contact met ons op. Wij luisteren graag naar uw wensen en maken een voorstel op maat.
         </p>
 
-        {/* Zo werkt het */}
         <p
           style={{
             fontWeight: 400,
@@ -59,7 +58,7 @@ export default function Conversie() {
             color: "rgba(255,255,255,0.70)",
             letterSpacing: "0.08em",
             textTransform: "uppercase",
-            marginBottom: "32px",
+            marginBottom: "40px",
           }}
         >
           Zo werkt het:
@@ -71,13 +70,13 @@ export default function Conversie() {
             justifyContent: "center",
             alignItems: "flex-start",
             gap: "0",
-            marginBottom: "56px",
+            marginBottom: "72px",
             flexWrap: "wrap",
           }}
         >
           {stappen.map((s, i) => (
             <div key={s} style={{ display: "flex", alignItems: "flex-start" }}>
-              <div style={{ textAlign: "center", padding: "0 24px", maxWidth: "200px" }}>
+              <div style={{ textAlign: "center", padding: "0 28px", maxWidth: "220px" }}>
                 <div
                   style={{
                     width: "40px",
@@ -88,14 +87,14 @@ export default function Conversie() {
                     alignItems: "center",
                     justifyContent: "center",
                     color: "#fff",
-                    fontWeight: 300,
+                    fontWeight: 400,
                     fontSize: "14px",
-                    margin: "0 auto 10px",
+                    margin: "0 auto 14px",
                   }}
                 >
                   {i + 1}
                 </div>
-                <span style={{ fontWeight: 300, fontSize: "14px", color: "rgba(255,255,255,0.85)", letterSpacing: "0.02em", lineHeight: 1.6, display: "block" }}>
+                <span style={{ fontWeight: 400, fontSize: "17px", color: "rgba(255,255,255,0.85)", lineHeight: 1.7, display: "block" }}>
                   {s}
                 </span>
               </div>
@@ -114,26 +113,24 @@ export default function Conversie() {
           ))}
         </div>
 
-        {/* Knoppen */}
         <div style={{ display: "flex", gap: "14px", justifyContent: "center", flexWrap: "wrap" }}>
-          {knoppen.map((k, i) => (
+          {knoppen.map((k) => (
             <a
               key={k.label}
               href={k.href}
               style={{
                 display: "inline-block",
-                fontFamily: "Roboto, system-ui, sans-serif",
-                fontWeight: i === 0 ? 400 : 300,
+                fontWeight: 400,
                 fontSize: "14px",
-                color: i === 0 ? "#5b604b" : "#ffffff",
-                backgroundColor: i === 0 ? "#ffffff" : "transparent",
-                border: "1px solid rgba(255,255,255,0.7)",
-                padding: "13px 28px",
+                color: "#ffffff",
+                backgroundColor: "transparent",
+                border: "1px solid #ffffff",
+                padding: "12px 28px",
                 textDecoration: "none",
                 letterSpacing: "0.04em",
                 transition: "opacity 0.2s",
               }}
-              onMouseEnter={(e) => { (e.currentTarget as HTMLAnchorElement).style.opacity = "0.8"; }}
+              onMouseEnter={(e) => { (e.currentTarget as HTMLAnchorElement).style.opacity = "0.75"; }}
               onMouseLeave={(e) => { (e.currentTarget as HTMLAnchorElement).style.opacity = "1"; }}
             >
               {k.label}

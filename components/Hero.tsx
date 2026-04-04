@@ -4,7 +4,7 @@ export default function Hero() {
       style={{
         width: "100%",
         height: "100vh",
-        minHeight: "580px",
+        minHeight: "600px",
         position: "relative",
         overflow: "hidden",
       }}
@@ -28,14 +28,14 @@ export default function Hero() {
           position: "absolute",
           inset: 0,
           background:
-            "linear-gradient(to top, rgba(0,0,0,0.60) 0%, rgba(0,0,0,0.30) 50%, transparent 80%)",
+            "linear-gradient(to top, rgba(0,0,0,0.65) 0%, rgba(0,0,0,0.25) 50%, transparent 80%)",
         }}
       />
 
       <div
         style={{
           position: "absolute",
-          bottom: "60px",
+          bottom: "80px",
           left: "60px",
           right: "60px",
           zIndex: 10,
@@ -43,13 +43,12 @@ export default function Hero() {
       >
         <h1
           style={{
-            fontFamily: "Roboto, system-ui, sans-serif",
             fontWeight: 400,
-            fontSize: "clamp(2rem, 6vw, 72px)",
+            fontSize: "90px",
             color: "#ffffff",
-            margin: "0 0 16px",
-            lineHeight: 1.1,
-            letterSpacing: "0.01em",
+            margin: "0 0 24px",
+            lineHeight: 1.2,
+            letterSpacing: "-0.01em",
           }}
         >
           Kamsteeg Tuinen – Tuinen met een goed gevoel in regio Breda
@@ -57,13 +56,13 @@ export default function Hero() {
 
         <p
           style={{
-            fontFamily: "Roboto, system-ui, sans-serif",
-            fontWeight: 300,
-            fontSize: "clamp(0.95rem, 1.8vw, 18px)",
+            fontWeight: 400,
+            fontSize: "17px",
             color: "rgba(255,255,255,0.88)",
-            margin: "0 0 8px",
+            margin: "0 0 10px",
             maxWidth: "680px",
             lineHeight: 1.7,
+            color: "#ffffff",
           }}
         >
           Al meer dan 25 jaar creëert Kamsteeg Tuinen buitenruimtes waar u met plezier vertoeft.
@@ -72,11 +71,11 @@ export default function Hero() {
         </p>
         <p
           style={{
-            fontFamily: "Roboto, system-ui, sans-serif",
-            fontWeight: 300,
-            fontSize: "clamp(0.9rem, 1.5vw, 16px)",
-            color: "rgba(255,255,255,0.75)",
-            margin: "0 0 28px",
+            fontWeight: 400,
+            fontSize: "17px",
+            color: "rgba(255,255,255,0.80)",
+            margin: "0 0 40px",
+            lineHeight: 1.7,
           }}
         >
           Ontdek wat wij voor uw tuin kunnen betekenen.
@@ -87,12 +86,12 @@ export default function Hero() {
             href="#contact"
             style={{
               display: "inline-block",
-              fontFamily: "Roboto, system-ui, sans-serif",
               fontWeight: 400,
               fontSize: "14px",
-              color: "#5b604b",
-              backgroundColor: "#ffffff",
-              padding: "13px 30px",
+              color: "#ffffff",
+              backgroundColor: "transparent",
+              border: "1px solid #ffffff",
+              padding: "12px 28px",
               textDecoration: "none",
               letterSpacing: "0.04em",
             }}
@@ -103,12 +102,11 @@ export default function Hero() {
             href="#projecten"
             style={{
               display: "inline-block",
-              fontFamily: "Roboto, system-ui, sans-serif",
               fontWeight: 400,
               fontSize: "14px",
               color: "#ffffff",
-              border: "1px solid rgba(255,255,255,0.7)",
-              padding: "13px 30px",
+              border: "1px solid rgba(255,255,255,0.5)",
+              padding: "12px 28px",
               textDecoration: "none",
               letterSpacing: "0.04em",
             }}

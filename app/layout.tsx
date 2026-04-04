@@ -1,12 +1,5 @@
 import type { Metadata } from "next";
-import { Roboto } from "next/font/google";
 import "./globals.css";
-
-const roboto = Roboto({
-  subsets: ["latin"],
-  weight: ["300", "400", "500"],
-  display: "swap",
-});
 
 export const metadata: Metadata = {
   title: "Kamsteeg Tuinen | Hovenier in Breda | Tuinontwerp, aanleg & onderhoud",
@@ -28,7 +21,11 @@ export default function RootLayout({
 }: Readonly<{ children: React.ReactNode }>) {
   return (
     <html lang="nl" className="h-full">
-      <body className={`${roboto.className} min-h-full`} suppressHydrationWarning>
+      <body
+        className="min-h-full"
+        style={{ fontFamily: '-apple-system, "Segoe UI", Roboto, sans-serif' }}
+        suppressHydrationWarning
+      >
         {children}
       </body>
     </html>

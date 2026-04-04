@@ -37,7 +37,6 @@ export default function Navbar() {
       >
         {/* Logo */}
         <a href="#" className="flex items-center gap-3 no-underline">
-          {/* SVG lijnlogo placeholder — zelfde stijl als strandtuin.nl */}
           <svg
             width="36"
             height="36"
@@ -51,8 +50,13 @@ export default function Navbar() {
             <circle cx="18" cy="14" r="3" stroke="currentColor" strokeWidth="1.2" />
           </svg>
           <span
-            className="text-sm font-light tracking-widest uppercase"
-            style={{ color: scrolled ? "#5b604b" : "#fff", letterSpacing: "0.18em" }}
+            style={{
+              fontSize: "14px",
+              fontWeight: 400,
+              letterSpacing: "0.18em",
+              textTransform: "uppercase" as const,
+              color: scrolled ? "#5b604b" : "#ffffff",
+            }}
           >
             Kamsteeg Tuinen
           </span>
@@ -64,8 +68,16 @@ export default function Navbar() {
             <a
               key={l.label}
               href={l.href}
-              className="text-sm font-light transition-opacity hover:opacity-60"
-              style={{ color: scrolled ? "#333" : "#fff" }}
+              style={{
+                fontSize: "14px",
+                fontWeight: 400,
+                color: scrolled ? "#3a3a2e" : "#ffffff",
+                textDecoration: "none",
+                opacity: 1,
+                transition: "opacity 0.2s",
+              }}
+              onMouseEnter={(e) => { (e.currentTarget as HTMLAnchorElement).style.opacity = "0.6"; }}
+              onMouseLeave={(e) => { (e.currentTarget as HTMLAnchorElement).style.opacity = "1"; }}
             >
               {l.label}
             </a>
@@ -76,8 +88,7 @@ export default function Navbar() {
         <button
           onClick={() => setMenuOpen(!menuOpen)}
           aria-label="Menu"
-          className="md:hidden transition-opacity hover:opacity-60"
-          style={{ color: scrolled ? "#333" : "#fff" }}
+          style={{ color: scrolled ? "#3a3a2e" : "#ffffff", background: "none", border: "none", cursor: "pointer" }}
         >
           <svg width="22" height="22" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             {menuOpen
@@ -90,14 +101,13 @@ export default function Navbar() {
       {/* Mobile menu */}
       {menuOpen && (
         <div
-          className="md:hidden flex flex-col px-8 pb-6 gap-5"
-          style={{ backgroundColor: "#fff", borderTop: "1px solid #e5e5e5" }}
+          style={{ backgroundColor: "#ffffff", borderTop: "1px solid #e5e5e5", padding: "0 32px 24px", display: "flex", flexDirection: "column", gap: "20px" }}
         >
           {links.map((l) => (
             <a
               key={l.label}
               href={l.href}
-              className="text-sm font-light text-gray-700 hover:text-[#5b604b] transition-colors"
+              style={{ fontSize: "14px", fontWeight: 400, color: "#3a3a2e", textDecoration: "none" }}
               onClick={() => setMenuOpen(false)}
             >
               {l.label}
