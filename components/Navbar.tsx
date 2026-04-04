@@ -51,8 +51,9 @@ export default function Navbar() {
           </svg>
           <span
             style={{
+              fontFamily: '"Roboto", system-ui, sans-serif',
               fontSize: "14px",
-              fontWeight: 400,
+              fontWeight: 500,
               letterSpacing: "0.18em",
               textTransform: "uppercase" as const,
               color: scrolled ? "#5b604b" : "#ffffff",
@@ -69,9 +70,10 @@ export default function Navbar() {
               key={l.label}
               href={l.href}
               style={{
-                fontSize: "14px",
-                fontWeight: 400,
-                color: scrolled ? "#3a3a2e" : "#ffffff",
+                fontFamily: '"Roboto", system-ui, sans-serif',
+                fontSize: "16px",
+                fontWeight: 500,
+                color: scrolled ? "#5b604b" : "#ffffff",
                 textDecoration: "none",
                 opacity: 1,
                 transition: "opacity 0.2s",

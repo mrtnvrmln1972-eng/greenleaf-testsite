@@ -23,7 +23,7 @@ export default function RootLayout({
     <html lang="nl" className="h-full">
       <body
         className="min-h-full"
-        style={{ fontFamily: '-apple-system, "Segoe UI", Roboto, sans-serif' }}
+        style={{ fontFamily: '"Roboto", system-ui, sans-serif' }}
         suppressHydrationWarning
       >
         {children}

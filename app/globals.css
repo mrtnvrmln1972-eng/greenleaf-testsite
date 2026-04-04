@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap');
 @import "tailwindcss";
 
 @theme {
@@ -16,13 +17,5 @@ html {
 body {
   font-family: "Roboto", system-ui, sans-serif;
   font-weight: 400;
-  color: #333;
-}
-
-h2 {
-  font-family: "Roboto", system-ui, sans-serif;
-  font-weight: 400;
-  font-size: 60px;
-  color: #7a7b6b;
-  line-height: 1.1;
+  color: #3a3a2e;
 }
