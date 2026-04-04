@@ -55,22 +55,22 @@ const diensten = [
   {
     Icon: IconSchop,
     h3: "Tuinaanleg",
-    p: "Of het nu gaat om een compacte stadstuin of een uitgestrekt landschap: onze vakmensen leggen uw tuin aan met zorg en precisie. Wij werken met duurzame materialen en besteden extra aandacht aan een solide basis.",
+    p: "Onze vakmensen leggen uw tuin aan met zorg en precisie. Wij werken met duurzame materialen en besteden extra aandacht aan een solide basis, voor een tuin die direct prachtig uitziet én lang mooi blijft.",
     cta: "→ Meer over tuinaanleg",
     href: "/tuinaanleg/",
   },
   {
     Icon: IconSchaar,
     h3: "Tuinonderhoud",
-    p: "Een mooie tuin vraagt om regelmatige zorg. Kamsteeg Tuinen biedt zowel eenmalig als periodiek onderhoud. Van snoeien en onkruidbestrijding tot een compleet seizoensplan — wij houden uw tuin in topconditie.",
+    p: "Een mooie tuin vraagt om regelmatige zorg. Wij bieden zowel eenmalig als periodiek onderhoud — van snoeien en onkruidbestrijding tot een compleet seizoensplan voor uw tuin.",
     cta: "→ Meer over tuinonderhoud",
     href: "/tuinonderhoud/",
   },
   {
     Icon: IconWater,
     h3: "(Zwem)vijvers & waterpartijen",
-    p: "Water brengt rust en leven in uw tuin. Kamsteeg Tuinen is specialist in de aanleg van vijvers, zwemvijvers en waterpartijen. Wij adviseren u over de juiste opzet, afmetingen en techniek — zodat u jarenlang geniet van helder water in een natuurlijke omgeving.",
-    cta: "→ Meer over (zwem)vijvers en waterpartijen",
+    p: "Water brengt rust en leven in uw tuin. Kamsteeg Tuinen is specialist in de aanleg van vijvers en zwemvijvers, afgestemd op de juiste opzet, afmetingen en techniek.",
+    cta: "→ Meer over (zwem)vijvers",
     href: "/tuinaanleg/zwemvijvers/",
   },
 ];
@@ -78,7 +78,7 @@ const diensten = [
 export default function Diensten() {
   return (
     <section id="diensten" style={{ backgroundColor: "#f2eee2", padding: "120px 0" }}>
-      <div style={{ maxWidth: "1100px", margin: "0 auto", padding: "0 40px" }}>
+      <div style={{ maxWidth: "1200px", margin: "0 auto", padding: "0 40px" }}>
 
         <h2
           style={{
@@ -112,6 +112,7 @@ export default function Diensten() {
             display: "grid",
             gridTemplateColumns: "repeat(4, 1fr)",
             gap: "48px",
+            alignItems: "stretch",
             marginBottom: "64px",
           }}
         >
