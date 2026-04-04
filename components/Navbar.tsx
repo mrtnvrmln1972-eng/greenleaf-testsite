@@ -25,8 +25,9 @@ export default function Navbar() {
     <header
       className="fixed top-0 left-0 right-0 z-50 transition-all duration-300"
       style={{
-        backgroundColor: scrolled ? "rgba(255,255,255,0.96)" : "transparent",
-        backdropFilter: scrolled ? "blur(4px)" : "none",
+        backgroundColor: scrolled ? "rgba(255,255,255,0.96)" : "rgba(0,0,0,0.45)",
+        backdropFilter: "blur(6px)",
+        WebkitBackdropFilter: "blur(6px)",
         borderBottom: scrolled ? "1px solid #e5e5e5" : "none",
       }}
     >
