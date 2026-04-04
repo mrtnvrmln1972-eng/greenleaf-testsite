@@ -19,7 +19,7 @@ export default async function Home() {
     fetchPage("contact"),
   ]);
 
-  const heroData = homePage ? parseHeroData(homePage.content, homePage.acf) : undefined;
+  const heroData = homePage ? parseHeroData(homePage) : undefined;
 
   // Services page is leeg — val terug op homepage content voor diensten
   const servicesContent = servicesPage?.content?.trim()
