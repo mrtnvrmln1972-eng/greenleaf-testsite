@@ -1,84 +1,125 @@
+"use client";
 const diensten = [
   {
     titel: "Tuinontwerp",
-    beschrijving:
-      "Een persoonlijk tuinontwerp dat past bij uw wensen, leefstijl en omgeving. Van schets tot gedetailleerd beplantingsplan — wij geven uw tuin richting.",
-    href: "#contact",
+    tekst:
+      "Een goed tuinontwerp is de basis voor een tuin die jarenlang voldoening geeft. Wij luisteren naar uw wensen en vertalen die naar een persoonlijk plan voor uw hovenier in Breda.",
   },
   {
     titel: "Tuinaanleg",
-    beschrijving:
-      "Professionele tuinaanleg in Breda en omgeving. Wij realiseren uw tuin met oog voor detail, duurzame materialen en een vlekkeloze oplevering.",
-    href: "#contact",
+    tekst:
+      "Onze vakmensen leggen uw tuin aan met zorg en precisie, met duurzame materialen. Professionele tuinaanleg in Breda en omgeving, van begin tot oplevering.",
   },
   {
     titel: "Tuinonderhoud",
-    beschrijving:
-      "Structureel tuinonderhoud voor particulieren én bedrijven. Uw tuin het hele jaar door verzorgd en in optimale conditie.",
-    href: "#contact",
+    tekst:
+      "Van snoeien en onkruidbestrijding tot een compleet seizoensplan voor tuinonderhoud. Wij houden uw tuin het hele jaar door in topconditie.",
   },
   {
     titel: "(Zwem)vijvers & waterpartijen",
-    beschrijving:
-      "Specialist in zwemvijvers, natuurvijvers en waterpartijen. Wij ontwerpen en realiseren watertuinen die jarenlang een lust voor het oog blijven.",
-    href: "#contact",
+    tekst:
+      "Kamsteeg Tuinen is specialist in de aanleg van vijvers en zwemvijvers. Een waterpartij geeft uw tuin beleving en sfeer in elk seizoen.",
   },
 ];
 
 export default function Diensten() {
   return (
-    <section id="diensten" className="bg-white py-24 md:py-32">
-      <div className="max-w-7xl mx-auto px-6 lg:px-10">
+    <section id="diensten" style={{ backgroundColor: "#f2eee2", padding: "100px 0" }}>
+      <div style={{ maxWidth: "1100px", margin: "0 auto", padding: "0 40px" }}>
+        <h2
+          style={{
+            fontFamily: "Roboto, system-ui, sans-serif",
+            fontWeight: 400,
+            fontSize: "clamp(2rem, 5vw, 60px)",
+            color: "#7a7b6b",
+            marginBottom: "64px",
+            textAlign: "center",
+          }}
+        >
+          Onze diensten
+        </h2>
 
-        <div className="mb-14">
-          <span className="text-xs font-light tracking-[0.2em] uppercase text-[#4A7B75] mb-3 block">
-            Wat wij doen
-          </span>
-          <h2
-            className="font-display text-[#2C3E35] font-normal"
-            style={{ fontSize: "clamp(1.9rem, 3.5vw, 2.8rem)" }}
-          >
-            Onze diensten
-          </h2>
-        </div>
-
-        <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-px bg-[#4A7B75]/10">
+        <div
+          style={{
+            display: "grid",
+            gridTemplateColumns: "repeat(auto-fit, minmax(220px, 1fr))",
+            gap: "48px",
+          }}
+        >
           {diensten.map((d) => (
-            <div
-              key={d.titel}
-              className="bg-[#F0F0ED] p-8 flex flex-col group hover:bg-[#4A7B75] transition-colors duration-300"
-            >
+            <div key={d.titel}>
               <h3
-                className="font-display font-normal text-[#4A7B75] group-hover:text-white mb-4 transition-colors"
-                style={{ fontSize: "clamp(1.1rem, 1.5vw, 1.3rem)" }}
+                style={{
+                  fontFamily: "Roboto, system-ui, sans-serif",
+                  fontWeight: 400,
+                  fontSize: "20px",
+                  color: "#7a7b6b",
+                  marginBottom: "14px",
+                  borderBottom: "1px solid #c8c4b4",
+                  paddingBottom: "12px",
+                }}
               >
                 {d.titel}
               </h3>
-              <p className="font-light text-[#2C3E35] group-hover:text-white/85 leading-relaxed text-sm flex-1 transition-colors">
-                {d.beschrijving}
+              <p
+                style={{
+                  fontWeight: 300,
+                  fontSize: "15px",
+                  color: "#555",
+                  lineHeight: 1.75,
+                  marginBottom: "20px",
+                }}
+              >
+                {d.tekst}
               </p>
               <a
-                href={d.href}
-                className="mt-6 inline-flex items-center gap-2 text-xs tracking-widest uppercase text-[#4A7B75] group-hover:text-white transition-colors font-light"
+                href="#contact"
+                style={{
+                  fontFamily: "Roboto, system-ui, sans-serif",
+                  fontWeight: 400,
+                  fontSize: "14px",
+                  color: "#7a7b6b",
+                  textDecoration: "none",
+                  letterSpacing: "0.02em",
+                }}
+                onMouseEnter={(e) => ((e.currentTarget as HTMLAnchorElement).style.textDecoration = "underline")}
+                onMouseLeave={(e) => ((e.currentTarget as HTMLAnchorElement).style.textDecoration = "none")}
               >
-                Meer informatie
-                <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M9 5l7 7-7 7" />
-                </svg>
+                Meer informatie →
               </a>
             </div>
           ))}
         </div>
 
-        <div className="mt-12 text-center">
+        <div style={{ marginTop: "60px", textAlign: "center" }}>
           <a
             href="#contact"
-            className="inline-block border border-[#4A7B75] text-[#4A7B75] font-light text-sm tracking-widest px-10 py-3.5 hover:bg-[#4A7B75] hover:text-white transition-colors"
+            style={{
+              display: "inline-block",
+              fontFamily: "Roboto, system-ui, sans-serif",
+              fontWeight: 400,
+              fontSize: "14px",
+              color: "#5b604b",
+              border: "1px solid #5b604b",
+              padding: "12px 36px",
+              textDecoration: "none",
+              letterSpacing: "0.06em",
+              transition: "background 0.2s, color 0.2s",
+            }}
+            onMouseEnter={(e) => {
+              const el = e.currentTarget as HTMLAnchorElement;
+              el.style.background = "#5b604b";
+              el.style.color = "#fff";
+            }}
+            onMouseLeave={(e) => {
+              const el = e.currentTarget as HTMLAnchorElement;
+              el.style.background = "transparent";
+              el.style.color = "#5b604b";
+            }}
           >
-            Bekijk alle diensten
+            Bekijk alle diensten →
           </a>
         </div>
-
       </div>
     </section>
   );

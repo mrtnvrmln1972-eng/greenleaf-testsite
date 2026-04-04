@@ -1,8 +1,8 @@
 import Navbar from "@/components/Navbar";
 import Hero from "@/components/Hero";
 import Intro from "@/components/Intro";
-import Diensten from "@/components/Diensten";
 import Galerij from "@/components/Galerij";
+import Diensten from "@/components/Diensten";
 import Projecten from "@/components/Projecten";
 import Reviews from "@/components/Reviews";
 import Waarom from "@/components/Waarom";
@@ -14,12 +14,12 @@ export const revalidate = 60;
 
 export default function Home() {
   return (
-    <main className="flex flex-col min-h-screen">
+    <main>
       <Navbar />
       <Hero />
       <Intro />
-      <Diensten />
       <Galerij />
+      <Diensten />
       <Projecten />
       <Reviews />
       <Waarom />

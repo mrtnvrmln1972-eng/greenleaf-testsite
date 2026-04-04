@@ -1,87 +1,121 @@
+"use client";
 const projecten = [
   {
-    foto: "https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=800&q=80",
+    foto: "https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=700&q=85",
     titel: "Landelijke achtertuin – Breda Noord",
-    omschrijving:
-      "Van kale ondergrond naar een weelderige landelijke tuin met siergrassen, vaste planten en een gebakken klinkerterras. Gerealiseerde tuin in Breda voor een gezin met jonge kinderen.",
-    tags: ["Tuinontwerp", "Tuinaanleg"],
+    tekst: "Van kale ondergrond naar een weelderige landelijke tuin. Tuinaanleg in Breda voor een gezin met jonge kinderen.",
   },
   {
-    foto: "https://images.unsplash.com/photo-1563306406-9a2d0cc1d77c?w=800&q=80",
+    foto: "https://images.unsplash.com/photo-1563306406-9a2d0cc1d77c?w=700&q=85",
     titel: "Zwemvijver villa – Etten-Leur",
-    omschrijving:
-      "Biologische zwemvijver geïntegreerd in een parkachtige tuin. De vijver filtert op natuurlijke wijze en biedt het hele jaar door een sfeervol waterbeeld.",
-    tags: ["Zwemvijver", "Tuinaanleg"],
+    tekst: "Biologische zwemvijver geïntegreerd in een parkachtige tuin. Specialist in (zwem)vijvers en waterpartijen.",
   },
   {
-    foto: "https://images.unsplash.com/photo-1582407947304-fd86f28320c7?w=800&q=80",
+    foto: "https://images.unsplash.com/photo-1582407947304-fd86f28320c7?w=700&q=85",
     titel: "Bedrijfstuin kantoorpand – Tilburg",
-    omschrijving:
-      "Representatieve bedrijfstuin voor een kantoorpand in Tilburg. Laag onderhoud, hoge uitstraling. Kamsteeg verzorgt ook het structurele tuinonderhoud.",
-    tags: ["Bedrijfstuin", "Tuinonderhoud"],
+    tekst: "Representatieve bedrijfstuin met laag onderhoud en hoge uitstraling. Structureel tuinonderhoud inbegrepen.",
   },
 ];
 
 export default function Projecten() {
   return (
-    <section id="projecten" className="bg-[#F0F0ED] py-24 md:py-32">
-      <div className="max-w-7xl mx-auto px-6 lg:px-10">
+    <section
+      id="projecten"
+      style={{ backgroundColor: "#5b604b", padding: "100px 0" }}
+    >
+      <div style={{ maxWidth: "1100px", margin: "0 auto", padding: "0 40px" }}>
+        <h2
+          style={{
+            fontFamily: "Roboto, system-ui, sans-serif",
+            fontWeight: 400,
+            fontSize: "clamp(2rem, 5vw, 60px)",
+            color: "#ffffff",
+            marginBottom: "20px",
+            textAlign: "center",
+          }}
+        >
+          Projecten &amp; inspiratie
+        </h2>
+        <p
+          style={{
+            fontWeight: 300,
+            fontSize: "16px",
+            color: "rgba(255,255,255,0.80)",
+            textAlign: "center",
+            marginBottom: "60px",
+            lineHeight: 1.7,
+          }}
+        >
+          Benieuwd hoe een tuin van Kamsteeg eruitziet in de praktijk?<br />
+          Bekijk onze gerealiseerde projecten.
+        </p>
 
-        <div className="mb-14">
-          <span className="text-xs font-light tracking-[0.2em] uppercase text-[#4A7B75] mb-3 block">
-            Onze realisaties
-          </span>
-          <h2
-            className="font-display text-[#2C3E35] font-normal mb-2"
-            style={{ fontSize: "clamp(1.9rem, 3.5vw, 2.8rem)" }}
-          >
-            Projecten &amp; inspiratie
-          </h2>
-          <h3 className="font-light text-[#6b7c74] text-lg">
-            Gerealiseerde tuinen in en rond Breda
-          </h3>
-        </div>
-
-        <div className="grid md:grid-cols-3 gap-8">
+        <div
+          style={{
+            display: "grid",
+            gridTemplateColumns: "repeat(3, 1fr)",
+            gap: "20px",
+            marginBottom: "52px",
+          }}
+        >
           {projecten.map((p) => (
-            <article key={p.titel} className="group flex flex-col bg-white">
-              <div className="overflow-hidden aspect-[4/3]">
-                <div
-                  className="w-full h-full bg-cover bg-center transition-transform duration-700 group-hover:scale-105"
-                  style={{ backgroundImage: `url('${p.foto}')` }}
+            <div key={p.titel}>
+              <div style={{ overflow: "hidden", aspectRatio: "4/3" }}>
+                <img
+                  src={p.foto}
+                  alt={p.titel}
+                  style={{
+                    width: "100%",
+                    height: "100%",
+                    objectFit: "cover",
+                    display: "block",
+                    borderRadius: 0,
+                    transition: "transform 0.6s ease",
+                  }}
+                  onMouseEnter={(e) => { (e.currentTarget as HTMLImageElement).style.transform = "scale(1.04)"; }}
+                  onMouseLeave={(e) => { (e.currentTarget as HTMLImageElement).style.transform = "scale(1)"; }}
                 />
               </div>
-              <div className="p-7 flex flex-col flex-1">
-                <div className="flex gap-2 flex-wrap mb-3">
-                  {p.tags.map((tag) => (
-                    <span
-                      key={tag}
-                      className="text-[10px] tracking-widest uppercase text-[#4A7B75] border border-[#4A7B75]/30 px-2.5 py-1 font-light"
-                    >
-                      {tag}
-                    </span>
-                  ))}
-                </div>
-                <h3 className="font-display font-normal text-[#2C3E35] mb-3 text-lg">
-                  {p.titel}
-                </h3>
-                <p className="font-light text-[#6b7c74] leading-relaxed text-sm flex-1">
-                  {p.omschrijving}
-                </p>
-              </div>
-            </article>
+              <h3
+                style={{
+                  fontFamily: "Roboto, system-ui, sans-serif",
+                  fontWeight: 400,
+                  fontSize: "17px",
+                  color: "#ffffff",
+                  marginTop: "16px",
+                  marginBottom: "8px",
+                }}
+              >
+                {p.titel}
+              </h3>
+              <p style={{ fontWeight: 300, fontSize: "14px", color: "rgba(255,255,255,0.72)", lineHeight: 1.65 }}>
+                {p.tekst}
+              </p>
+            </div>
           ))}
         </div>
 
-        <div className="mt-12 text-center">
+        <div style={{ textAlign: "center" }}>
           <a
-            href="#contact"
-            className="inline-block border border-[#4A7B75] text-[#4A7B75] font-light text-sm tracking-widest px-10 py-3.5 hover:bg-[#4A7B75] hover:text-white transition-colors"
+            href="#"
+            style={{
+              display: "inline-block",
+              fontFamily: "Roboto, system-ui, sans-serif",
+              fontWeight: 400,
+              fontSize: "14px",
+              color: "#ffffff",
+              border: "1px solid rgba(255,255,255,0.6)",
+              padding: "12px 36px",
+              textDecoration: "none",
+              letterSpacing: "0.06em",
+              transition: "background 0.2s",
+            }}
+            onMouseEnter={(e) => { (e.currentTarget as HTMLAnchorElement).style.background = "rgba(255,255,255,0.12)"; }}
+            onMouseLeave={(e) => { (e.currentTarget as HTMLAnchorElement).style.background = "transparent"; }}
           >
-            Bekijk meer projecten
+            Bekijk meer projecten →
           </a>
         </div>
-
       </div>
     </section>
   );

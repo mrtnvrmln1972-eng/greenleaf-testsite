@@ -1,18 +1,11 @@
 import type { Metadata } from "next";
-import { Inter, Playfair_Display } from "next/font/google";
+import { Roboto } from "next/font/google";
 import "./globals.css";
 
-const inter = Inter({
+const roboto = Roboto({
   subsets: ["latin"],
-  variable: "--font-inter",
   weight: ["300", "400", "500"],
-});
-
-const playfair = Playfair_Display({
-  subsets: ["latin"],
-  variable: "--font-playfair",
-  weight: ["400", "500", "600"],
-  style: ["normal", "italic"],
+  display: "swap",
 });
 
 export const metadata: Metadata = {
@@ -20,7 +13,7 @@ export const metadata: Metadata = {
   description:
     "Kamsteeg Tuinen is uw hovenier in Breda. Meer dan 25 jaar vakmanschap in tuinontwerp, tuinaanleg en tuinonderhoud. Vraag vrijblijvend advies aan.",
   keywords:
-    "hovenier breda, tuinaanleg breda, tuinontwerp, tuinonderhoud, zwemvijver, hovenier",
+    "hovenier breda, tuinaanleg breda, tuinontwerp, tuinonderhoud, zwemvijver",
   openGraph: {
     title: "Kamsteeg Tuinen | Hovenier in Breda",
     description:
@@ -34,8 +27,8 @@ export default function RootLayout({
   children,
 }: Readonly<{ children: React.ReactNode }>) {
   return (
-    <html lang="nl" className={`${inter.variable} ${playfair.variable} h-full`}>
-      <body className="font-sans min-h-full flex flex-col" suppressHydrationWarning>
+    <html lang="nl" className="h-full">
+      <body className={`${roboto.className} min-h-full`} suppressHydrationWarning>
         {children}
       </body>
     </html>

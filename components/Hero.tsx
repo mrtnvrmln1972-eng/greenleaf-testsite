@@ -1,44 +1,75 @@
 export default function Hero() {
   return (
-    <section className="relative w-full h-screen min-h-[600px] overflow-hidden">
-      {/* Background photo */}
+    <section
+      style={{
+        width: "100%",
+        height: "100vh",
+        minHeight: "580px",
+        position: "relative",
+        overflow: "hidden",
+      }}
+    >
+      {/* Volledige achtergrondafbeelding */}
       <div
-        className="absolute inset-0 bg-cover bg-center"
+        aria-hidden="true"
         style={{
+          position: "absolute",
+          inset: 0,
           backgroundImage:
-            "url('https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=1920&q=85')",
+            "url('https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=1920&q=90')",
+          backgroundSize: "cover",
+          backgroundPosition: "center",
         }}
       />
 
-      {/* Gradient: subtle darkening toward bottom for text legibility */}
-      <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-black/10" />
+      {/* Semi-transparante balk onderaan — exact zoals referentie */}
+      <div
+        aria-hidden="true"
+        style={{
+          position: "absolute",
+          bottom: 0,
+          left: 0,
+          right: 0,
+          height: "220px",
+          background: "linear-gradient(to top, rgba(0,0,0,0.52) 0%, rgba(0,0,0,0.28) 60%, transparent 100%)",
+        }}
+      />
 
-      {/* Content pinned to bottom */}
-      <div className="absolute bottom-0 left-0 right-0 px-8 md:px-16 pb-16 md:pb-20">
-        <div className="max-w-7xl mx-auto">
-          <h1 className="font-sans font-light tracking-[0.15em] md:tracking-[0.25em] text-white uppercase leading-none mb-4"
-            style={{ fontSize: "clamp(2.5rem, 7vw, 6.5rem)" }}
-          >
-            Kamsteeg Tuinen
-          </h1>
-          <p className="font-sans font-light tracking-[0.1em] text-white/85 mb-8 text-lg md:text-xl">
-            Tuinen met een goed gevoel
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4">
-            <a
-              href="#contact"
-              className="inline-block bg-[#4A7B75] text-white font-light text-sm tracking-widest px-8 py-3.5 hover:bg-[#3a6158] transition-colors"
-            >
-              Vraag vrijblijvend advies aan
-            </a>
-            <a
-              href="#projecten"
-              className="inline-block border border-white text-white font-light text-sm tracking-widest px-8 py-3.5 hover:bg-white hover:text-[#2C3E35] transition-colors"
-            >
-              Bekijk gerealiseerde tuinen
-            </a>
-          </div>
-        </div>
+      {/* Tekst — links uitgelijnd, onderin */}
+      <div
+        style={{
+          position: "absolute",
+          bottom: "60px",
+          left: "60px",
+          right: "60px",
+          zIndex: 10,
+        }}
+      >
+        <h1
+          style={{
+            fontFamily: "Roboto, system-ui, sans-serif",
+            fontWeight: 400,
+            fontSize: "clamp(3rem, 9vw, 90px)",
+            color: "#ffffff",
+            letterSpacing: "0.02em",
+            margin: 0,
+            lineHeight: 1,
+          }}
+        >
+          KAMSTEEG TUINEN
+        </h1>
+        <p
+          style={{
+            fontFamily: "Roboto, system-ui, sans-serif",
+            fontWeight: 300,
+            fontSize: "clamp(1rem, 2vw, 20px)",
+            color: "rgba(255,255,255,0.90)",
+            marginTop: "12px",
+            letterSpacing: "0.03em",
+          }}
+        >
+          Tuinen met een goed gevoel
+        </p>
       </div>
     </section>
   );
