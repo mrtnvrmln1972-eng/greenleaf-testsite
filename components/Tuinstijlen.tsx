@@ -1,10 +1,10 @@
 const fotos = [
-  { src: "https://source.unsplash.com/400x300/?garden,modern",    alt: "Moderne tuin – Kamsteeg Tuinen" },
-  { src: "https://source.unsplash.com/400x300/?garden,landscape", alt: "Landschappelijke tuin – Kamsteeg Tuinen" },
-  { src: "https://source.unsplash.com/400x300/?garden,beach",     alt: "Strandtuin – Kamsteeg Tuinen" },
-  { src: "https://source.unsplash.com/400x300/?garden,urban",     alt: "Stadstuin – Kamsteeg Tuinen" },
-  { src: "https://source.unsplash.com/400x300/?garden,villa",     alt: "Villatuin – Kamsteeg Tuinen" },
-  { src: "https://source.unsplash.com/400x300/?garden,pond",      alt: "Tuin met vijver – Kamsteeg Tuinen" },
+  { src: "/images/kamsteeg/tuinstijlen/tuinstijl-1.jpg", alt: "Tuinstijl 1 – Kamsteeg Tuinen" },
+  { src: "/images/kamsteeg/tuinstijlen/tuinstijl-2.jpg", alt: "Tuinstijl 2 – Kamsteeg Tuinen" },
+  { src: "/images/kamsteeg/tuinstijlen/tuinstijl-3.jpg", alt: "Tuinstijl 3 – Kamsteeg Tuinen" },
+  { src: "/images/kamsteeg/tuinstijlen/tuinstijl-4.jpg", alt: "Tuinstijl 4 – Kamsteeg Tuinen" },
+  { src: "/images/kamsteeg/tuinstijlen/tuinstijl-5.jpg", alt: "Tuinstijl 5 – Kamsteeg Tuinen" },
+  { src: "/images/kamsteeg/tuinstijlen/tuinstijl-6.jpg", alt: "Tuinstijl 6 – Kamsteeg Tuinen" },
 ];
 
 const stijlen = [
