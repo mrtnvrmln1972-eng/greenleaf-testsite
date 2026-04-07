@@ -23,7 +23,7 @@ const reviews = [
 
 export default function Reviews() {
   return (
-    <section id="reviews" style={{ backgroundColor: "#f4f0e8", padding: "120px 0" }} className="mob-py">
+    <section id="reviews" style={{ backgroundColor: "#F7F8F6", padding: "120px 0" }} className="mob-py">
       <div style={{ maxWidth: "1200px", margin: "0 auto", padding: "0 40px" }} className="mob-px">
 
         <h2
@@ -46,7 +46,7 @@ export default function Reviews() {
           style={{
             fontWeight: 300,
             fontSize: "24px",
-            color: "#5b604b",
+            color: "#5E644B",
             marginBottom: "56px",
             lineHeight: 1.3,
             textAlign: "center",
@@ -91,7 +91,7 @@ export default function Reviews() {
                 &ldquo;{r.tekst}&rdquo;
               </p>
               <div style={{ borderTop: "1px solid #e8e4d8", paddingTop: "20px" }}>
-                <p style={{ fontWeight: 400, fontSize: "14px", color: "#5b604b", margin: 0 }}>
+                <p style={{ fontWeight: 400, fontSize: "14px", color: "#5E644B", margin: 0 }}>
                   {r.naam}
                 </p>
                 <p style={{ fontWeight: 300, fontSize: "13px", color: "#6b6b5a", marginTop: "4px" }}>
@@ -106,7 +106,7 @@ export default function Reviews() {
           <a
             href="#reviews"
             style={{ fontWeight: 400, fontSize: "14px", color: "#6b6b5a", textDecoration: "none", transition: "color 0.3s ease" }}
-            onMouseEnter={(e) => { (e.currentTarget as HTMLAnchorElement).style.color = "#5b604b"; }}
+            onMouseEnter={(e) => { (e.currentTarget as HTMLAnchorElement).style.color = "#5E644B"; }}
             onMouseLeave={(e) => { (e.currentTarget as HTMLAnchorElement).style.color = "#6b6b5a"; }}
           >
             → Lees meer klantbeoordelingen
@@ -120,7 +120,7 @@ export default function Reviews() {
           style={{
             fontWeight: 300,
             fontSize: "24px",
-            color: "#5b604b",
+            color: "#5E644B",
             marginBottom: "20px",
             lineHeight: 1.3,
             transitionDelay: "0.1s",
@@ -209,7 +209,7 @@ export default function Reviews() {
               <span
                 key={label}
                 style={style as React.CSSProperties}
-                onMouseEnter={(e) => { (e.currentTarget as HTMLSpanElement).style.color = "#5b604b"; }}
+                onMouseEnter={(e) => { (e.currentTarget as HTMLSpanElement).style.color = "#5E644B"; }}
                 onMouseLeave={(e) => { (e.currentTarget as HTMLSpanElement).style.color = "#1a1a18"; }}
               >
                 {label}

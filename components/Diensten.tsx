@@ -3,11 +3,11 @@
 function IconPotlood() {
   return (
     <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-      <line x1="10" y1="38" x2="38" y2="10" stroke="#5b604b" strokeWidth="1.5" strokeLinecap="square" />
-      <polyline points="34,6 42,14 14,42 6,42 6,34" stroke="#5b604b" strokeWidth="1.5" strokeLinejoin="miter" fill="none" />
-      <line x1="6" y1="42" x2="14" y2="42" stroke="#5b604b" strokeWidth="1.5" strokeLinecap="square" />
-      <line x1="6" y1="34" x2="6" y2="42" stroke="#5b604b" strokeWidth="1.5" strokeLinecap="square" />
-      <line x1="30" y1="10" x2="38" y2="18" stroke="#5b604b" strokeWidth="1.5" />
+      <line x1="10" y1="38" x2="38" y2="10" stroke="#5E644B" strokeWidth="1.5" strokeLinecap="square" />
+      <polyline points="34,6 42,14 14,42 6,42 6,34" stroke="#5E644B" strokeWidth="1.5" strokeLinejoin="miter" fill="none" />
+      <line x1="6" y1="42" x2="14" y2="42" stroke="#5E644B" strokeWidth="1.5" strokeLinecap="square" />
+      <line x1="6" y1="34" x2="6" y2="42" stroke="#5E644B" strokeWidth="1.5" strokeLinecap="square" />
+      <line x1="30" y1="10" x2="38" y2="18" stroke="#5E644B" strokeWidth="1.5" />
     </svg>
   );
 }
@@ -15,9 +15,9 @@ function IconPotlood() {
 function IconSchop() {
   return (
     <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-      <path d="M24 8 L32 16 Q36 20 34 26 L26 34 L14 22 Q10 18 14 14 Z" stroke="#5b604b" strokeWidth="1.5" fill="none" strokeLinejoin="round" />
-      <line x1="26" y1="34" x2="18" y2="42" stroke="#5b604b" strokeWidth="1.5" strokeLinecap="square" />
-      <line x1="14" y1="22" x2="20" y2="28" stroke="#5b604b" strokeWidth="1" strokeLinecap="round" />
+      <path d="M24 8 L32 16 Q36 20 34 26 L26 34 L14 22 Q10 18 14 14 Z" stroke="#5E644B" strokeWidth="1.5" fill="none" strokeLinejoin="round" />
+      <line x1="26" y1="34" x2="18" y2="42" stroke="#5E644B" strokeWidth="1.5" strokeLinecap="square" />
+      <line x1="14" y1="22" x2="20" y2="28" stroke="#5E644B" strokeWidth="1" strokeLinecap="round" />
     </svg>
   );
 }
@@ -25,11 +25,11 @@ function IconSchop() {
 function IconSchaar() {
   return (
     <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-      <circle cx="13" cy="35" r="6" stroke="#5b604b" strokeWidth="1.5" fill="none" />
-      <circle cx="13" cy="13" r="6" stroke="#5b604b" strokeWidth="1.5" fill="none" />
-      <line x1="18" y1="30" x2="42" y2="10" stroke="#5b604b" strokeWidth="1.5" strokeLinecap="square" />
-      <line x1="18" y1="18" x2="42" y2="38" stroke="#5b604b" strokeWidth="1.5" strokeLinecap="square" />
-      <line x1="27" y1="22" x2="29" y2="26" stroke="#5b604b" strokeWidth="1.5" strokeLinecap="round" />
+      <circle cx="13" cy="35" r="6" stroke="#5E644B" strokeWidth="1.5" fill="none" />
+      <circle cx="13" cy="13" r="6" stroke="#5E644B" strokeWidth="1.5" fill="none" />
+      <line x1="18" y1="30" x2="42" y2="10" stroke="#5E644B" strokeWidth="1.5" strokeLinecap="square" />
+      <line x1="18" y1="18" x2="42" y2="38" stroke="#5E644B" strokeWidth="1.5" strokeLinecap="square" />
+      <line x1="27" y1="22" x2="29" y2="26" stroke="#5E644B" strokeWidth="1.5" strokeLinecap="round" />
     </svg>
   );
 }
@@ -37,9 +37,9 @@ function IconSchaar() {
 function IconWater() {
   return (
     <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-      <path d="M6 28 Q12 22 18 28 Q24 34 30 28 Q36 22 42 28" stroke="#5b604b" strokeWidth="1.5" strokeLinecap="round" fill="none" />
-      <path d="M6 36 Q12 30 18 36 Q24 42 30 36 Q36 30 42 36" stroke="#5b604b" strokeWidth="1.5" strokeLinecap="round" fill="none" />
-      <path d="M24 6 Q28 12 28 17 Q28 22 24 22 Q20 22 20 17 Q20 12 24 6 Z" stroke="#5b604b" strokeWidth="1.5" fill="none" strokeLinejoin="round" />
+      <path d="M6 28 Q12 22 18 28 Q24 34 30 28 Q36 22 42 28" stroke="#5E644B" strokeWidth="1.5" strokeLinecap="round" fill="none" />
+      <path d="M6 36 Q12 30 18 36 Q24 42 30 36 Q36 30 42 36" stroke="#5E644B" strokeWidth="1.5" strokeLinecap="round" fill="none" />
+      <path d="M24 6 Q28 12 28 17 Q28 22 24 22 Q20 22 20 17 Q20 12 24 6 Z" stroke="#5E644B" strokeWidth="1.5" fill="none" strokeLinejoin="round" />
     </svg>
   );
 }
@@ -80,7 +80,7 @@ const staggerDelays = ["0s", "0.1s", "0.2s", "0.3s"];
 
 export default function Diensten() {
   return (
-    <section id="diensten" style={{ backgroundColor: "#f4f0e8", padding: "120px 0" }} className="mob-py">
+    <section id="diensten" style={{ backgroundColor: "#D0D7D4", padding: "120px 0" }} className="mob-py">
       <style>{`
         @keyframes shimmer {
           0%   { background-position: -200% center; }
@@ -147,7 +147,7 @@ export default function Diensten() {
                 style={{
                   fontWeight: 300,
                   fontSize: "24px",
-                  color: "#5b604b",
+                  color: "#5E644B",
                   marginBottom: "16px",
                   lineHeight: 1.3,
                 }}
@@ -187,8 +187,8 @@ export default function Diensten() {
               display: "inline-block",
               fontWeight: 400,
               fontSize: "13px",
-              color: "#5b604b",
-              border: "1px solid #5b604b",
+              color: "#5E644B",
+              border: "1px solid #5E644B",
               padding: "16px 40px",
               textDecoration: "none",
               letterSpacing: "0.1em",
@@ -197,13 +197,13 @@ export default function Diensten() {
             }}
             onMouseEnter={(e) => {
               const el = e.currentTarget as HTMLAnchorElement;
-              el.style.backgroundColor = "#5b604b";
+              el.style.backgroundColor = "#5E644B";
               el.style.color = "#fff";
             }}
             onMouseLeave={(e) => {
               const el = e.currentTarget as HTMLAnchorElement;
               el.style.backgroundColor = "transparent";
-              el.style.color = "#5b604b";
+              el.style.color = "#5E644B";
             }}
           >
             Bekijk alle diensten

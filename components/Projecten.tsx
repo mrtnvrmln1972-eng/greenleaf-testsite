@@ -23,7 +23,7 @@ const projecten = [
 
 export default function Projecten() {
   return (
-    <section id="projecten" style={{ backgroundColor: "#5b604b", padding: "120px 0" }} className="mob-py">
+    <section id="projecten" style={{ backgroundColor: "#5E644B", padding: "120px 0" }} className="mob-py">
       <div style={{ maxWidth: "1200px", margin: "0 auto", padding: "0 40px" }} className="mob-px">
 
         <h2

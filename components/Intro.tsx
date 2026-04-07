@@ -3,8 +3,8 @@ const btnStyle: React.CSSProperties = {
   fontFamily: '"Roboto", system-ui, sans-serif',
   fontWeight: 400,
   fontSize: "13px",
-  color: "#5b604b",
-  border: "1px solid #5b604b",
+  color: "#5E644B",
+  border: "1px solid #5E644B",
   padding: "16px 40px",
   textDecoration: "none",
   background: "transparent",
@@ -15,7 +15,7 @@ const btnStyle: React.CSSProperties = {
 
 export default function Intro() {
   return (
-    <section style={{ backgroundColor: "#f4f0e8", padding: "120px 0" }} className="mob-py">
+    <section style={{ backgroundColor: "#F7F8F6", padding: "120px 0" }} className="mob-py">
       <div style={{ maxWidth: "1200px", margin: "0 auto", padding: "0 40px" }} className="mob-px">
 
         <h2
@@ -56,7 +56,7 @@ export default function Intro() {
         >
           {/* Linkerkolom */}
           <div data-fade="" style={{ display: "flex", flexDirection: "column", transitionDelay: "0.1s" }}>
-            <h3 style={{ fontWeight: 300, fontSize: "24px", color: "#5b604b", marginBottom: "24px", lineHeight: 1.3 }}>
+            <h3 style={{ fontWeight: 300, fontSize: "24px", color: "#5E644B", marginBottom: "24px", lineHeight: 1.3 }}>
               Tuinen met een goed gevoel
             </h3>
             <p style={{ fontWeight: 300, fontSize: "18px", color: "#1a1a18", lineHeight: 1.75, marginBottom: "20px" }}>
@@ -77,7 +77,7 @@ export default function Intro() {
 
           {/* Rechterkolom */}
           <div data-fade="" style={{ display: "flex", flexDirection: "column", transitionDelay: "0.2s" }}>
-            <h3 style={{ fontWeight: 300, fontSize: "24px", color: "#5b604b", marginBottom: "24px", lineHeight: 1.3 }}>
+            <h3 style={{ fontWeight: 300, fontSize: "24px", color: "#5E644B", marginBottom: "24px", lineHeight: 1.3 }}>
               Voor particulieren én bedrijven
             </h3>
             <p style={{ fontWeight: 300, fontSize: "18px", color: "#1a1a18", lineHeight: 1.75, marginBottom: "20px" }}>

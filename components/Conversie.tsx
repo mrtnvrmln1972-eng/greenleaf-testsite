@@ -14,7 +14,7 @@ const knoppen = [
 
 export default function Conversie() {
   return (
-    <section id="contact" style={{ backgroundColor: "#5b604b", padding: "120px 0" }} className="mob-py">
+    <section id="contact" style={{ backgroundColor: "#5E644B", padding: "120px 0" }} className="mob-py">
       <div style={{ maxWidth: "860px", margin: "0 auto", padding: "0 40px", textAlign: "center" }} className="mob-px">
         <h2
           data-fade=""

@@ -9,7 +9,7 @@ const punten = [
 
 export default function Waarom() {
   return (
-    <section id="waarom" style={{ backgroundColor: "#ffffff", padding: "120px 0" }} className="mob-py">
+    <section id="waarom" style={{ backgroundColor: "#F7F8F6", padding: "120px 0" }} className="mob-py">
       <div style={{ maxWidth: "860px", margin: "0 auto", padding: "0 40px" }} className="mob-px">
         <h2
           data-fade=""
@@ -87,8 +87,8 @@ export default function Waarom() {
               display: "inline-block",
               fontWeight: 400,
               fontSize: "13px",
-              color: "#5b604b",
-              border: "1px solid #5b604b",
+              color: "#5E644B",
+              border: "1px solid #5E644B",
               padding: "16px 40px",
               textDecoration: "none",
               letterSpacing: "0.1em",
@@ -97,13 +97,13 @@ export default function Waarom() {
             }}
             onMouseEnter={(e) => {
               const el = e.currentTarget as HTMLAnchorElement;
-              el.style.backgroundColor = "#5b604b";
+              el.style.backgroundColor = "#5E644B";
               el.style.color = "#fff";
             }}
             onMouseLeave={(e) => {
               const el = e.currentTarget as HTMLAnchorElement;
               el.style.backgroundColor = "transparent";
-              el.style.color = "#5b604b";
+              el.style.color = "#5E644B";
             }}
           >
             Plan een kennismakingsgesprek

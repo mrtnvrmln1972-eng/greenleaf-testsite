@@ -21,7 +21,7 @@ const stijlen = [
 
 export default function Tuinstijlen() {
   return (
-    <section id="tuinstijlen" style={{ backgroundColor: "#f4f0e8", padding: "120px 0" }} className="mob-py">
+    <section id="tuinstijlen" style={{ backgroundColor: "#D0D7D4", padding: "120px 0" }} className="mob-py">
       <div style={{ maxWidth: "1200px", margin: "0 auto", padding: "0 40px" }} className="mob-px">
         <div
           className="col-2"
@@ -95,7 +95,7 @@ export default function Tuinstijlen() {
                       display: "block",
                       fontWeight: 400,
                       fontSize: "13px",
-                      color: "#5b604b",
+                      color: "#5E644B",
                       textDecoration: "none",
                       letterSpacing: "0.1em",
                       textTransform: "uppercase",

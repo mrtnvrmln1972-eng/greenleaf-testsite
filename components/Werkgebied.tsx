@@ -8,7 +8,7 @@ const plaatsen = [
 
 export default function Werkgebied() {
   return (
-    <section id="werkgebied" style={{ backgroundColor: "#f4f0e8", padding: "120px 0" }} className="mob-py">
+    <section id="werkgebied" style={{ backgroundColor: "#EDE8E0", padding: "120px 0" }} className="mob-py">
       <div style={{ maxWidth: "1200px", margin: "0 auto", padding: "0 40px" }} className="mob-px">
 
         <h2
@@ -46,7 +46,7 @@ export default function Werkgebied() {
                 height: "auto",
                 objectFit: "contain",
                 display: "block",
-                backgroundColor: "#f4f0e8",
+                backgroundColor: "#EDE8E0",
               }}
             />
           </div>
@@ -57,7 +57,7 @@ export default function Werkgebied() {
               style={{
                 fontWeight: 300,
                 fontSize: "24px",
-                color: "#5b604b",
+                color: "#5E644B",
                 marginBottom: "24px",
                 lineHeight: 1.3,
               }}
@@ -129,8 +129,8 @@ export default function Werkgebied() {
                   fontFamily: '"Roboto", system-ui, sans-serif',
                   fontWeight: 400,
                   fontSize: "13px",
-                  color: "#5b604b",
-                  border: "1px solid #5b604b",
+                  color: "#5E644B",
+                  border: "1px solid #5E644B",
                   padding: "16px 40px",
                   textDecoration: "none",
                   letterSpacing: "0.1em",
