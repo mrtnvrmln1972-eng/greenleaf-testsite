@@ -5,6 +5,7 @@ import Galerij from "@/components/Galerij";
 import Diensten from "@/components/Diensten";
 import Projecten from "@/components/Projecten";
 import Reviews from "@/components/Reviews";
+import Tuinstijlen from "@/components/Tuinstijlen";
 import Waarom from "@/components/Waarom";
 import Werkgebied from "@/components/Werkgebied";
 import Conversie from "@/components/Conversie";
@@ -22,6 +23,7 @@ export default function Home() {
       <Diensten />
       <Projecten />
       <Reviews />
+      <Tuinstijlen />
       <Waarom />
       <Werkgebied />
       <Conversie />
