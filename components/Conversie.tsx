@@ -7,15 +7,15 @@ const stappen = [
 ];
 
 const knoppen = [
-  { label: "Vraag offerte aan", href: "#" },
+  { label: "Vraag offerte aan", href: "mailto:info@kamsteegtuinen.nl" },
   { label: "Bel direct: 076 5421230", href: "tel:0765421230" },
   { label: "Mail ons", href: "mailto:info@kamsteegtuinen.nl" },
 ];
 
 export default function Conversie() {
   return (
-    <section id="contact" style={{ backgroundColor: "#5b604b", padding: "120px 0" }}>
-      <div style={{ maxWidth: "860px", margin: "0 auto", padding: "0 40px", textAlign: "center" }}>
+    <section id="contact" style={{ backgroundColor: "#5b604b", padding: "120px 0" }} className="mob-py">
+      <div style={{ maxWidth: "860px", margin: "0 auto", padding: "0 40px", textAlign: "center" }} className="mob-px">
         <h2
           data-fade=""
           style={{
@@ -111,6 +111,7 @@ export default function Conversie() {
               </div>
               {i < stappen.length - 1 && (
                 <div
+                  className="stap-lijn"
                   style={{
                     width: "40px",
                     height: "1px",

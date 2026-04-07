@@ -23,8 +23,8 @@ const reviews = [
 
 export default function Reviews() {
   return (
-    <section style={{ backgroundColor: "#f4f0e8", padding: "120px 0" }}>
-      <div style={{ maxWidth: "1200px", margin: "0 auto", padding: "0 40px" }}>
+    <section id="reviews" style={{ backgroundColor: "#f4f0e8", padding: "120px 0" }} className="mob-py">
+      <div style={{ maxWidth: "1200px", margin: "0 auto", padding: "0 40px" }} className="mob-px">
 
         <h2
           data-fade=""
@@ -57,6 +57,7 @@ export default function Reviews() {
         </h3>
 
         <div
+          className="col-3"
           style={{
             display: "grid",
             gridTemplateColumns: "repeat(3, 1fr)",
@@ -103,7 +104,7 @@ export default function Reviews() {
 
         <div data-fade="" style={{ marginBottom: "64px", transitionDelay: "0.3s" }}>
           <a
-            href="#"
+            href="#reviews"
             style={{ fontWeight: 400, fontSize: "14px", color: "#6b6b5a", textDecoration: "none", transition: "color 0.3s ease" }}
             onMouseEnter={(e) => { (e.currentTarget as HTMLAnchorElement).style.color = "#5b604b"; }}
             onMouseLeave={(e) => { (e.currentTarget as HTMLAnchorElement).style.color = "#6b6b5a"; }}

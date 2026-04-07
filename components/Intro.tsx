@@ -15,8 +15,8 @@ const btnStyle: React.CSSProperties = {
 
 export default function Intro() {
   return (
-    <section style={{ backgroundColor: "#f4f0e8", padding: "120px 0" }}>
-      <div style={{ maxWidth: "1200px", margin: "0 auto", padding: "0 40px" }}>
+    <section style={{ backgroundColor: "#f4f0e8", padding: "120px 0" }} className="mob-py">
+      <div style={{ maxWidth: "1200px", margin: "0 auto", padding: "0 40px" }} className="mob-px">
 
         <h2
           data-fade=""
@@ -45,6 +45,7 @@ export default function Intro() {
         </p>
 
         <div
+          className="col-2"
           style={{
             display: "grid",
             gridTemplateColumns: "1fr 1fr",

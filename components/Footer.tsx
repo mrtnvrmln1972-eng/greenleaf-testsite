@@ -3,7 +3,7 @@ const navigatie = [
   { label: "Tuinontwerp", href: "#diensten" },
   { label: "Tuinaanleg", href: "#diensten" },
   { label: "Tuinonderhoud", href: "#diensten" },
-  { label: "Over ons", href: "#" },
+  { label: "Over ons", href: "#waarom" },
   { label: "Contact", href: "#contact" },
 ];
 
@@ -19,6 +19,7 @@ export default function Footer() {
       <div style={{ maxWidth: "1200px", margin: "0 auto", padding: "48px 40px" }}>
 
         <div
+          className="col-footer"
           style={{
             display: "grid",
             gridTemplateColumns: "1fr 1fr 1fr 1fr",

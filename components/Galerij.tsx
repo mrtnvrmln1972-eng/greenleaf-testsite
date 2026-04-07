@@ -3,11 +3,17 @@
 import { useState } from "react";
 
 const fotos = [
-  { src: "/images/DSC_4243-768x476.jpg",                                           alt: "Tuin aangelegd door Kamsteeg Tuinen" },
-  { src: "/images/IMG_9526-scaled.jpg",                                            alt: "Tuinproject Kamsteeg Tuinen" },
-  { src: "/images/IMG_010904-024-1024x768.webp",                                   alt: "Tuinaanleg Kamsteeg Tuinen" },
-  { src: "/images/tussenetalage.jpg",                                               alt: "Tuinontwerp Kamsteeg Tuinen" },
-  { src: "/images/Overflowing-flower-beds-lining-winding-brick-paths-0.jpeg.webp", alt: "Borders en paden Kamsteeg Tuinen" },
+  { src: "/Slider%20home/Toptuinen-Luxe-villatuin-in-Bilthoven-01.jpg", alt: "Luxe villatuin aangelegd door Kamsteeg Tuinen" },
+  { src: "/Slider%20home/Toptuinen-Luxe-villatuin-in-Bilthoven-02.jpg", alt: "Villatuin met terras – Kamsteeg Tuinen" },
+  { src: "/Slider%20home/Toptuinen-Luxe-villatuin-in-Bilthoven-03.jpg", alt: "Tuinaanleg met beplanting – Kamsteeg Tuinen" },
+  { src: "/Slider%20home/Toptuinen-Luxe-villatuin-in-Bilthoven-04.jpg", alt: "Tuinontwerp Kamsteeg Tuinen" },
+  { src: "/Slider%20home/Toptuinen-Luxe-villatuin-in-Bilthoven-06.jpg", alt: "Groene tuin aangelegd door Kamsteeg Tuinen" },
+  { src: "/Slider%20home/Toptuinen-Luxe-villatuin-in-Bilthoven-07.jpg", alt: "Tuin met sierbeplanting – Kamsteeg Tuinen" },
+  { src: "/images/DSC_4243-768x476.jpg",                                alt: "Tuin aangelegd door Kamsteeg Tuinen" },
+  { src: "/images/IMG_9526-scaled.jpg",                                 alt: "Tuinproject Kamsteeg Tuinen" },
+  { src: "/images/IMG_010904-024-1024x768.webp",                        alt: "Tuinaanleg Kamsteeg Tuinen" },
+  { src: "/images/tussenetalage.jpg",                                   alt: "Tuinontwerp Kamsteeg Tuinen" },
+  { src: "/Overige%20foto%27s/Toptuinen-Bosrijke-villatuin-met-veel-privacy-01.jpg", alt: "Bosrijke villatuin – Kamsteeg Tuinen" },
 ];
 
 const N = fotos.length;
@@ -30,8 +36,9 @@ export default function Galerij() {
   ];
 
   return (
-    <section style={{ backgroundColor: "#5b604b", padding: "100px 0" }}>
+    <section style={{ backgroundColor: "#5b604b", padding: "100px 0" }} className="mob-py">
       <div
+        className="mob-px"
         style={{
           maxWidth: "1400px",
           margin: "0 auto",
@@ -64,6 +71,7 @@ export default function Galerij() {
 
         {/* Foto's grid */}
         <div
+          className="galerij-grid"
           style={{
             flex: 1,
             display: "grid",

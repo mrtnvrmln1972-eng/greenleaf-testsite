@@ -9,8 +9,8 @@ const punten = [
 
 export default function Waarom() {
   return (
-    <section style={{ backgroundColor: "#ffffff", padding: "120px 0" }}>
-      <div style={{ maxWidth: "860px", margin: "0 auto", padding: "0 40px" }}>
+    <section id="waarom" style={{ backgroundColor: "#ffffff", padding: "120px 0" }} className="mob-py">
+      <div style={{ maxWidth: "860px", margin: "0 auto", padding: "0 40px" }} className="mob-px">
         <h2
           data-fade=""
           style={{

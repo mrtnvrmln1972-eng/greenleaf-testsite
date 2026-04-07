@@ -24,6 +24,7 @@ export default function Hero() {
 
       {/* Overlay blok rechts, verticaal gecentreerd */}
       <div
+        className="hero-panel"
         style={{
           position: "absolute",
           top: 0,
@@ -36,6 +37,7 @@ export default function Hero() {
         }}
       >
         <div
+          className="hero-box"
           style={{
             backgroundColor: "rgba(91,96,75,0.65)",
             backdropFilter: "blur(4px)",

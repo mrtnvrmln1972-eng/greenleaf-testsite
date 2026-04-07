@@ -23,8 +23,8 @@ const projecten = [
 
 export default function Projecten() {
   return (
-    <section id="projecten" style={{ backgroundColor: "#5b604b", padding: "120px 0" }}>
-      <div style={{ maxWidth: "1200px", margin: "0 auto", padding: "0 40px" }}>
+    <section id="projecten" style={{ backgroundColor: "#5b604b", padding: "120px 0" }} className="mob-py">
+      <div style={{ maxWidth: "1200px", margin: "0 auto", padding: "0 40px" }} className="mob-px">
 
         <h2
           data-fade=""
@@ -57,6 +57,7 @@ export default function Projecten() {
         </p>
 
         <div
+          className="col-3"
           style={{
             display: "grid",
             gridTemplateColumns: "repeat(3, 1fr)",
@@ -114,7 +115,7 @@ export default function Projecten() {
 
         <div data-fade="" style={{ textAlign: "center", transitionDelay: "0.3s" }}>
           <a
-            href="#"
+            href="#projecten"
             style={{
               display: "inline-block",
               fontWeight: 400,

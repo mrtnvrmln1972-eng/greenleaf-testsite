@@ -30,3 +30,34 @@ body {
   opacity: 1;
   transform: translateY(0);
 }
+
+/* ─── Responsive: mobiel (max 768px) ─────────────────────────────────────── */
+@media (max-width: 768px) {
+  /* Container padding */
+  .mob-px { padding-left: 20px !important; padding-right: 20px !important; }
+
+  /* Sectie padding */
+  .mob-py { padding-top: 72px !important; padding-bottom: 72px !important; }
+
+  /* Hero tekst-overlay: volledig breed op mobiel */
+  .hero-panel { width: 100% !important; }
+  .hero-box   { padding: 40px 24px !important; }
+
+  /* Grids */
+  .col-2      { grid-template-columns: 1fr !important; gap: 40px !important; }
+  .col-3      { grid-template-columns: 1fr !important; gap: 32px !important; }
+  .col-4      { grid-template-columns: 1fr 1fr !important; gap: 24px !important; }
+  .col-footer { grid-template-columns: 1fr 1fr !important; gap: 32px !important; }
+
+  /* Galerij: toon 1 foto tegelijk */
+  .galerij-grid { grid-template-columns: 1fr !important; }
+  .galerij-grid > div:nth-child(n+2) { display: none !important; }
+
+  /* Conversie: verbindingslijn tussen stappen verbergen */
+  .stap-lijn { display: none !important; }
+
+  /* Typografie */
+  .h2-mob { font-size: 32px !important; }
+
+  /* Navbar hamburger tonen, desktop nav verbergen wordt al afgehandeld door md: classes */
+}

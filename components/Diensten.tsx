@@ -80,14 +80,14 @@ const staggerDelays = ["0s", "0.1s", "0.2s", "0.3s"];
 
 export default function Diensten() {
   return (
-    <section id="diensten" style={{ backgroundColor: "#f4f0e8", padding: "120px 0" }}>
+    <section id="diensten" style={{ backgroundColor: "#f4f0e8", padding: "120px 0" }} className="mob-py">
       <style>{`
         @keyframes shimmer {
           0%   { background-position: -200% center; }
           100% { background-position: 200% center; }
         }
       `}</style>
-      <div style={{ maxWidth: "1200px", margin: "0 auto", padding: "0 40px" }}>
+      <div style={{ maxWidth: "1200px", margin: "0 auto", padding: "0 40px" }} className="mob-px">
 
         <h2
           data-fade=""
@@ -121,6 +121,7 @@ export default function Diensten() {
         </p>
 
         <div
+          className="col-4"
           style={{
             display: "grid",
             gridTemplateColumns: "repeat(4, 1fr)",
@@ -181,7 +182,7 @@ export default function Diensten() {
 
         <div data-fade="" style={{ textAlign: "center", transitionDelay: "0.4s" }}>
           <a
-            href="#"
+            href="#diensten"
             style={{
               display: "inline-block",
               fontWeight: 400,

@@ -7,7 +7,7 @@ const links = [
   { label: "Tuinaanleg", href: "#diensten" },
   { label: "Tuinonderhoud", href: "#diensten" },
   { label: "Projecten", href: "#projecten" },
-  { label: "Over ons", href: "#" },
+  { label: "Over ons", href: "#waarom" },
   { label: "Contact", href: "#contact" },
 ];
 
@@ -76,6 +76,7 @@ export default function Navbar() {
         <button
           onClick={() => setMenuOpen(!menuOpen)}
           aria-label="Menu"
+          className="md:hidden"
           style={{ color: "#ffffff", background: "none", border: "none", cursor: "pointer" }}
         >
           <svg width="22" height="22" fill="none" stroke="currentColor" viewBox="0 0 24 24">

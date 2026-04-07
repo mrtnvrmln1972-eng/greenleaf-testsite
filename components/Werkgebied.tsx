@@ -8,8 +8,8 @@ const plaatsen = [
 
 export default function Werkgebied() {
   return (
-    <section id="werkgebied" style={{ backgroundColor: "#f4f0e8", padding: "120px 0" }}>
-      <div style={{ maxWidth: "1200px", margin: "0 auto", padding: "0 40px" }}>
+    <section id="werkgebied" style={{ backgroundColor: "#f4f0e8", padding: "120px 0" }} className="mob-py">
+      <div style={{ maxWidth: "1200px", margin: "0 auto", padding: "0 40px" }} className="mob-px">
 
         <h2
           data-fade=""
@@ -27,6 +27,7 @@ export default function Werkgebied() {
         </h2>
 
         <div
+          className="col-2"
           style={{
             display: "grid",
             gridTemplateColumns: "1fr 1fr",
@@ -42,10 +43,10 @@ export default function Werkgebied() {
               alt="Sander Kamsteeg, hovenier Breda"
               style={{
                 width: "100%",
-                height: "500px",
-                objectFit: "cover",
-                objectPosition: "top",
+                height: "auto",
+                objectFit: "contain",
                 display: "block",
+                backgroundColor: "#f4f0e8",
               }}
             />
           </div>
@@ -122,7 +123,7 @@ export default function Werkgebied() {
 
             <div>
               <a
-                href="/contact"
+                href="#contact"
                 style={{
                   display: "inline-block",
                   fontFamily: '"Roboto", system-ui, sans-serif',
@@ -145,11 +146,11 @@ export default function Werkgebied() {
 
         {/* Links onderaan */}
         <p data-fade="" style={{ fontWeight: 300, fontSize: "14px", color: "#6b6b5a", transitionDelay: "0.2s" }}>
-          <a href="#" style={{ color: "#6b6b5a", textDecoration: "none", transition: "color 0.3s ease" }}>→ Hovenier in Breda</a>
+          <a href="#werkgebied" style={{ color: "#6b6b5a", textDecoration: "none", transition: "color 0.3s ease" }}>→ Hovenier in Breda</a>
           {"  |  "}
-          <a href="#" style={{ color: "#6b6b5a", textDecoration: "none", transition: "color 0.3s ease" }}>→ Hovenier in Etten-Leur</a>
+          <a href="#werkgebied" style={{ color: "#6b6b5a", textDecoration: "none", transition: "color 0.3s ease" }}>→ Hovenier in Etten-Leur</a>
           {"  |  "}
-          <a href="#" style={{ color: "#6b6b5a", textDecoration: "none", transition: "color 0.3s ease" }}>→ Hovenier in Tilburg</a>
+          <a href="#werkgebied" style={{ color: "#6b6b5a", textDecoration: "none", transition: "color 0.3s ease" }}>→ Hovenier in Tilburg</a>
         </p>
 
       </div>
